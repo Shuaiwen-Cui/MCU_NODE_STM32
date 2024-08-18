@@ -1,7 +1,7 @@
 # 主控
 
 ## 主控概览
-![主控](main_control.jpg) 
+![主控](main_control.jpg){: width="500px" height="500px" }
 
 <div class="grid cards" markdown>
 
@@ -28,10 +28,10 @@
 - USB: TYPE-C
 - 引脚: 2.54mm 间距, 2x2x28引脚
 
-![RESOURCE](resource1.jpg)
+![RESOURCE](resource1.jpg){: width="500px" height="500px" }
 
-![RESOURCE](resource2.jpg)
+![RESOURCE](resource2.jpg){: width="500px" height="500px" }
 
-![RESOURCE](resource3.jpg)
+![RESOURCE](resource3.jpg){: width="500px" height="500px" }
 
-![RESOURCE](resource4.jpg)
+![RESOURCE](resource4.jpg){: width="500px" height="500px" }

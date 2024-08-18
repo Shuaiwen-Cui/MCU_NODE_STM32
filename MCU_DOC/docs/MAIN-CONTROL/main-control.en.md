@@ -1,7 +1,7 @@
 # MAIN CONTROL
 
 ## MAIN CONTROL OVERVIEW
-![OVERVIEW](main_control.jpg)
+![OVERVIEW](main_control.jpg){: width="500px" height="500px" }
 
 <div class="grid cards" markdown>
 
@@ -28,10 +28,10 @@
 - USB: TYPE-C
 - PINS: 2.54MM PITCH, 2x2x28PINS
 
-![RESOURCE](resource1.jpg)
+![RESOURCE](resource1.jpg){: width="500px" height="500px" }
 
-![RESOURCE](resource2.jpg)
+![RESOURCE](resource2.jpg){: width="500px" height="500px" }
 
-![RESOURCE](resource3.jpg)
+![RESOURCE](resource3.jpg){: width="500px" height="500px" }
 
-![RESOURCE](resource4.jpg)
+![RESOURCE](resource4.jpg){: width="500px" height="500px" }

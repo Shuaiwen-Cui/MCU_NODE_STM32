@@ -8,6 +8,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/"/>
     </url>
     <url>
+        <loc>https://localhost:8000/ABOUT/</loc>
+        <lastmod>2024-08-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/ABOUT/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/ABOUT/"/>
+    </url>
+    <url>
         <loc>https://localhost:8000/ARCHITECTURE/architecture/</loc>
         <lastmod>2024-08-18</lastmod>
         <changefreq>daily</changefreq>
@@ -118,6 +125,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/"/>
+    </url>
+    <url>
+        <loc>https://localhost:8000/zh/ABOUT/</loc>
+        <lastmod>2024-08-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/ABOUT/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/ABOUT/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/ARCHITECTURE/architecture/</loc>

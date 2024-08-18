@@ -8,11 +8,11 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/"/>
     </url>
     <url>
-        <loc>https://localhost:8000/ABOUT/</loc>
+        <loc>https://localhost:8000/ABOUT/about/</loc>
         <lastmod>2024-08-18</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/ABOUT/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/ABOUT/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/ABOUT/about/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/ABOUT/about/"/>
     </url>
     <url>
         <loc>https://localhost:8000/ARCHITECTURE/architecture/</loc>
@@ -141,11 +141,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/"/>
     </url>
     <url>
-        <loc>https://localhost:8000/zh/ABOUT/</loc>
+        <loc>https://localhost:8000/zh/ABOUT/about/</loc>
         <lastmod>2024-08-18</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/ABOUT/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/ABOUT/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/ABOUT/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/ABOUT/about/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/ARCHITECTURE/architecture/</loc>

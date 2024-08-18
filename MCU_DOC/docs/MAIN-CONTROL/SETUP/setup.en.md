@@ -142,3 +142,5 @@ Configure the clock as shown in the above figure. The clock configuration is cru
 !!! note
     So far, we have finished the basic setup up for MCU. You can have check of all configuration again and then click 'Generate Code' to generate the initialization code for the MCU. We will continue to set up the software environment in the next section.
 
+!!! tip
+    For simplicity, I did not include all the CubeMX configuration steps in this section. In stead, the configuration is divided into several sections according to the function of the configuration. In practice, one can configure all the settings in one go. 

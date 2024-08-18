@@ -257,7 +257,7 @@ markdown_extensions:
 nav:
   - ABOUT: 
       # - "index.md"
-      - "ABOUT/index.md"
+      - "ABOUT/about.md"
   - ARCHITECTURE:
       - "ARCHITECTURE/architecture.md"
   - MAIN-CONTROL:

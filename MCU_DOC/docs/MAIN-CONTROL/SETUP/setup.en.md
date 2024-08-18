@@ -1,7 +1,7 @@
 # SETUP
 
 !!! note
-    'SETUP' serves as the first step to set up the main control system, which enables many fundamental functions to facilitate the operation of the system.
+    'SETUP' serves as the first step to set up the main control system, which enables many fundamental functions to facilitate the operation of the system. This section focuses on basic setup for the main control board.
 
 ## HARDWARE PREPARATION
 
@@ -133,3 +133,12 @@ Select the 'RTC' tab and enable the 'RTC' as shown in the above figure. The RTC 
 ![DEBUG](config_debug.png)
 
 Select the 'DEBUG' tab and enable the 'Serial Wire' as shown in the above figure. The Serial Wire is a debug interface that allows the debugger to communicate with the MCU.
+
+#### Clock Configuration
+![CLOCK](config_clock.png)
+
+Configure the clock as shown in the above figure. The clock configuration is crucial for the MCU to operate correctly.
+
+!!! note
+    So far, we have finished the basic setup up for MCU. You can have check of all configuration again and then click 'Generate Code' to generate the initialization code for the MCU. We will continue to set up the software environment in the next section.
+

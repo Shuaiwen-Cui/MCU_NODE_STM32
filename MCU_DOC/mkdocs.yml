@@ -254,7 +254,8 @@ markdown_extensions:
 # Page Navigation Tree
 nav:
   - ABOUT: 
-      - "index.md"
+      # - "index.md"
+      - "ABOUT/index.md"
   - ARCHITECTURE:
       - "ARCHITECTURE/architecture.md"
   - MAIN-CONTROL:

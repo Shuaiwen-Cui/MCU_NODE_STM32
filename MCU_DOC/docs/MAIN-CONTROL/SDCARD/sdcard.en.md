@@ -16,3 +16,6 @@ For SDMMC configuration, refer to SDMMC tab.
 ![SDCARD_GPIO](sdcard_gpio.png)
 
 For SD card, we can use the default GPIO pins. However, you can change the GPIO pins according to your requirements.
+
+## GENERATE AND UPDATE CODE
+Finally, let's generate the code to save the current progress and to make it ready for following programming steps. Click the 'Generate Code' button at the top right corner of the screen.

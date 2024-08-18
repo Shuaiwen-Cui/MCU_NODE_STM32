@@ -144,3 +144,6 @@ Configure the clock as shown in the above figure. The clock configuration is cru
 
 !!! tip
     For simplicity, I did not include all the CubeMX configuration steps in this section. In stead, the configuration is divided into several sections according to the function of the configuration. In practice, one can configure all the settings in one go. 
+
+## GENERATE AND UPDATE CODE
+Finally, let's generate the code to save the current progress and to make it ready for following programming steps. Click the 'Generate Code' button at the top right corner of the screen.

@@ -22,3 +22,6 @@ As shown, in the 'NVIC Settings' tab, enable the SDMMC interrupt.
 ![NVIC_CONFIG](nvic.png)
 
 So far, the NVIC settings are as shown. 
+
+## GENERATE AND UPDATE CODE
+Finally, let's generate the code to save the current progress and to make it ready for following programming steps. Click the 'Generate Code' button at the top right corner of the screen.

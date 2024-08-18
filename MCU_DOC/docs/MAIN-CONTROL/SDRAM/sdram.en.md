@@ -16,3 +16,6 @@ The SDRAM Module we are using is WINBOND W9825G6KH-6I. You can find the datashee
 ![SDRAM_GPIO](sdram_gpio.png)
 
 Check the pin configuration. Compare the setup in CUBEMX with the pin design.
+
+## GENERATE AND UPDATE CODE
+Finally, let's generate the code to save the current progress and to make it ready for following programming steps. Click the 'Generate Code' button at the top right corner of the screen.

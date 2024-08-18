@@ -78,11 +78,25 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/RTOS/rtos/"/>
     </url>
     <url>
+        <loc>https://localhost:8000/MAIN-CONTROL/SDCARD/sdcard/</loc>
+        <lastmod>2024-08-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDCARD/sdcard/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDCARD/sdcard/"/>
+    </url>
+    <url>
         <loc>https://localhost:8000/MAIN-CONTROL/SDMMC/sdmmc/</loc>
         <lastmod>2024-08-18</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDMMC/sdmmc/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDMMC/sdmmc/"/>
+    </url>
+    <url>
+        <loc>https://localhost:8000/MAIN-CONTROL/SDRAM/sdram/</loc>
+        <lastmod>2024-08-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDRAM/sdram/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDRAM/sdram/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/SETUP/setup/</loc>
@@ -197,11 +211,25 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/RTOS/rtos/"/>
     </url>
     <url>
+        <loc>https://localhost:8000/zh/MAIN-CONTROL/SDCARD/sdcard/</loc>
+        <lastmod>2024-08-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDCARD/sdcard/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDCARD/sdcard/"/>
+    </url>
+    <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/SDMMC/sdmmc/</loc>
         <lastmod>2024-08-18</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDMMC/sdmmc/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDMMC/sdmmc/"/>
+    </url>
+    <url>
+        <loc>https://localhost:8000/zh/MAIN-CONTROL/SDRAM/sdram/</loc>
+        <lastmod>2024-08-18</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDRAM/sdram/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDRAM/sdram/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/SETUP/setup/</loc>

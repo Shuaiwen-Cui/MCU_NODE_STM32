@@ -36,4 +36,5 @@ Here, we set the pin mode to "Output" as we use it as a control for LED.
 !!! info
     The user label is used to mark the pin for easy identification. Here, we set it to "LED" to indicate that this pin is used to control the LED.
 
+## GENERATE AND UPDATE CODE
 Finally, let's generate the code to save the current progress and to make it ready for following programming steps. Click the 'Generate Code' button at the top right corner of the screen.

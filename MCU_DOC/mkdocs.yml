@@ -2,14 +2,14 @@
 # Built upon MkDocs & Material for MkDocs
 
 # Project information
-site_name: MCU_NODE_ESP32
+site_name: MCU_NODE_STM32
 site_url: https://localhost:8000/ # build and run on server, to visit it, type in the server's IP address and port number like this: xxx.xxx.xxx.xxx:8000
 site_author: Shuaiwen Cui
 site_description: >-
   
 # Repository
-repo_name: Shuaiwen-Cui/MCU_NODE_ESP32
-repo_url: https://github.com/Shuaiwen-Cui/MCU_NODE_ESP32.git
+repo_name: Shuaiwen-Cui/MCU_NODE_STM32
+repo_url: https://github.com/Shuaiwen-Cui/MCU_NODE_STM32.git
 
 # Copyright
 copyright: Copyright &copy; 2024 ~ now | 🚀 Shuaiwen Cui (Shaun)
@@ -117,7 +117,15 @@ plugins:
             ABOUT: 关于
             ARCHITECTURE: 架构
             MAIN-CONTROL: 主控
-            SENSING: 传感
+            SETUP: 设置
+            LED: 发光二极管
+            USART: 通用同步/异步收发器
+            FMC: 灵活存储控制器
+            SDMMC: 安全数字存储卡控制器
+            FILE-SYS: 文件系统
+            RTOS: 实时操作系统
+            POWER: 电源
+            PERCEPTION: 感知
             COMMUNICATION: 通信
             INTERFACING: 交互
 
@@ -251,8 +259,17 @@ nav:
       - "ARCHITECTURE/architecture.md"
   - MAIN-CONTROL:
       - "MAIN-CONTROL/main-control.md"
-  - SENSING:
-      - "SENSING/sensing.md"
+      - SETUP: "MAIN-CONTROL/SETUP/setup.md"
+      - LED: "MAIN-CONTROL/LED/led.md"
+      - USART: "MAIN-CONTROL/USART/usart.md"
+      - FMC: "MAIN-CONTROL/FMC/fmc.md"
+      - SDMMC: "MAIN-CONTROL/SDMMC/sdmmc.md"
+      - FILE-SYS: "MAIN-CONTROL/FILE-SYS/file-sys.md"
+      - RTOS: "MAIN-CONTROL/RTOS/rtos.md"
+  - POWER: 
+      - "POWER/power.md"
+  - PERCEPTION:
+      - "PERCEPTION/perception.md"
   - COMMUNICATION:
       - "COMMUNICATION/communication.md"
   - INTERFACING:

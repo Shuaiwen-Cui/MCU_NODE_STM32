@@ -130,6 +130,7 @@ plugins:
             PERCEPTION: 感知
             COMMUNICATION: 通信
             INTERFACING: 交互
+            RELEASES: 发布
 
 # # Hooks
 # hooks:
@@ -279,6 +280,8 @@ nav:
       - "COMMUNICATION/communication.md"
   - INTERFACING:
       - "INTERFACING/interfacing.md"
+  - RELEASES:
+      - "RELEASES/releases.md"
 
 
     

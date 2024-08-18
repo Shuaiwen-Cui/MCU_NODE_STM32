@@ -71,4 +71,14 @@
 
 将三个组件按照上图所示进行连接。然后将 USB-TTL 适配器连接到计算机的 USB 端口，将调试器连接到计算机的 USB 端口。
 
+## 软件准备
+
+### STM32CUBEMX
+
+STM32CUBEMX 是一个图形化工具，允许非常轻松地配置 STM32 微控制器，并通过分步过程生成相应的初始化 C 代码。可以从 [官方网站](https://www.st.com/en/development-tools/stm32cubemx.html) 下载并安装 STM32CubeMX。
+
+### KEIL MDK
+
+KEIL MDK 是一个适用于广泛的 ARM Cortex-M 系列微控制器设备的完整软件开发环境。可以从 [官方网站](https://www.keil.com/demo/eval/arm.htm) 下载并安装 KEIL MDK。
+
 ## 软件设置

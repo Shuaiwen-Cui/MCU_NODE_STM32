@@ -71,4 +71,26 @@ To program the main control board, we need three components:
 
 Connect the three components as shown in the figure above. Then connect the USB-TTL adapter and the debugger to the computer.
 
+## SOFTWARE PREPARATION
+
+### STM32CUBEMX
+STM32CUBEMX is a graphical tool that allows configuring the STM32 microcontroller very easily and generating the corresponding initialization C code through a step-by-step process. Download and install STM32CubeMX from the [official website](https://www.st.com/en/development-tools/stm32cubemx.html).
+
+### KEIL MDK
+KEIL MDK is a complete software development environment for a wide range of ARM Cortex-M based microcontroller devices. Download and install KEIL MDK from the [official website](https://www.keil.com/demo/eval/arm.htm).
+
 ## SOFTWARE SETUP
+
+### CREATE A NEW PROJECT IN STM32CUBEMX
+
+![STM32CUBEMX](STM32CUBEMX.png)
+
+Open STM32CubeMX and click the 'File' tab and then click the option 'New Project'.
+
+![NEW PROJECT](new_proj.png)
+
+Select the MCU series and the MCU model. Then click 'Start Project'.
+
+![Memory Protection](mpu.png)
+
+Enable the 'Memory Protection Unit' and click 'YES'.

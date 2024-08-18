@@ -1,2 +1,4 @@
 # MCU_NODE_STM32
-Make an edge intelligence node based on STM32
+Make an edge intelligence node based on STM32.
+
+Please check the link on the right-hand side for more information.

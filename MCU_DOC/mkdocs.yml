@@ -121,7 +121,9 @@ plugins:
             LED: 发光二极管
             USART: 通用同步/异步收发器
             FMC: 灵活存储控制器
+            SDRAM: 同步动态随机存储器
             SDMMC: 安全数字存储卡控制器
+            SDCARD: 安全数字存储卡
             FILE-SYS: 文件系统
             RTOS: 实时操作系统
             POWER: 电源
@@ -264,7 +266,9 @@ nav:
       - LED: "MAIN-CONTROL/LED/led.md"
       - USART: "MAIN-CONTROL/USART/usart.md"
       - FMC: "MAIN-CONTROL/FMC/fmc.md"
+      - SDRAM: "MAIN-CONTROL/SDRAM/sdram.md"
       - SDMMC: "MAIN-CONTROL/SDMMC/sdmmc.md"
+      - SDCARD: "MAIN-CONTROL/SDCARD/sdcard.md"
       - FILE-SYS: "MAIN-CONTROL/FILE-SYS/file-sys.md"
       - RTOS: "MAIN-CONTROL/RTOS/rtos.md"
   - POWER: 

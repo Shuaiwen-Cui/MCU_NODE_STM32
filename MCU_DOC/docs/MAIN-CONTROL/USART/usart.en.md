@@ -31,3 +31,5 @@ Let's create two DMA channels for USART1. One for transmitting data and the othe
 ![NVIC](config_usart_nvic.png)
 
 Here, let's enable the USART1 global interrupt. Note that for DMA, the interrupts are by default enabled once you enable the DMA channels.
+
+Finally, let's generate the code to save the current progress and to make it ready for following programming steps. Click the 'Generate Code' button at the top right corner of the screen.

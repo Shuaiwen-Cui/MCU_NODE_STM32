@@ -82,3 +82,57 @@ STM32CUBEMX 是一个图形化工具，允许非常轻松地配置 STM32 微控�
 KEIL MDK 是一个适用于广泛的 ARM Cortex-M 系列微控制器设备的完整软件开发环境。可以从 [官方网站](https://www.keil.com/demo/eval/arm.htm) 下载并安装 KEIL MDK。
 
 ## 软件设置
+
+### 在 STM32CUBEMX 中创建新项目
+
+#### 新建项目
+![STM32CUBEMX](STM32CUBEMX.png)
+
+打开 STM32CubeMX，点击“文件”选项卡，然后选择“新建项目”选项。
+
+#### 选择 MCU 系列和型号
+![NEW PROJECT](new_proj.png)
+
+选择 MCU 系列和 MCU 型号。然后点击“开始项目”。
+
+#### 启用内存保护单元
+![Memory Protection](mpu.png)
+
+启用“内存保护单元”，并点击“YES”。
+
+#### 项目信息和代码生成配置
+![Project Information](proj_info.png)
+
+![Project Code Generation](proj_code_gen.png)
+
+首先按照上图所示设置项目信息和代码生成配置。然后点击“生成代码”。
+
+### 系统配置
+
+让我们回到 Pinout & Configuration（引脚配置）选项卡，并按照下图配置系统。
+
+#### 系统核心 - SYS: 时间基准源
+![SYS](config_timebase.png)
+
+选择“SYS”选项卡，然后将“时间基准源”选择为“SysTick”。
+
+#### 系统核心 - RCC: 高速时钟 (HSE) 和低速时钟 (LSE)
+![RCC](config_rcc.png)
+
+选择“RCC”选项卡，并按照上图配置“高速时钟 (HSE)”和“低速时钟 (LSE)”。两者均设置为“晶体/陶瓷谐振器”。通常来说，外部晶振比内部 RC 振荡器更精确。
+
+#### 系统核心 - CORETEX_M7: 启用 I-Cache、D-Cache 和 MPU
+![CORETEX_M7](config_cortex_m7.png)
+
+选择“CORETEX_M7”选项卡，并按照上图启用“I-Cache”、“D-Cache”和“MPU”。某些高级功能需要启用 I-Cache、D-Cache 和 MPU，例如 X-CUBE-AI。
+
+#### 定时器 - RTC: 启用 RTC
+![RTC](config_rtc.png)
+
+选择“RTC”选项卡，并按照上图启用“RTC”。RTC 是一个实时时钟，可以用于跟踪当前时间和日期。这里我们启用 RTC 以备将来的应用。
+
+#### 跟踪和调试 - DEBUG: 启用串行线
+![DEBUG](config_debug.png)
+
+选择“DEBUG”选项卡，并按照上图启用“串行线”。串行线是一种调试接口，允许调试器与 MCU 通信。
+

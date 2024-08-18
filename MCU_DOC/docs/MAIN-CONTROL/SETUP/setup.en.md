@@ -83,14 +83,53 @@ KEIL MDK is a complete software development environment for a wide range of ARM 
 
 ### CREATE A NEW PROJECT IN STM32CUBEMX
 
+#### New Project
 ![STM32CUBEMX](STM32CUBEMX.png)
 
 Open STM32CubeMX and click the 'File' tab and then click the option 'New Project'.
 
+#### Select MCU Series and Model
 ![NEW PROJECT](new_proj.png)
 
 Select the MCU series and the MCU model. Then click 'Start Project'.
 
+### Enable Memory Protection Unit (MPU)
 ![Memory Protection](mpu.png)
 
 Enable the 'Memory Protection Unit' and click 'YES'.
+
+### Configure Project Information and Code Generation
+![Project Information](proj_info.png)
+
+![Project Code Generation](proj_code_gen.png)
+
+Setup the project information and code generation configuration first as shown in the above figures.Then click 'Generate Code'.
+
+### SYSTEM CONFIGURATION
+
+Let's go back to the Pinout & Configuration tab and configure the system as shown below.
+
+#### System Core - SYS: Timebase Source
+![SYS](config_timebase.png)
+
+Select the 'SYS' tab and then select the 'Timebase Source' as 'SysTick'.
+
+#### System Core - RCC: High Speed Clock (HSE) & Low Speed Clock (LSE)
+![RCC](config_rcc.png)
+
+Select the 'RCC' tab and configure the 'High Speed Clock (HSE)' and 'Low Speed Clock (LSE)' as shown in the above figure. Both of them are set to 'Crystal/Ceramic Resonator'. Generally speaking, the external crystal oscillators are more accurate than the internal RC oscillators.
+
+#### System Core - CORETEX_M7: Enable I-Cache & D-Cache & MPU
+![CORETEX_M7](config_cortex_m7.png)
+
+Select the 'CORETEX_M7' tab and enable the 'I-Cache', 'D-Cache', and 'MPU' as shown in the above figure. Some advanced features require the I-Cache, D-Cache, and MPU to be enabled, e.g., X-CUBE-AI. 
+
+#### Timer - RTC: Enable RTC
+![RTC](config_rtc.png)
+
+Select the 'RTC' tab and enable the 'RTC' as shown in the above figure. The RTC is a real-time clock that can be used to keep track of the current time and date. Here, we enable RTC for future potential applications.
+
+#### Trace and Debug - DEBUG: Enable Serial Wire
+![DEBUG](config_debug.png)
+
+Select the 'DEBUG' tab and enable the 'Serial Wire' as shown in the above figure. The Serial Wire is a debug interface that allows the debugger to communicate with the MCU.

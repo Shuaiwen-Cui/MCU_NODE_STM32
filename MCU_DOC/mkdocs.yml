@@ -118,6 +118,7 @@ plugins:
             ARCHITECTURE: 架构
             MAIN-CONTROL: 主控
             SETUP: 设置
+            BSP: 板级支持包
             LED: 发光二极管
             USART: 通用同步/异步收发器
             FMC: 灵活存储控制器
@@ -126,6 +127,9 @@ plugins:
             SDCARD: 安全数字存储卡
             FILE-SYS: 文件系统
             RTOS: 实时操作系统
+            COMPUTATION: 计算
+            CMSIS-DSP: CMSIS数字信号处理库
+            CMSIS-NN: CMSIS神经网络库
             POWER: 电源
             PERCEPTION: 感知
             COMMUNICATION: 通信
@@ -264,6 +268,7 @@ nav:
   - MAIN-CONTROL:
       - "MAIN-CONTROL/main-control.md"
       - SETUP: "MAIN-CONTROL/SETUP/setup.md"
+      - BSP: "MAIN-CONTROL/BSP/bsp.md"
       - LED: "MAIN-CONTROL/LED/led.md"
       - USART: "MAIN-CONTROL/USART/usart.md"
       - FMC: "MAIN-CONTROL/FMC/fmc.md"
@@ -272,6 +277,10 @@ nav:
       - SDCARD: "MAIN-CONTROL/SDCARD/sdcard.md"
       - FILE-SYS: "MAIN-CONTROL/FILE-SYS/file-sys.md"
       - RTOS: "MAIN-CONTROL/RTOS/rtos.md"
+  - COMPUTATION:
+      - "COMPUTATION/computation.md"
+      - CMSIS-DSP: "COMPUTATION/CMSIS-DSP/cmsis-dsp.md"
+      - CMSIS-NN: "COMPUTATION/CMSIS-NN/cmsis-nn.md"
   - POWER: 
       - "POWER/power.md"
   - PERCEPTION:

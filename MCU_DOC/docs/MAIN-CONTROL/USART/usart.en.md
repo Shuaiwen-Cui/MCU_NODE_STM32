@@ -47,6 +47,9 @@ We have introduced how to transplant and incorporate the BSP code into the proje
 4. Include the header file of the module code in the user project.
 5. Call the module function in the user project.
 
+!!! tip
+    Do remember to check the 'Use MicroLib' to enable the print out function in the 'Options for Target' -> 'Target' -> 'Code Generation' -> 'Use MicroLib'.
+
 ### CODE REVIEW - USART
 
 Let's review the code for the USART module. 

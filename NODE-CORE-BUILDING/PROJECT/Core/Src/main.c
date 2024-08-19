@@ -29,7 +29,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "bsp_init.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -111,7 +111,7 @@ int main(void)
   MX_RTC_Init();
   MX_FATFS_Init();
   /* USER CODE BEGIN 2 */
-
+  BSP_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */

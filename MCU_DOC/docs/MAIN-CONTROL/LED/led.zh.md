@@ -38,3 +38,74 @@
 
 ## 生成与更新代码
 接下来，我们生成代码以保存当前进度，并使其准备好进行后续的编程步骤。点击屏幕右上角的“生成代码”按钮。
+
+## 在Keil中编程
+
+### 整合模块代码
+
+我们已经介绍了如何将BSP代码移植并整合到项目中，这适用于每个相应的模块。对于移植：
+
+1. 从BSP项目中复制模块代码到用户项目中。
+2. 将模块代码添加到用户项目的包含路径中。
+3. 将模块代码添加到项目项中。
+4. 在用户项目中包含模块代码的头文件。
+5. 在用户项目中调用模块函数。
+
+### 代码审查 - LED
+
+让我们审查LED模块的代码。这个模块实际上非常简单，读者可以参考下面的代码了解详情。
+
+#### **iled.h**
+
+```c
+/*
+ * iled.h
+ *
+ *  Created on: June 07, 2024
+ *      Author: SHUAIWEN CUI
+ */
+
+#ifndef ILED_H_
+#define ILED_H_
+
+#include "stm32h7xx_hal.h" // HAL library file declaration, replace it with the corresponding file according to the actual situation
+#include "main.h" // IO definition and initialization function are in the main.c file, must be referenced
+
+void LED(uint8_t state);// LED independent control function (0 is off, other values are on)
+void LED_Toggle(void);// LED Toggle
+
+#endif /* ILED_H_ */
+
+```
+
+#### **iled.c**
+
+```c
+/*
+ * iled.c
+ *
+ *  Created on: June 07, 2024
+ *      Author: SHUAIWEN CUI
+ */
+
+#include "iled.h"
+
+void LED(uint8_t state) // LED R independent control function (0 is off, other values are on)
+{
+
+	if (state)
+	{
+		HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_RESET);
+	}
+	else
+	{
+		HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, GPIO_PIN_SET);
+	}
+}
+
+void LED_Toggle(void)
+{
+	int state = HAL_GPIO_ReadPin(LED_GPIO_Port, LED_Pin);
+	HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, 1 - state);
+}
+```

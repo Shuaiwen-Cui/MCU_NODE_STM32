@@ -23,3 +23,4 @@ Open the 'Options for Target' and add the path of the 'Include' folder to the 'I
 Now, the CMSIS-DSP library is successfully incorporated into the project. You can use the functions provided by the library in your project.
 
 
+

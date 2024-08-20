@@ -280,9 +280,9 @@ nav:
   - COMPUTATION:
       - "COMPUTATION/computation.md"
       - CMSIS-DSP: "COMPUTATION/CMSIS-DSP/cmsis-dsp.md"
-      - CMSIS-DSP-LIB: "COMPUTATION/CMSIS-DSP-LIB/cmsis-dsp-lib.md"
+      # - CMSIS-DSP-LIB: "COMPUTATION/CMSIS-DSP-LIB/cmsis-dsp-lib.md"
       - CMSIS-NN: "COMPUTATION/CMSIS-NN/cmsis-nn.md"
-      - CMSIS-NN-LIB: "COMPUTATION/CMSIS-NN-LIB/cmsis-nn-lib.md"
+      # - CMSIS-NN-LIB: "COMPUTATION/CMSIS-NN-LIB/cmsis-nn-lib.md"
   - POWER: 
       - "POWER/power.md"
   - PERCEPTION:

@@ -34,3 +34,15 @@ ADXL355 是Analog Devices的一款高精度、低噪声的三轴MEMS加速度计
 | 电源电压范围       | 2.0V 至 3.6V                 |
 | 内置功能           | 数字温度传感器, FIFO缓冲区  |
 | 稳定性             | 低漂移（随时间和温度变化）  |
+
+## 开发参考
+
+<div class="grid cards" markdown>
+
+-   :material-file:{ .lg .middle } __SPI__
+
+    ---
+
+    [:octicons-arrow-right-24: <a href="https://blog.csdn.net/as480133937/article/details/105764119" target="_blank"> Portal </a>](#)
+
+</div>

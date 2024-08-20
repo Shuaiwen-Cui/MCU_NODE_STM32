@@ -34,3 +34,14 @@ This accelerometer has a selectable measurement range of ±2g, ±4g, or ±8g and
 | Supply Voltage     | 2.0V to 3.6V                 |
 | Built-in Features  | Digital Temperature Sensor, FIFO Buffer |
 
+## DEV REFERENCE
+
+<div class="grid cards" markdown>
+
+-   :material-file:{ .lg .middle } __SPI__
+
+    ---
+
+    [:octicons-arrow-right-24: <a href="https://blog.csdn.net/as480133937/article/details/105764119" target="_blank"> Portal </a>](#)
+
+</div>

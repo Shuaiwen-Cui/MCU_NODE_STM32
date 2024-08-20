@@ -162,6 +162,20 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/perception/"/>
     </url>
     <url>
+        <loc>https://localhost:8000/PERCEPTION/ADXL355/adxl355/</loc>
+        <lastmod>2024-08-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/ADXL355/adxl355/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/ADXL355/adxl355/"/>
+    </url>
+    <url>
+        <loc>https://localhost:8000/PERCEPTION/ADXL362/adxl362/</loc>
+        <lastmod>2024-08-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/ADXL362/adxl362/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/ADXL362/adxl362/"/>
+    </url>
+    <url>
         <loc>https://localhost:8000/POWER/power/</loc>
         <lastmod>2024-08-20</lastmod>
         <changefreq>daily</changefreq>
@@ -342,6 +356,20 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/perception/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/perception/"/>
+    </url>
+    <url>
+        <loc>https://localhost:8000/zh/PERCEPTION/ADXL355/adxl355/</loc>
+        <lastmod>2024-08-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/ADXL355/adxl355/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/ADXL355/adxl355/"/>
+    </url>
+    <url>
+        <loc>https://localhost:8000/zh/PERCEPTION/ADXL362/adxl362/</loc>
+        <lastmod>2024-08-20</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/ADXL362/adxl362/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/ADXL362/adxl362/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/POWER/power/</loc>

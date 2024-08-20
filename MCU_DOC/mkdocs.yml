@@ -132,6 +132,7 @@ plugins:
             CMSIS-NN: CMSIS神经网络库
             POWER: 电源
             PERCEPTION: 感知
+            ACCELEROMETER: 加速度计
             COMMUNICATION: 通信
             INTERFACING: 交互
             RELEASES: 发布
@@ -287,6 +288,9 @@ nav:
       - "POWER/power.md"
   - PERCEPTION:
       - "PERCEPTION/perception.md"
+      - ACCELEROMETER:
+          - ADXL362: "PERCEPTION/ADXL362/adxl362.md"
+          - ADXL355: "PERCEPTION/ADXL355/adxl355.md"
   - COMMUNICATION:
       - "COMMUNICATION/communication.md"
   - INTERFACING:

@@ -23,6 +23,7 @@
 #include "mdma.h"
 #include "rtc.h"
 #include "sdmmc.h"
+#include "spi.h"
 #include "usart.h"
 #include "gpio.h"
 #include "fmc.h"
@@ -30,6 +31,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "bsp_init.h"
+#include "ADXL362.h"
+#include <stdlib.h>
 
 /* USER CODE END Includes */
 
@@ -40,7 +43,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define UART_TX_BUFFER_SIZE  7
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -51,6 +54,25 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+extern SPI_HandleTypeDef hspi1;
+extern DMA_HandleTypeDef hdma_spi1_rx;
+extern DMA_HandleTypeDef hdma_spi1_tx;
+
+/// Flag indicating successful data transmission via SPI (transmission complete). Declared in the file ADXL362.c
+extern bool spiTxComplete;
+/// Flag indicating successful data reception via SPI (reception complete). Declared in the file ADXL362.c
+extern bool spiRxComplete;
+
+/// XDATA buffer for transmission via UART
+uint8_t xBuff[UART_TX_BUFFER_SIZE] = "X: "; 
+/// YDATA buffer for transmission via UART
+uint8_t yBuff[UART_TX_BUFFER_SIZE] = "Y: "; 
+/// ZDATA buffer for transmission via UART
+uint8_t zBuff[UART_TX_BUFFER_SIZE] = "Z: "; 
+/// Final buffer for transmission via UART, containing data from xBuff, yBuff, and zBuff
+uint8_t txBuff[UART_TX_BUFFER_SIZE * 3 + 2];    
+/// Index of the data transmission buffer for UART
+uint8_t index_b = 0;
 
 /* USER CODE END PV */
 
@@ -63,6 +85,16 @@ static void MPU_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+/**
+ * @brief      Board functionality test
+ * 
+ */
+void ping() {
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_SET);
+  HAL_Delay(100);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_RESET);
+  HAL_Delay(100);
+}
 
 /* USER CODE END 0 */
 
@@ -111,8 +143,25 @@ int main(void)
   MX_FATFS_Init();
   MX_FMC_Init();
   MX_RTC_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   BSP_Init();
+
+  printf("ADXL362 TEST.\n\r");
+
+  ADXL362_Init(&hspi1, &hdma_spi1_rx, &hdma_spi1_tx); // Initialization of the ADXL362 accelerometer 
+
+  printf("ADXL362 initialization complete.\n\r");
+
+  ping();
+  ping();
+  
+  // Declaration and initialization of variables for storing accelerometer data
+  //uint16_t uint16x = 0, uint16y = 0, uint16z = 0;
+  uint8_t uint8x = 0, uint8y = 0, uint8z = 0;
+  uint8_t uint8x1 = 0, uint8y1 = 0, uint8z1 = 0;
+  int8_t delta = 0;
+  uint8_t flag_xyz;
 
   /* USER CODE END 2 */
 
@@ -121,8 +170,15 @@ int main(void)
   while (1)
   {
     LED_Toggle();
-    HAL_Delay(500);
-	printf("LED toggled.\n\r");
+    HAL_Delay(1000);
+    printf("LED toggled.\n\r");
+	  
+    // Reading data from the ADXL362 registers
+    ADXL362_ReadXYZ_8(&uint8x, &uint8y, &uint8z);
+
+    // Printing the data to the console
+    printf("X: %d, Y: %d, Z: %d\n\r", uint8x, uint8y, uint8z);
+	  
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -165,7 +221,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLM = 5;
   RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 4;
+  RCC_OscInitStruct.PLL.PLLQ = 5;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;

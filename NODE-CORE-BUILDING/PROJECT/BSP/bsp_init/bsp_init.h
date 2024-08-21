@@ -14,7 +14,7 @@
 #define BSP_INIT_SUCCESS 0
 #define BSP_INIT_FAIL 1
 
-#define BSP_INIT_TEST // test required for the BSP initialization, comment this out to disable the test
+// #define BSP_INIT_TEST // test required for the BSP initialization, comment this out to disable the test
 
 /**
  * @name Modules To Be Enabled

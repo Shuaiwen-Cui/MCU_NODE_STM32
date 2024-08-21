@@ -46,3 +46,15 @@ ADXL362 是来自Analog Devices的一款超低功耗三轴数字加速度计，�
     [:octicons-arrow-right-24: <a href="https://blog.csdn.net/qq_41777559/article/details/115492823?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522172414869816800207094200%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=172414869816800207094200&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-115492823-null-null.142^v100^pc_search_result_base5&utm_term=STM32HAL%E5%BA%93%E5%AE%9E%E7%8E%B0ADXL355%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%BC%A0%E6%84%9F%E5%99%A8%E7%AE%80%E5%8D%95%E8%AE%B0%E6%AD%A5%E5%8A%9F%E8%83%BD%EF%BC%88SPI%EF%BC%89&spm=1018.2226.3001.4187" target="_blank"> Portal </a>](#)
 
 </div>
+
+## 开发流程
+
+![SPI](SPI.png)
+
+![SPI_PIN](SPI_PIN.png)
+
+![INCLUDE](INCLUDE.png)
+
+![PATH](PATH.png)
+
+![INTEGRATION](INTEGRATION.png)

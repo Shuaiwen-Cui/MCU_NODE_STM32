@@ -121,6 +121,8 @@ plugins:
             BSP: 板级支持包
             LED: 发光二极管
             USART: 通用同步/异步收发器
+            NON-INTERACTIVE-MODE: 非交互模式
+            INTERACTIVE-MODE: 交互模式
             FMC: 灵活存储控制器
             SDRAM: 同步动态随机存储器
             SDMMC: 安全数字存储卡控制器
@@ -271,7 +273,9 @@ nav:
       - SETUP: "MAIN-CONTROL/SETUP/setup.md"
       - BSP: "MAIN-CONTROL/BSP/bsp.md"
       - LED: "MAIN-CONTROL/LED/led.md"
-      - USART: "MAIN-CONTROL/USART/usart.md"
+      - USART: 
+          - NON-INTERACTIVE-MODE: "MAIN-CONTROL/USART/usart.md"
+          - INTERACTIVE-MODE: "MAIN-CONTROL/USART/usart-interactive.md"
       - FMC: "MAIN-CONTROL/FMC/fmc.md"
       - SDRAM: "MAIN-CONTROL/SDRAM/sdram.md"
       - SDMMC: "MAIN-CONTROL/SDMMC/sdmmc.md"

@@ -2,6 +2,9 @@
 
 USART can be used for many different purposes, and for now, only USART1 is used for serial communication.
 
+!!! alert
+    This version is used for non-interactive version, as interruption and DMA features are enabled, kind of difficult to do interactive menu. For interactive version, please refer to the 'interactive' version.
+
 ## USART1 CIRCUIT
 ![USART1_CIRCUIT](usart_circuit.png)
 

@@ -2,6 +2,9 @@
 
 USART可以用于多种不同的用途，目前我们只使用USART1进行串行通信。
 
+!!! alert
+    此版本用于非交互版本，由于启用了中断和DMA功能，有点难做交互菜单。如需互动版本，请参阅“交互式”版本。
+
 ## USART1电路
 ![USART1_CIRCUIT](usart_circuit.png)
 

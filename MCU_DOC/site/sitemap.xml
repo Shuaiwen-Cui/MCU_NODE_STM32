@@ -148,6 +148,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SETUP/setup/"/>
     </url>
     <url>
+        <loc>https://localhost:8000/MAIN-CONTROL/USART/usart-interactive/</loc>
+        <lastmod>2024-08-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/USART/usart-interactive/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/USART/usart-interactive/"/>
+    </url>
+    <url>
         <loc>https://localhost:8000/MAIN-CONTROL/USART/usart/</loc>
         <lastmod>2024-08-22</lastmod>
         <changefreq>daily</changefreq>
@@ -342,6 +349,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SETUP/setup/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SETUP/setup/"/>
+    </url>
+    <url>
+        <loc>https://localhost:8000/zh/MAIN-CONTROL/USART/usart-interactive/</loc>
+        <lastmod>2024-08-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/USART/usart-interactive/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/USART/usart-interactive/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/USART/usart/</loc>

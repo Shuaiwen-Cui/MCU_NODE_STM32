@@ -1,0 +1,42 @@
+# OLED
+
+## OLED介绍
+
+OLED（有机发光二极管）是一种使用有机化合物产生光的显示技术。它是一种自发光显示器，这意味着它不需要背光灯来工作。OLED显示器以高对比度、广视角和快响应时间而闻名。它们通常用于智能手机、平板电脑和其他便携设备。
+
+## OLED模块
+
+![FRONT](front.png)
+
+![BACK](back.png)
+
+- OLED控制 - CH1116
+- OLED尺寸 - 1.3英寸
+- OLED分辨率 - 128x64
+
+<div class="grid cards" markdown>
+
+-   :shopping_cart:{ .lg .middle } __淘宝购买链接__
+
+    ---
+
+    淘宝购买链接
+
+    [:octicons-arrow-right-24: <a href="https://m.tb.cn/h.gNJD403ubrW3ZYi?tk=tceA3fHTq8c" target="_blank"> 商品链接 </a>](#)
+
+</div>
+
+## 驱动器参考
+- KEYSKING驱动器
+
+<div class="grid cards" markdown>
+
+-   :material-file:{ .lg .middle } __波特律动__
+
+    ---
+
+    波特律动
+
+    [:octicons-arrow-right-24: <a href="https://led.baud-dance.com/" target="_blank"> 门户 </a>](#)
+
+</div>

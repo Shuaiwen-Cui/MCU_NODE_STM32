@@ -137,6 +137,7 @@ plugins:
             ACCELEROMETER: 加速度计
             COMMUNICATION: 通信
             INTERFACING: 交互
+            OLED: OLED 显示屏
             RELEASES: 发布
 
 # # Hooks
@@ -299,6 +300,7 @@ nav:
       - "COMMUNICATION/communication.md"
   - INTERFACING:
       - "INTERFACING/interfacing.md"
+      - OLED: "INTERFACING/OLED/oled.md"
   - RELEASES:
       - "RELEASES/releases.md"
 

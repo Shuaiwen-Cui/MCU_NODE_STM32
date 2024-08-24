@@ -6,8 +6,8 @@
 #include "string.h"
 
 typedef enum {
-  OLED_COLOR_NORMAL = 0, // 正常模式 黑底白字
-  OLED_COLOR_REVERSED    // 反色模式 白底黑字
+  OLED_COLOR_NORMAL = 0, // NORMAL MODE BLACK BACKGROUND WHITE WORD
+  OLED_COLOR_REVERSED    // REVERSED MODE WHITE BACKGROUND BLACK WORD
 } OLED_ColorMode;
 
 void OLED_Init();

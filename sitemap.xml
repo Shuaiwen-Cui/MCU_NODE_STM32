@@ -29,6 +29,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/communication/"/>
     </url>
     <url>
+        <loc>https://localhost:8000/COMMUNICATION/WIFI/esp8266/</loc>
+        <lastmod>2024-08-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/WIFI/esp8266/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/WIFI/esp8266/"/>
+    </url>
+    <url>
         <loc>https://localhost:8000/COMMUNICATION/WIFI/wifi/</loc>
         <lastmod>2024-08-24</lastmod>
         <changefreq>daily</changefreq>
@@ -50,25 +57,11 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/CMSIS-DSP/cmsis-dsp/"/>
     </url>
     <url>
-        <loc>https://localhost:8000/COMPUTATION/CMSIS-DSP-LIB/cmsis-dsp-lib/</loc>
-        <lastmod>2024-08-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/CMSIS-DSP-LIB/cmsis-dsp-lib/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/CMSIS-DSP-LIB/cmsis-dsp-lib/"/>
-    </url>
-    <url>
         <loc>https://localhost:8000/COMPUTATION/CMSIS-NN/cmsis-nn/</loc>
         <lastmod>2024-08-24</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/CMSIS-NN/cmsis-nn/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/CMSIS-NN/cmsis-nn/"/>
-    </url>
-    <url>
-        <loc>https://localhost:8000/COMPUTATION/CMSIS-NN-LIB/cmsis-nn-lib/</loc>
-        <lastmod>2024-08-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/CMSIS-NN-LIB/cmsis-nn-lib/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/CMSIS-NN-LIB/cmsis-nn-lib/"/>
     </url>
     <url>
         <loc>https://localhost:8000/INTERFACING/interfacing/</loc>
@@ -246,6 +239,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/communication/"/>
     </url>
     <url>
+        <loc>https://localhost:8000/zh/COMMUNICATION/WIFI/esp8266/</loc>
+        <lastmod>2024-08-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/WIFI/esp8266/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/WIFI/esp8266/"/>
+    </url>
+    <url>
         <loc>https://localhost:8000/zh/COMMUNICATION/WIFI/wifi/</loc>
         <lastmod>2024-08-24</lastmod>
         <changefreq>daily</changefreq>
@@ -267,25 +267,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/CMSIS-DSP/cmsis-dsp/"/>
     </url>
     <url>
-        <loc>https://localhost:8000/zh/COMPUTATION/CMSIS-DSP-LIB/cmsis-dsp-lib/</loc>
-        <lastmod>2024-08-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/CMSIS-DSP-LIB/cmsis-dsp-lib/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/CMSIS-DSP-LIB/cmsis-dsp-lib/"/>
-    </url>
-    <url>
         <loc>https://localhost:8000/zh/COMPUTATION/CMSIS-NN/cmsis-nn/</loc>
         <lastmod>2024-08-24</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/CMSIS-NN/cmsis-nn/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/CMSIS-NN/cmsis-nn/"/>
-    </url>
-    <url>
-        <loc>https://localhost:8000/zh/COMPUTATION/CMSIS-NN-LIB/cmsis-nn-lib/</loc>
-        <lastmod>2024-08-24</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/CMSIS-NN-LIB/cmsis-nn-lib/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/CMSIS-NN-LIB/cmsis-nn-lib/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/INTERFACING/interfacing/</loc>

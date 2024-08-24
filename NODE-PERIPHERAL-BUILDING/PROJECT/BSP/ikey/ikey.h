@@ -6,8 +6,8 @@
  * @date 2024-07-14
  * ! Note: in this version, the key status reading is in blocking mode, which means the responsiveness is not good. Better to use interrupt mode.
  */
-#ifndef IKEY_H_
-#define IKEY_H_
+#ifndef __IKEY_H
+#define __IKEY_H
 
 #include "stm32h7xx_hal.h" // HAL library file declaration, replace it with the corresponding file according to the actual situation
 #include "main.h" // IO definition and initialization function are in the main.c file, must be referenced
@@ -52,4 +52,4 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin); // actually no need to state, no
 
 #endif
 
-#endif /* IKEY_H_ */
+#endif /* __IKEY_H */

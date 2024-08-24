@@ -12,7 +12,7 @@
 
 /**
  * @name VARIABLES
- * 
+ *
  */
 // The gap between the initialization of each module, in ms.
 int Init_Gap = 500;
@@ -30,7 +30,7 @@ int BSP_Init(void)
     int i;
 #ifdef MODULE_ENABLE_LED
     // BSP Initialization - LED - flash once to indicate OK
-    LED(0); // for deployment, switch off the LED to save power
+    LED(0);          // for deployment, switch off the LED to save power
 #ifdef BSP_INIT_TEST // for debugging, flash the LED to indicate status
     LED(1);
     HAL_Delay(200);
@@ -45,7 +45,7 @@ int BSP_Init(void)
     // nothing required
 #endif
 
-    HAL_Delay(2*Init_Gap); // to give the user enough time to connect to the serial terminal
+    HAL_Delay(2 * Init_Gap); // to give the user enough time to connect to the serial terminal
 
 #ifdef MODULE_ENABLE_USART1
 #ifdef BSP_INIT_TEST
@@ -168,6 +168,19 @@ int BSP_Init(void)
 
 #endif
 
+#ifdef MODULE_ENABLE_OLED
+    // BSP Initialization - OLED
+    printf("[INITIALIZATION] OLED Initialization - START\n\r");
+
+    OLED_Init();
+    OLED_NewFrame();
+    OLED_DrawImage((128 - (bilibiliImg.w)) / 2, 0, &bilibiliImg, OLED_COLOR_NORMAL);
+    OLED_PrintString(30, 64 - 16, "LIFTNODE", &font16x16, OLED_COLOR_NORMAL);
+    OLED_ShowFrame();
+
+    printf("[INITIALIZATION] OLED Initialization - FINISHED\n\r");
+    printf("\n\r");
+#endif
 
 #ifdef MODULE_ENABLE_USART1
     printf("[INITIALIZATION] BSP Initialization - FINISHED\n\r");

@@ -9,8 +9,8 @@
  * 
  */
 
-#ifndef IUSART_H_
-#define IUSART_H_
+#ifndef __IUSART_H
+#define __IUSART_H
 
 /**
  * ! INCLUDES
@@ -72,4 +72,4 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t size);
 #endif
 
 
-#endif /* IUSART_H_ */
+#endif /* __IUSART_H */

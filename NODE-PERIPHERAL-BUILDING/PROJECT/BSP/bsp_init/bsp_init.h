@@ -8,13 +8,13 @@
  * @copyright Copyright (c) 2024
  *
  */
-#ifndef BSP_INIT_H
-#define BSP_INIT_H
+#ifndef __BSP_INIT_H
+#define __BSP_INIT_H
 
 #define BSP_INIT_SUCCESS 0
 #define BSP_INIT_FAIL 1
 
-#define BSP_INIT_TEST // test required for the BSP initialization, comment this out to disable the test
+// #define BSP_INIT_TEST // test required for the BSP initialization, comment this out to disable the test
 
 /**
  * @name Modules To Be Enabled
@@ -27,6 +27,7 @@
  * @param MODULE_ENABLE_MEMORY //! Enable Memory module - for memory management on SDRAM
  * @param MODULE_ENABLE_SDCARD //! Enable SD Card module test - for SD Card basic io. !!! This module can not be used together with MODULE_ENABLE_FILE
  * @param MODULE_ENABLE_FILE //! Enable File module test - for file operations on SD Card !!! This module can not be used together with MODULE_ENABLE_SDCARD
+ * @param MODULE_ENABLE_OLED //! Enable OLED module
  */
 
 #define MODULE_ENABLE_LED // Enable LED module
@@ -36,6 +37,7 @@
 #define MODULE_ENABLE_MEMORY // Enable Memory module - for memory management on SDRAM
 // #define MODULE_ENABLE_SDCARD // Enable SD Card module
 #define MODULE_ENABLE_FILE   // Enable File module - for file operations on SD Card
+#define MODULE_ENABLE_OLED // Enable OLED module
 
 /**
  * @name Include Files
@@ -85,6 +87,14 @@
 
 #endif
 
+#ifdef MODULE_ENABLE_OLED
+
+#include "font.h"
+#include "oled.h"
+
+#endif
+
+
 /**
  * @name Function Prototypes
  *
@@ -99,4 +109,4 @@ int fputc(int ch, FILE *f);
 int fgetc(FILE *f);
 #endif
 
-#endif /* BSP_INIT_H */
+#endif /* __BSP_INIT_H */

@@ -50,12 +50,13 @@ project/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Middlewares\Third_Party\FatFs\src\ff_gen_drv.h \
   ..\Middlewares\Third_Party\FatFs\src\diskio.h \
   ..\Middlewares\Third_Party\FatFs\src\ff.h ..\FATFS\Target\sd_diskio.h \
-  ..\Core\Inc\mdma.h ..\Core\Inc\rtc.h ..\Core\Inc\sdmmc.h \
-  ..\Core\Inc\usart.h ..\Core\Inc\gpio.h ..\Core\Inc\fmc.h \
-  ..\BSP\bsp_init\bsp_init.h \
+  ..\Core\Inc\i2c.h ..\Core\Inc\mdma.h ..\Core\Inc\rtc.h \
+  ..\Core\Inc\sdmmc.h ..\Core\Inc\usart.h ..\Core\Inc\gpio.h \
+  ..\Core\Inc\fmc.h ..\BSP\bsp_init\bsp_init.h \
   D:\Keil5\ARM\ARMCLANG\Bin\..\include\stdio.h ..\BSP\iled\iled.h \
   ..\BSP\iusart\iusart.h D:\Keil5\ARM\ARMCLANG\Bin\..\include\string.h \
   D:\Keil5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
   D:\Keil5\ARM\ARMCLANG\Bin\..\include\stdbool.h ..\BSP\isdram\isdram.h \
   ..\BSP\imemory\imemory.h ..\BSP\ifile\ifile.h \
-  ..\Middlewares\Third_Party\FatFs\src\diskio.h
+  ..\Middlewares\Third_Party\FatFs\src\diskio.h ..\BSP\oled\font.h \
+  ..\BSP\oled\oled.h ..\BSP\oled\font.h

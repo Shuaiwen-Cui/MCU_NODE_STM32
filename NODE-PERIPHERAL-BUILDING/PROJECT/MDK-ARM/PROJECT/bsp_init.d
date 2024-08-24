@@ -55,4 +55,5 @@ project/bsp_init.o: ..\BSP\bsp_init\bsp_init.c ..\BSP\bsp_init\bsp_init.h \
   ..\Middlewares\Third_Party\FatFs\src\diskio.h ..\FATFS\App\fatfs.h \
   ..\Middlewares\Third_Party\FatFs\src\ff_gen_drv.h \
   ..\Middlewares\Third_Party\FatFs\src\diskio.h \
-  ..\Middlewares\Third_Party\FatFs\src\ff.h ..\FATFS\Target\sd_diskio.h
+  ..\Middlewares\Third_Party\FatFs\src\ff.h ..\FATFS\Target\sd_diskio.h \
+  ..\BSP\oled\font.h ..\BSP\oled\oled.h ..\BSP\oled\font.h

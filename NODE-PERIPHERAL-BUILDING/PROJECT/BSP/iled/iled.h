@@ -5,8 +5,8 @@
  *      Author: SHUAIWEN CUI
  */
 
-#ifndef ILED_H_
-#define ILED_H_
+#ifndef __ILED_H
+#define __ILED_H
 
 #include "stm32h7xx_hal.h" // HAL library file declaration, replace it with the corresponding file according to the actual situation
 #include "main.h" // IO definition and initialization function are in the main.c file, must be referenced
@@ -14,4 +14,4 @@
 void LED(uint8_t state);// LED independent control function (0 is off, other values are on)
 void LED_Toggle(void);// LED Toggle
 
-#endif /* ILED_H_ */
+#endif /* __ILED_H */

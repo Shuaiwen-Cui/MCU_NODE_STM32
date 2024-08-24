@@ -29,6 +29,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/communication/"/>
     </url>
     <url>
+        <loc>https://localhost:8000/COMMUNICATION/WIFI/wifi/</loc>
+        <lastmod>2024-08-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/WIFI/wifi/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/WIFI/wifi/"/>
+    </url>
+    <url>
         <loc>https://localhost:8000/COMPUTATION/computation/</loc>
         <lastmod>2024-08-24</lastmod>
         <changefreq>daily</changefreq>
@@ -237,6 +244,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/communication/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/communication/"/>
+    </url>
+    <url>
+        <loc>https://localhost:8000/zh/COMMUNICATION/WIFI/wifi/</loc>
+        <lastmod>2024-08-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/WIFI/wifi/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/WIFI/wifi/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/COMPUTATION/computation/</loc>

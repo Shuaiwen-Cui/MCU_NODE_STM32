@@ -37,6 +37,9 @@ OLED（有机发光二极管）是一种使用有机化合物产生光的显示�
 
     波特律动
 
-    [:octicons-arrow-right-24: <a href="https://led.baud-dance.com/" target="_blank"> 门户 </a>](#)
+    [:octicons-arrow-right-24: <a href="https://led.baud-dance.com/" target="_blank"> 传送门 </a>](#)
 
 </div>
+
+!!! info
+    KEYSKING和BAUD DANCE的驱动器适用于此OLED模块，测试可行。

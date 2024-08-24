@@ -42,3 +42,5 @@ OLED (Organic Light Emitting Diode) is a type of display technology that uses or
     [:octicons-arrow-right-24: <a href="https://led.baud-dance.com/" target="_blank"> Portal </a>](#)
 
 </div>
+!!! info
+    The drivers from KEYSKING and BAUD DANCE are recommended for this OLED module, tested OK.

@@ -45,3 +45,24 @@ OLED（有机发光二极管）是一种使用有机化合物产生光的显示�
     KEYSKING和BAUD DANCE的驱动器适用于此OLED模块，测试可行。
 
 ![LIFTNODE-OLED](LIFTNODE-OLED.jpg)
+
+## 实战
+
+### 硬件设置
+
+按照下表连接OLED模块到MCU。
+
+| OLED引脚 | MCU引脚 |
+|----------|---------|
+| VCC      | 3.3V（或外部VCC）   |
+| GND      | GND（或外部GND）    |
+| SCL      | PB6     |
+| SDA      | PB7     |
+
+### 软件设置
+
+STM32CUBEMX: 启用I2C1，配置PB6和PB7引脚分别为SCL和SDA。
+
+### 移植KEYSKING驱动并在主程序中调用相关函数
+
+参考上面keysking的连接。

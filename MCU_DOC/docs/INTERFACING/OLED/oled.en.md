@@ -47,3 +47,24 @@ OLED (Organic Light Emitting Diode) is a type of display technology that uses or
     The drivers from KEYSKING and BAUD DANCE are recommended for this OLED module, tested OK.
 
 ![LIFTNODE-OLED](LIFTNODE-OLED.jpg)
+
+## HANDS-ON
+
+### HARDWARE SETUP
+
+Follow the table below to connect the OLED module to the MCU.
+
+| OLED PIN | MCU PIN |
+|----------|---------|
+| VCC      | 3.3V (or external VCC)   |
+| GND      | GND (or external GND)    |
+| SCL      | PB6     |
+| SDA      | PB7     |
+
+### SOFTWARE SETUP
+
+STM32CUBEMX： enbable I2C1 and set the SCL and SDA pins to PB6 and PB7 respectively.
+
+### TRANSPLANT THE DRIVER FROM KEYSKING AND CALL IN THE MAIN FUNCTION
+
+Refer to the link above.

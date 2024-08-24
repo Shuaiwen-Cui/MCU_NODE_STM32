@@ -35,7 +35,11 @@ extern "C" {
 extern UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN Private defines */
+#define BUFFER_SIZE 256
 
+extern uint8_t dma_buff[BUFFER_SIZE];
+
+extern volatile uint8_t dma_data_length;
 /* USER CODE END Private defines */
 
 void MX_USART1_UART_Init(void);

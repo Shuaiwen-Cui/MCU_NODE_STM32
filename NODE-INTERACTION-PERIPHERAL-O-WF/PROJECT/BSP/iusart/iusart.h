@@ -55,7 +55,6 @@ extern DMA_HandleTypeDef hdma_usart1_rx; // Declare the HAL library structure of
 // extern char RX_BUF[RX_BUF_SIZE]; // Define the receiving buffer
 // extern char RX_IDLE_BUF[RX_IDLE_BUF_SIZE];
 
-
 /**
  * ! FUNCTION PROTOTYPES
  * 

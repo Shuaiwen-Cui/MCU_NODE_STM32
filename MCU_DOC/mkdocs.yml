@@ -136,6 +136,9 @@ plugins:
             PERCEPTION: 感知
             ACCELEROMETER: 加速度计
             COMMUNICATION: 通信
+            WIFI: 无线网络
+            ESP8266: ESP8266模块
+            STM32-ESP8266: STM32与ESP8266
             INTERFACING: 交互
             OLED: OLED 显示屏
             RELEASES: 发布
@@ -301,6 +304,7 @@ nav:
       - WIFI: 
           - "COMMUNICATION/WIFI/wifi.md"
           - ESP8266: "COMMUNICATION/WIFI/esp8266.md"
+          - STM32-ESP8266: "COMMUNICATION/WIFI/stm32-esp8266.md"
   - INTERFACING:
       - "INTERFACING/interfacing.md"
       - OLED: "INTERFACING/OLED/oled.md"

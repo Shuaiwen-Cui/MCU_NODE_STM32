@@ -298,6 +298,9 @@ nav:
           - ADXL355: "PERCEPTION/ADXL355/adxl355.md"
   - COMMUNICATION:
       - "COMMUNICATION/communication.md"
+      - WIFI: 
+          - "COMMUNICATION/WIFI/wifi.md"
+          - ESP8266: "COMMUNICATION/WIFI/esp8266.md"
   - INTERFACING:
       - "INTERFACING/interfacing.md"
       - OLED: "INTERFACING/OLED/oled.md"

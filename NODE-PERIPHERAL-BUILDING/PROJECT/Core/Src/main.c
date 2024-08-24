@@ -113,6 +113,7 @@ int main(void)
   MX_FMC_Init();
   MX_RTC_Init();
   MX_I2C1_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
   BSP_Init();
 

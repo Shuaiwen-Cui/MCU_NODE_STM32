@@ -6,9 +6,9 @@ OLED (Organic Light Emitting Diode) is a type of display technology that uses or
 
 ## OLED MODULE
 
-![FRONT](front.png) 
+![FRONT](FRONT_ORIGIN.jpg)
 
-![BACK](back.png)
+![BACK](BACK_ORIGIN.jpg)
 
 - OLED CONTROL - CH1116
 - OLED SIZE - 1.3 INCH
@@ -60,6 +60,8 @@ Follow the table below to connect the OLED module to the MCU.
 | GND      | GND (or external GND)    |
 | SCL      | PB6     |
 | SDA      | PB7     |
+
+![OLED-WIRING](OLED-WIRING.png){: width="800px" height="800px" }
 
 ### SOFTWARE SETUP
 

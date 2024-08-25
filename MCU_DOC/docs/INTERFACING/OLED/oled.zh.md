@@ -6,9 +6,9 @@ OLED（有机发光二极管）是一种使用有机化合物产生光的显示�
 
 ## OLED模块
 
-![FRONT](front.png)
+![FRONT](FRONT_ORIGIN.jpg)
 
-![BACK](back.png)
+![BACK](BACK_ORIGIN.jpg)
 
 - OLED控制 - CH1116
 - OLED尺寸 - 1.3英寸
@@ -58,6 +58,8 @@ OLED（有机发光二极管）是一种使用有机化合物产生光的显示�
 | GND      | GND（或外部GND）    |
 | SCL      | PB6     |
 | SDA      | PB7     |
+
+![OLED-WIRING](OLED-WIRING.png){: width="800px" height="800px" }
 
 ### 软件设置
 

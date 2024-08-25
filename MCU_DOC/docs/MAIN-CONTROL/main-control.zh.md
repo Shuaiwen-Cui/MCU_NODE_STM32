@@ -42,8 +42,14 @@
 
 ## 机械尺寸
 
-<iframe src="http://www.cuishuaiwen.com:7500/DEV/FK-STM32H743/FK743-MECHANICAL-DESIGN.pdf" width="100%" height="600px"></iframe>
+<!-- <iframe src="http://www.cuishuaiwen.com:7500/DEV/FK-STM32H743/FK743-MECHANICAL-DESIGN.pdf" width="100%" height="600px"></iframe>
 
 ## 电路图
 
-<iframe src="http://www.cuishuaiwen.com:7500/DEV/FK-STM32H743/FK743-LAYOUT.pdf" width="100%" height="600px"></iframe>
+<iframe src="http://www.cuishuaiwen.com:7500/DEV/FK-STM32H743/FK743-LAYOUT.pdf" width="100%" height="600px"></iframe> -->
+
+![MECHANICAL-DESIGN](MECHANICAL-DESIGN.png){: width="800px" height="800px" }
+
+![LAYOUT1](LAYOUT1.png){: width="800px" height="800px" }
+
+![LAYOUT2](LAYOUT2.png){: width="800px" height="800px" }

@@ -4,6 +4,37 @@
 
 主控 + 感知 + 通信 + 交互
 
+
+### 主控
+
+- STM32H743IIT6 (ARM Cortex-M7 480MHz)
+- RAM 1MB
+- FLASH 2MB
+- SDRAM 32MB
+- QSPI FLASH 8MB（待开发）
+- TF CARD 32GB
+
+### 感知
+- IMU
+    - MPU6050
+- ACC
+    - ADXL362
+    - ADXL355
+- T&H
+    - DHT11
+
+### 通信
+- WIFI
+    - ESP8266
+- BLUETOOTH
+    - HC-05
+- CELLULAR
+    - SIM7600G-H
+
+### 交互
+- OLED
+    - CH1116
+
 ## 软件架构
 
 物理层 -> 驱动层 -> 中间件层 -> 应用层 

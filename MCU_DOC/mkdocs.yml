@@ -135,6 +135,10 @@ plugins:
             POWER: 电源
             PERCEPTION: 感知
             ACCELEROMETER: 加速度计
+            ADXL362: ADXL362
+            ADXL355: ADXL355
+            IMU: 惯性测量单元
+            MPU6050: MPU6050
             COMMUNICATION: 通信
             WIFI: 无线网络
             ESP8266: ESP8266模块
@@ -299,6 +303,8 @@ nav:
       - ACCELEROMETER:
           - ADXL362: "PERCEPTION/ADXL362/adxl362.md"
           - ADXL355: "PERCEPTION/ADXL355/adxl355.md"
+      - IMU: 
+          - MPU6050: "PERCEPTION/MPU6050/mpu6050.md"
   - COMMUNICATION:
       - "COMMUNICATION/communication.md"
       - WIFI: 

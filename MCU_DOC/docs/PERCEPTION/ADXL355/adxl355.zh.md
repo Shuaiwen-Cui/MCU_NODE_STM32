@@ -11,14 +11,14 @@ ADXL355 是Analog Devices的一款高精度、低噪声的三轴MEMS加速度计
 
 <div class="grid cards" markdown>
 
--   :shopping_cart:{ .lg .middle } __product link on Taobao__
+-   :shopping_cart:{ .lg .middle } __商品链接__
 
     ---
 
-    Product link on Taobao
+    商品链接
 
 
-    [:octicons-arrow-right-24: <a href="https://m.tb.cn/h.gOAa1c9dkkkeJvb?tk=AzO934Jjml0" target="_blank"> Purchase Link </a>](#)
+    [:octicons-arrow-right-24: <a href="https://m.tb.cn/h.gOAa1c9dkkkeJvb?tk=AzO934Jjml0" target="_blank"> 购买链接 </a>](#)
 
 </div>
 

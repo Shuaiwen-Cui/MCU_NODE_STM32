@@ -11,14 +11,14 @@ ADXL362 是来自Analog Devices的一款超低功耗三轴数字加速度计，�
 
 <div class="grid cards" markdown>
 
--   :shopping_cart:{ .lg .middle } __product link on Taobao__
+-   :shopping_cart:{ .lg .middle } __商品链接__
 
     ---
 
-    Product link on Taobao
+    商品链接
 
 
-    [:octicons-arrow-right-24: <a href="https://m.tb.cn/h.gmUamYr0olYwEiw?tk=CKLS34JO9QL" target="_blank"> Purchase Link </a>](#)
+    [:octicons-arrow-right-24: <a href="https://m.tb.cn/h.gmUamYr0olYwEiw?tk=CKLS34JO9QL" target="_blank"> 购买链接 </a>](#)
 
 </div>
 

@@ -1,0 +1,8 @@
+../EdgeIntelligence/CMSIS-DSP/Source/FastMathFunctions/arm_cos_f32.c:71:11:arm_cos_f32	3
+../EdgeIntelligence/CMSIS-DSP/Source/FastMathFunctions/arm_cos_q15.c:49:7:arm_cos_q15	2
+../EdgeIntelligence/CMSIS-DSP/Source/FastMathFunctions/arm_cos_q31.c:49:7:arm_cos_q31	2
+../EdgeIntelligence/CMSIS-DSP/Source/FastMathFunctions/arm_sin_f32.c:71:11:arm_sin_f32	3
+../EdgeIntelligence/CMSIS-DSP/Source/FastMathFunctions/arm_sin_q15.c:49:7:arm_sin_q15	1
+../EdgeIntelligence/CMSIS-DSP/Source/FastMathFunctions/arm_sin_q31.c:49:7:arm_sin_q31	1
+../EdgeIntelligence/CMSIS-DSP/Source/FastMathFunctions/arm_sqrt_q15.c:50:12:arm_sqrt_q15	7
+../EdgeIntelligence/CMSIS-DSP/Source/FastMathFunctions/arm_sqrt_q31.c:50:12:arm_sqrt_q31	7

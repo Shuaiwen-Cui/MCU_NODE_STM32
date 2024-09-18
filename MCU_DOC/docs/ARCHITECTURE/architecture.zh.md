@@ -43,7 +43,7 @@
 
 初始化： STM32CUBEMX
 
-代码编辑： KEIL5/VSCODE
+代码编辑： KEIL5/STM32CUBEIDE/VSCODE
 
 ## 开发参考连接
 

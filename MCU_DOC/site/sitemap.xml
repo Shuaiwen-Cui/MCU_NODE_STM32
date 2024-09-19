@@ -134,6 +134,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/PERIPHERAL/peripheral/"/>
     </url>
     <url>
+        <loc>https://localhost:8000/MAIN-CONTROL/PREPARATION/preparation/</loc>
+        <lastmod>2024-09-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/PREPARATION/preparation/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/PREPARATION/preparation/"/>
+    </url>
+    <url>
         <loc>https://localhost:8000/MAIN-CONTROL/RTOS/rtos/</loc>
         <lastmod>2024-09-19</lastmod>
         <changefreq>daily</changefreq>
@@ -363,6 +370,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/PERIPHERAL/peripheral/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/PERIPHERAL/peripheral/"/>
+    </url>
+    <url>
+        <loc>https://localhost:8000/zh/MAIN-CONTROL/PREPARATION/preparation/</loc>
+        <lastmod>2024-09-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/PREPARATION/preparation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/PREPARATION/preparation/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/RTOS/rtos/</loc>

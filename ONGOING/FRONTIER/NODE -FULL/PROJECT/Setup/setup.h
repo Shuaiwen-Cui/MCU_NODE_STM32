@@ -18,7 +18,7 @@
 #define NODE_FAIL 1
 
 /**
- * @name CONFIGURATION
+ * @name MAIN CONTROL MODULE CONFIGURATION
  * @brief This section is to determine the modules to be included in the project
  * ! This is where you configure the modules to be included in the project
  * @param MODULE_ENABLE_LED //! Enable LED module
@@ -35,6 +35,21 @@
 // #define MODULE_ENABLE_SDCARD // Enable SD Card module
 #define MODULE_ENABLE_FILE   // Enable File module - for file operations on SD Card
 
+/**
+ * @name PERIPHERAL COMPONENT CONFIGURATION
+ * @brief This section is to determine the peripheral components to be incorporated in the project
+ * ! This is where you configure the peripheral components to be included in the project
+ * @param MODULE_ENABLE_OLED //! Enable OLED module
+ * 
+ */
+#define MODULE_ENABLE_OLED // Enable OLED module
+
+
+
+
+
+
+
 // Necessary Libraries
 #include <stdio.h>
 
@@ -43,29 +58,41 @@
 #include "bsp_led.h"
 #endif
 
+// USART for Debugging & Communication
 #ifdef MODULE_ENABLE_USART //! Note - Do rember to check the MicroLib option in the project settings
 #include "bsp_usart.h"
 #endif
 
+// SDRAM for Computation
 #ifdef MODULE_ENABLE_SDRAM
 #include "bsp_sdram.h"
 #endif
 
+// Memory Management
 #ifdef MODULE_ENABLE_MEMORY
 #include "bsp_memory.h"
 #endif
 
+// SD Card for Large Volume Storage
 #ifdef MODULE_ENABLE_SDCARD
 #include "bsp_sdcard.h"
 #endif
 
+// File System Wrap-up
 #ifdef MODULE_ENABLE_FILE
 #include "bsp_file.h"
+#endif
+
+// OLED for Interfacing
+#ifdef MODULE_ENABLE_OLED
+#include "font.h"
+#include "oled.h"
 #endif
 
 /**
  * @name NODE INFORMATION
  */
+
 
 /**
  * @name FUNCTION PROTOTYPING

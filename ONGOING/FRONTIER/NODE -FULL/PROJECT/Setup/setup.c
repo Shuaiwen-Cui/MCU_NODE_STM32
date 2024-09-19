@@ -164,6 +164,22 @@ int Node_Init(void)
     printf("[NODE INITIALIZATION] SD Card FATFS File IO Initialization - DONE.\n\r\n\r");
 #endif
 
+    HAL_Delay(Init_Gap);
+
+#ifdef MODULE_ENABLE_OLED
+    // BSP Initialization - OLED
+    printf("[NODE INITIALIZATION] OLED Initialization - START\n\r");
+
+    OLED_Init();
+    OLED_NewFrame();
+    OLED_DrawImage((128 - (copilotImg.w)) / 2, 0, &copilotImg, OLED_COLOR_NORMAL);
+    OLED_PrintString(32, 64 - 16, "LIFTNODE", &font16x16, OLED_COLOR_NORMAL);
+    OLED_ShowFrame();
+
+    printf("[NODE INITIALIZATION] OLED Initialization - FINISHED\n\r");
+    printf("\n\r");
+#endif
+
     return NODE_SUCCESS;
 }
 

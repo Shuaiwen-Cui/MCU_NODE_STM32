@@ -1,151 +1,297 @@
-# 初始化设置
-
-!!! note
-    '初始化设置' 是设置主控系统的第一步，使得系统能够运行基本功能。 本节重点介绍主控板的基本设置。
-
-## 硬件准备
-
-为了编程主控板，我们需要三个组件：
-
-- **主控板** - 嵌入 MCU 的开发板
-- **USB-TTL 适配器** - 将主控板连接到计算机
-- **调试器**（ST-LINK V2、J-LINK 等） - 用于编程主控板
-
-### 组件 1 - 主控板 - FANKE743
-
-![MAIN_CONTROL](main_control.jpg){: width="500px" height="500px" }
-
-<div class="grid cards" markdown>
-
--   :shopping_cart:{ .lg .middle } __产品链接__
-
-    ---
-
-    产品链接
-
-
-    [:octicons-arrow-right-24: <a href="https://m.tb.cn/h.glFZRKv3mP2cLID?tk=G3YX3VNEVf9" target="_blank"> Purchase Link </a>](#)
-
-</div>
-
-### 组件 2 - USB-TTL 适配器
-
-![USB_TTL_ADAPTER](usb_ttl.jpg)
-
-<div class="grid cards" markdown>
-
--   :shopping_cart:{ .lg .middle } __产品链接__
-
-    ---
-
-    产品链接
-
-
-    [:octicons-arrow-right-24: <a href="[https://m.tb.cn/h.glFZRKv3mP2cLID?tk=G3YX3VNEVf9 ](https://www.waveshare.com/usb-to-ttl.htm)" target="_blank"> Purchase Link </a>](#)
-
-</div>
-
-### 组件 3 - 调试器
-
-![DEBUGGER](debugger.png)
-
-<div class="grid cards" markdown>
-
--   :shopping_cart:{ .lg .middle } __产品链接__
-
-    ---
-
-    产品链接
-
-
-    [:octicons-arrow-right-24: <a href="https://item.taobao.com/item.htm?spm=a21n57.1.item.27.6054523cmH3JcG&priceTId=2100cfb417239664885743719e0be4&utparam=%7B%22aplus_abtest%22:%229e72697eebf441849f1700870339a8ad%22%7D&id=563709870959&ns=1&xxc=ad_ztc&skuId=4855986632645&pisk=f0QtthmAvJ2MWVqc51ZHoIBZO6FhkNCaIO5SoKvic9BdGp00_Fq2ktpd3dxM5d0vksBVntC4_I9fhtpcjk4l_182l82Yrzfaj-w8eOn61HNXNIibWyq31182l-hnlu4R_T3APFwvcWLBMIMXlhTXRB9eiIMfhdtIdQdylK6XlWKBNCHjhqg6RDO-prF9LfOtki9ODYeK070xkwdQQL1TzqAdRCd6e1_t0ml26hp51pelUvmvAs-AujuvC1sP3Q6sC8xNGMBp6EUnfU1dcTdF5zD9TGfCZp1-N41wWgQJ5GeEYFXORe_12jgf9FpwABKKBJp576_yRH47w6_FI17dijaXtTvC_NTYP7895dTpTZ2E5KICcNxwuAwkbssdpCL54FblyrcnELdmfWFK0m-6t3YMuVa08PTD9LV6fmo2mBRpEWFn0m-3DBpu1mmq0n3R." target="_blank"> Purchase Link </a>](#)
-
-</div>
-
-!!! info
-    CMSIS-DAP, ST-LINK, J-LINK等调试器都可以用于编程主控板。任何一种调试器都可以用来对主控板进行编程。
-
-## 硬件连接
-
-![CONNECTION](connection.png)
-
-将三个组件按照上图所示进行连接。然后将 USB-TTL 适配器连接到计算机的 USB 端口，将调试器连接到计算机的 USB 端口。
-
-## 软件准备
-
-### STM32CUBEMX
-
-STM32CUBEMX 是一个图形化工具，允许非常轻松地配置 STM32 微控制器，并通过分步过程生成相应的初始化 C 代码。可以从 [官方网站](https://www.st.com/en/development-tools/stm32cubemx.html) 下载并安装 STM32CubeMX。
-
-### KEIL MDK
-
-KEIL MDK 是一个适用于广泛的 ARM Cortex-M 系列微控制器设备的完整软件开发环境。可以从 [官方网站](https://www.keil.com/demo/eval/arm.htm) 下载并安装 KEIL MDK。
-
-## 软件设置
-
-### 在 STM32CUBEMX 中创建新项目
-
-#### 新建项目
-![STM32CUBEMX](STM32CUBEMX.png)
-
-打开 STM32CubeMX，点击“文件”选项卡，然后选择“新建项目”选项。
-
-#### 选择 MCU 系列和型号
-![NEW PROJECT](new_proj.png)
-
-选择 MCU 系列和 MCU 型号。然后点击“开始项目”。
-
-#### 启用内存保护单元
-![Memory Protection](mpu.png)
-
-启用“内存保护单元”，并点击“YES”。
-
-#### 项目信息和代码生成配置
-![Project Information](proj_info.png)
-
-![Project Code Generation](proj_code_gen.png)
-
-首先按照上图所示设置项目信息和代码生成配置。然后点击“生成代码”。
-
-### 系统配置
-
-让我们回到 Pinout & Configuration（引脚配置）选项卡，并按照下图配置系统。
-
-#### 系统核心 - SYS: 时间基准源
-![SYS](config_timebase.png)
-
-选择“SYS”选项卡，然后将“时间基准源”选择为“SysTick”。
-
-#### 系统核心 - RCC: 高速时钟 (HSE) 和低速时钟 (LSE)
-![RCC](config_rcc.png)
-
-选择“RCC”选项卡，并按照上图配置“高速时钟 (HSE)”和“低速时钟 (LSE)”。两者均设置为“晶体/陶瓷谐振器”。通常来说，外部晶振比内部 RC 振荡器更精确。
-
-#### 系统核心 - CORETEX_M7: 启用 I-Cache、D-Cache 和 MPU
-![CORETEX_M7](config_cortex_m7.png)
-
-选择“CORETEX_M7”选项卡，并按照上图启用“I-Cache”、“D-Cache”和“MPU”。某些高级功能需要启用 I-Cache、D-Cache 和 MPU，例如 X-CUBE-AI。
-
-#### 定时器 - RTC: 启用 RTC
-![RTC](config_rtc.png)
-
-选择“RTC”选项卡，并按照上图启用“RTC”。RTC 是一个实时时钟，可以用于跟踪当前时间和日期。这里我们启用 RTC 以备将来的应用。
-
-#### 跟踪和调试 - DEBUG: 启用串行线
-![DEBUG](config_debug.png)
-
-选择“DEBUG”选项卡，并按照上图启用“串行线”。串行线是一种调试接口，允许调试器与 MCU 通信。
-
-#### 时钟配置
-![CLOCK](config_clock.png)
-
-按照上图配置时钟。时钟配置对 MCU 正常运行至关重要。
-
-!!! note
-    到目前为止，我们已经完成了MCU的基本配置，可以最后检查一下目前的配置然后点击“生成代码”按钮生成代码。我们会在接下来的章节中继续配置软件环境。
-
-!!! tip
-    简洁起见，我没有在此处展示所有的配置选项。相反，这些配置根据各自功能被分成了几个部分分散在不同章节中。在实践中，可以把所有需要用到的配置一次性配置完成。
-
-## 生成与更新代码
-接下来，我们生成代码以保存当前进度，并使其准备好进行后续的编程步骤。点击屏幕右上角的“生成代码”按钮。
+# 设置
+
+!!! Note
+    "SETUP" 指代的是配置与初始化这一步骤。 这一部分意在配置硬件的基本信息，功能性模块，总领板级支持包，外设以及其他系统。
+
+## 如何设置
+
+在文件结构和项目结构中都有一个独立的文件夹名为 'Setup'。要修改节点初始化的配置，只需修改 .h 或 .c 文件中的参数和宏即可。
+
+## Setup 作用范围
+
+'Setup' 包含了几乎所有重要的可配置信息、模块、宏和变量。
+
+## 代码
+
+### setup.h
+
+```c
+/**
+ * @file setup.h
+ * @author SHUAIWEN CUI (SHUAIWEN001 AT e DOT ntu DOT edu DOT sg)
+ * @brief This file is for MCU node configuration and initialization setup.
+ * @version 1.0
+ * @date 2024-07-12
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
+#ifndef _SETUP_H_
+#define _SETUP_H_
+
+/**
+ * @name MACROS
+ */
+#define NODE_SUCCESS 0
+#define NODE_FAIL 1
+
+/**
+ * @name CONFIGURATION
+ * @brief This section is to determine the modules to be included in the project
+ * ! This is where you configure the modules to be included in the project
+ * @param MODULE_ENABLE_LED //! Enable LED module
+ * @param MODULE_ENABLE_USART //! Enable USART
+ * @param MODULE_ENABLE_SDRAM //! Enable SDRAM module to use external RAM for computation
+ * @param MODULE_ENABLE_MEMORY //! Enable Memory module - for memory management on SDRAM
+ * @param MODULE_ENABLE_SDCARD //! Enable SD Card module- for SD Card basic io. !!! This module can not be used together with MODULE_ENABLE_FILE. Better to disable this and use the MODULE_ENABLE_FILE. Enabling FATFS in CubeMX may lead to fail of this option, and you may need to reformat the SD card before using next time.
+ * @param MODULE_ENABLE_FILE //! Enable File module - for file operations on SD Card !!! This module can not be used together with MODULE_ENABLE_SDCARD. Better to enable this.
+ */
+#define MODULE_ENABLE_LED // Enable LED module
+#define MODULE_ENABLE_USART // Enable USART module
+#define MODULE_ENABLE_SDRAM  // Enable SDRAM module
+#define MODULE_ENABLE_MEMORY // Enable Memory module - for memory management on SDRAM
+// #define MODULE_ENABLE_SDCARD // Enable SD Card module
+#define MODULE_ENABLE_FILE   // Enable File module - for file operations on SD Card
+
+// Necessary Libraries
+#include <stdio.h>
+
+// LED for Status Indication
+#ifdef MODULE_ENABLE_LED
+#include "bsp_led.h"
+#endif
+
+#ifdef MODULE_ENABLE_USART //! Note - Do rember to check the MicroLib option in the project settings
+#include "bsp_usart.h"
+#endif
+
+#ifdef MODULE_ENABLE_SDRAM
+#include "bsp_sdram.h"
+#endif
+
+#ifdef MODULE_ENABLE_MEMORY
+#include "bsp_memory.h"
+#endif
+
+#ifdef MODULE_ENABLE_SDCARD
+#include "bsp_sdcard.h"
+#endif
+
+#ifdef MODULE_ENABLE_FILE
+#include "bsp_file.h"
+#endif
+
+/**
+ * @name NODE INFORMATION
+ */
+
+/**
+ * @name FUNCTION PROTOTYPING
+ */
+
+/**
+ * @name Node_Init
+ * @brief This function is for board initialization, with configurable initialization test incorporated.
+ */
+int Node_Init(void);
+
+#ifdef MODULE_ENABLE_USART
+// IO retargetting
+int fputc(int ch, FILE *f);
+int fgetc(FILE *f);
+#endif
+
+#endif /* _SETUP_H_ */
+```
+
+### setup.c
+
+```c
+/**
+ * @file setup.c
+ * @author SHUAIWEN CUI (SHUAIWEN001 AT e DOT ntu DOT edu DOT sg)
+ * @brief This file is for MCU node configuration and initialization setup.
+ * @version 1.0
+ * @date 2024-07-12
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
+#include "setup.h"
+
+/**
+ * @name INITIALIZATION TEST
+ * @brief This determines whether to conduct test when initializing the node. To disenable, comment it out.
+ */
+int init_test_mode = 0; // 0 for not, 1 for yes.
+
+/**
+ * @name VARIABLES
+ *
+ */
+// The gap between the initialization of each module, in ms.
+int Init_Gap = 300;
+
+/**
+ * @name Node_Init
+ * @brief This function is for board initialization, with configurable initialization test incorporated.
+ */
+int Node_Init(void)
+{
+    // Variables
+    int i;
+
+    // COMPONNET-LED
+#ifdef MODULE_ENABLE_LED
+    LED(0);                  // for deployment, switch off the LED to save power
+    if (init_test_mode == 1) // for debugging, flash the LED to indicate status
+    {
+        LED(1);
+        HAL_Delay(200);
+        LED(0);
+        HAL_Delay(200);
+        LED(1);
+    }
+#endif
+
+    // COMPONENT-USART-SERIAL Communication
+#ifdef MODULE_ENABLE_USART
+    if (init_test_mode == 1)
+    {
+        for (i = 0; i < 3; i++)
+        {
+            printf("[NODE INITIALIZATION] Count Down for Upcoming Testing: %d \n\r", 3 - i);
+            HAL_Delay(1000);
+        }
+        printf("\n\r");
+    }
+    printf("[NODE INITIALIZATION] Serial Communication - SUCCESS.\n\r\n\r");
+#endif
+
+    HAL_Delay(Init_Gap); // to give the user enough time to connect to the serial terminal
+
+    // COMPONENT-SDRAM
+#ifdef MODULE_ENABLE_SDRAM
+    // BSP Initialization - SDRAM
+    printf("[NODE INITIALIZATION] SDRAM Initialization - START.\n\r");
+    SDRAM_InitSequence();
+    printf("[NODE INITIALIZATION] SDRAM Initialization - DONE.\n\r\n\r");
+    if (init_test_mode == 1)
+    {
+        if (SDRAM_Test() == 0)
+        {
+            printf("[NODE INITIALIZATION] SDRAM TEST - SUCCESS.\n\r\n\r");
+        }
+        else
+        {
+            printf("[NODE INITIALIZATION] SDRAM TEST - FAIL.\n\r\n\r");
+        }
+    }
+#endif
+
+    HAL_Delay(Init_Gap);
+
+    // COMPONENT-MEMORY MANAGEMENT - SDRAM
+#ifdef MODULE_ENABLE_MEMORY
+    printf("[NODE INITIALIZATION] Memory Management Initialization - START.\n\r");
+    memory_init();
+    printf("[NODE INITIALIZATION] Memory Management Initialization - DONE.\n\r\n\r");
+    if (init_test_mode == 1)
+    {
+        printf("[NODE INITIALIZATION] Memory Management Test - START.\n\r");
+        if (memory_management_test() == 0)
+        {
+            printf("[NODE INITIALIZATION] Memory Management Test - SUCCESS.\n\r\n\r");
+        }
+        else
+        {
+            printf("[NODE INITIALIZATION] Memory Management Test - FAIL.\n\r\n\r");
+        }
+    }
+#endif
+
+    HAL_Delay(Init_Gap);
+
+    // COMPONENT-SDCARD (If you use FATFS, don't enable this.)
+#ifdef MODULE_ENABLE_SDCARD
+    printf("[NODE INITIALIZATION] SD Card Initialization - START.\n\r");
+    SD_Init();
+    printf("[NODE INITIALIZATION] SD CARD Initialization - DONE.\n\r");
+    if (init_test_mode == 1)
+    {
+        // SD Card Test
+        printf("[NODE INITIALIZATION] SD Card Test - START.\n\r");
+        SD_Test();
+        printf("[NODE INITIALIZATION] SD Card Test - DONE.\n\r");
+    }
+#endif
+
+    HAL_Delay(Init_Gap);
+
+#ifdef MODULE_ENABLE_FILE // the test is kept outside the test zone, as sd card hard conenction is not quite stable, and we need the test to ensure the connection is okay
+
+    printf("[NODE INITIALIZATION] SD Card File IO Initialization and Test - START.\n\r");
+    printf("\n\r");
+
+    // mount the file system
+    printf("[NODE INITIALIZATION] Mounting the file system.\n\r");
+    Mount_FatFs();
+    printf("\n\r");
+
+    // get disk information
+    printf("[NODE INITIALIZATION] Getting disk information.\n\r");
+    FatFs_GetDiskInfo();
+    printf("\n\r");
+
+    if (init_test_mode == 1)
+    {
+        // scan the directory
+        printf("[NODE INITIALIZATION] Scanning the directory.\n\r");
+        FatFs_ScanDir("0:/");
+        printf("\n\r");
+
+        // write a text file
+        printf("[NODE INITIALIZATION] Writing a text file.\n\r");
+        FatFs_WriteTXTFile("test.txt", 2016, 11, 15);
+        printf("\n\r");
+
+        // read a text file
+        printf("[NODE INITIALIZATION] Reading a text file.\n\r");
+        FatFs_ReadTXTFile("test.txt");
+        printf("\n\r");
+
+        // get file information
+        printf("[NODE INITIALIZATION] Getting file information.\n\r");
+        FatFs_GetFileInfo("test.txt");
+        printf("\n\r");
+
+        // delete a file
+        printf("[NODE INITIALIZATION] Deleting a file.\n\r");
+        FatFs_DeleteFile("test.txt");
+        printf("\n\r");
+    }
+    printf("[NODE INITIALIZATION] SD Card FATFS File IO Initialization - DONE.\n\r\n\r");
+#endif
+
+    return NODE_SUCCESS;
+}
+
+#ifdef MODULE_ENABLE_USART
+// MicroLib needed for retargetting
+// retarget fputc for printf
+int fputc(int ch, FILE *f)
+{
+    uint8_t temp = (uint8_t)ch;
+    HAL_UART_Transmit(&huart1, &temp, 1, HAL_MAX_DELAY);
+    return ch;
+}
+
+// retarget fgetc for scanf
+int fgetc(FILE *f)
+{
+    while (__HAL_UART_GET_FLAG(&huart1, UART_FLAG_RXNE) == RESET)
+        ;                                      // Wait until the data is received
+    return (int)(huart1.Instance->RDR & 0xFF); // Read the received data
+}
+#endif
+```

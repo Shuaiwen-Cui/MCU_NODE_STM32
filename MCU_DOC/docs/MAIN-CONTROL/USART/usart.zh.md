@@ -59,13 +59,13 @@ USART可以用于多种不同的用途，目前我们只使用USART1进行串行
 
 让我们审查USART模块的代码。
 
-#### **iusart.h**
+#### **bsp_usart.h**
 
 ```c
 /**
- * @file iusart.h
+ * @file bsp_usart.h
  * @author SHUAIWEN CUI (shuaiwencui AT gmail DOT com)
- * @brief This is the header file for the iusart.c file
+ * @brief This is the header file for the bsp_usart.c file
  * @version 1.0
  * @date 2024-06-24
  * 
@@ -73,8 +73,8 @@ USART可以用于多种不同的用途，目前我们只使用USART1进行串行
  * 
  */
 
-#ifndef IUSART_H_
-#define IUSART_H_
+#ifndef _BSP_USART_H_
+#define _BSP_USART_H_
 
 /**
  * ! INCLUDES
@@ -136,17 +136,18 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t size);
 #endif
 
 
-#endif /* IUSART_H_ */
+#endif /* _BSP_USART_H_ */
+
 
 ```
 
-#### **iusart.c**
+#### **bsp_usart.c**
 
 ```c
 /**
- * @file iusart.c
+ * @file bsp_usart.c
  * @author SHUAIWEN CUI (shuaiwencui@gmail.com)
- * @brief This is the source file for the iusart.c file
+ * @brief This is the source file for the bsp_usart.c file
  * @version 1.0
  * @date 2024-06-24
  *
@@ -154,7 +155,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t size);
  *
  */
 
-#include "iusart.h"
+#include "bsp_usart.h"
 
 /**
  * @name test part
@@ -166,7 +167,7 @@ char RX_IDLE_BUF[RX_IDLE_BUF_SIZE]; // Define the idle receiving buffer (IDEL Mo
 
 /**
  * @name MCU_serial_init
- * @brief This function is used to initialize the USART1, and the reception method is according to the reception mode RX_MODE defined in the iusart.h file. The normal mode is the blocking mode, not recommended as it will block the main loop and causes waste of CPU resources; the interrupt mode is recommended; and the DMA mode is the most recommended.
+ * @brief This function is used to initialize the USART1, and the reception method is according to the reception mode RX_MODE defined in the bsp_usart.h file. The normal mode is the blocking mode, not recommended as it will block the main loop and causes waste of CPU resources; the interrupt mode is recommended; and the DMA mode is the most recommended.
  *
  */
 void MCU_serial_init(void)
@@ -199,7 +200,7 @@ void MCU_serial_init(void)
 
 /**
  * @name MCU_Send
- * @brief This function is used to send data through the USART1, and the transmission method is according to the transmission mode TX_MODE defined in the iusart.h file
+ * @brief This function is used to send data through the USART1, and the transmission method is according to the transmission mode TX_MODE defined in the bsp_usart.h file
  * @param pData: The pointer to the data to be sent
  * @param size: The size of the data to be sent
  * @retval None
@@ -223,7 +224,7 @@ void MCU_send(uint8_t *pData, uint16_t size)
 
 /**
  * @name MCU_printf
- * @brief This function is used to send formatted data through the USART1, and the transmission method is according to the transmission mode TX_MODE defined in the iusart.h file
+ * @brief This function is used to send formatted data through the USART1, and the transmission method is according to the transmission mode TX_MODE defined in the bsp_usart.h file
  * @param format: The pointer to the formatted string to be sent
  * @param ...: The arguments to be formatted
  * @retval None
@@ -285,6 +286,7 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t size)
     }
 }
 #endif
+
 
 ```
 

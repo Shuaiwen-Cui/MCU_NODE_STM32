@@ -37,19 +37,19 @@
 
 让我们审查 SDRAM 模块的代码。
 
-#### **isdram.h**
+#### **bsp_sdram.h**
 
 ```c
 /**
- * @file isdram.h
+ * @file bsp_sdram.h
  * @author SHUAIWEN CUI (shuaiwencui AT gmail DOT com)
- * @brief This file is the header file for the isdram.c file
+ * @brief This file is the header file for the bsp_sdram.c file
  * @version 1.0
  * @date 2024-07-16
  * @ref https://blog.csdn.net/Believeziwo/article/details/131372421
  */
-#ifndef __ISDRAM_H
-#define __ISDRAM_H
+#ifndef _BSP_SDRAM_H_
+#define _BSP_SDRAM_H_
 
 /**
  * @name INCLUDES
@@ -80,13 +80,13 @@
 #define SDRAM_MODEREG_WRITEBURST_MODE_SINGLE ((uint16_t)0x0200)
 
 #define SDRAM_DEBUG_ON 1
-#define SDRAM_INFO(fmt, arg...) printf("[INITIALIZATION] " fmt "\n", ##arg)
-#define SDRAM_ERROR(fmt, arg...) printf("[INITIALIZATION] " fmt "\n", ##arg)
+#define SDRAM_INFO(fmt, arg...) printf("[NODE INITIALIZATION] " fmt "\n", ##arg)
+#define SDRAM_ERROR(fmt, arg...) printf("[NODE INITIALIZATION] " fmt "\n", ##arg)
 #define SDRAM_DEBUG(fmt, arg...)                                       \
     do                                                                 \
     {                                                                  \
         if (SDRAM_DEBUG_ON)                                            \
-            printf("[INITIALIZATION] [%d]" fmt "\n", __LINE__, ##arg); \
+            printf("[NODE INITIALIZATION] [%d]" fmt "\n", __LINE__, ##arg); \
     } while (0)
 
 /**
@@ -98,17 +98,18 @@ void SDRAM_WriteBuffer(uint32_t *pBuffer, uint32_t uwWriteAddress, uint32_t uwBu
 void SDRAM_ReadBuffer(uint32_t *pBuffer, uint32_t uwReadAddress, uint32_t uwBufferSize);
 uint8_t SDRAM_Test(void);
 
-#endif /* __ISDRAM_H */
+#endif /* _BSP_SDRAM_H_ */
+
 
 ```
 
-#### **isdram.c**
+#### **bsp_sdram.c**
 
 ```c
 /**
- * @file isdram.c
+ * @file bsp_sdram.c
  * @author SHUAIWEN CUI (shuaiwencui AT gmail DOT com)
- * @brief This file is the source file for the isdram.c file
+ * @brief This file is the source file for the bsp_sdram.c file
  * @version 1.0
  * @date 2024-07-16
  * @ref https://blog.csdn.net/Believeziwo/article/details/131372421
@@ -118,7 +119,7 @@ uint8_t SDRAM_Test(void);
  * @name INCLUDES
  *
  */
-#include "isdram.h"
+#include "bsp_sdram.h"
 #include "fmc.h"
 
 /**
@@ -376,11 +377,11 @@ uint8_t SDRAM_Test(void)
 
 让我们来审查内存管理的代码。
 
-#### **imemory.h**
+#### **bsp_memory.h**
 
 ```c
 /**
- * @file imemory.h
+ * @file bsp_memory.h
  * @author SHUAIWEN CUI (shuaiwencui AT gmail DOT com)
  * @brief This is the header file for the memory management module.
  * @version 1.0
@@ -391,8 +392,8 @@ uint8_t SDRAM_Test(void)
  *
  */
 
-#ifndef __IMEMORY_H
-#define __IMEMORY_H
+#ifndef _BSP_MEMORY_H_
+#define _BSP_MEMORY_H_
 
 /**
  * @name INCLUDES
@@ -400,8 +401,8 @@ uint8_t SDRAM_Test(void)
 #include "stm32h7xx.h"
 #include <stddef.h>
 #include <stdint.h>
-#include "iusart.h"
-#include "isdram.h"
+#include "bsp_usart.h"
+#include "bsp_sdram.h"
 
 /**
  * @name FUNCTION PROTOTYPES
@@ -437,15 +438,16 @@ void memory_free(void *ptr);
 int memory_management_test(void);
 
 
-#endif /* __IMEMORY_H */
+#endif /* _BSP_MEMORY_H_ */
+
 
 ```
 
-#### **imemory.c**
+#### **bsp_memory.c**
 
 ```c
 /**
- * @file imemory.h
+ * @file bsp_memory.h
  * @author SHUAIWEN CUI (shuaiwencui AT gmail DOT com)
  * @brief This is the header file for the memory management module.
  * @version 1.0
@@ -461,7 +463,7 @@ int memory_management_test(void);
 /**
  * @name INCLUDES
  */
-#include "imemory.h"
+#include "bsp_memory.h"
 
 /**
  * @name MACROS

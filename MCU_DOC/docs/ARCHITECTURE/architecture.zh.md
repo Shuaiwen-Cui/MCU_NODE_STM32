@@ -2,6 +2,8 @@
 
 ## 硬件架构
 
+![Hardware Architecture](hw.png)
+
 主控 + 感知 + 通信 + 交互
 
 
@@ -36,6 +38,8 @@
     - CH1116
 
 ## 软件架构
+
+![Software Architecture](sw.png)
 
 物理层 -> 驱动层 -> 中间件层 -> 应用层 
 

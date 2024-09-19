@@ -123,10 +123,50 @@ int main(void)
   while (1)
   {
     LED_Toggle();
-    HAL_Delay(1000);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    // Read all parameters
+    MPU6050_Read_All(&hi2c2, &MPU6050);
+    printf("Acceleration x:%12.8f \t y:%12.8f \t z:%12.8f\n", MPU6050.Ax, MPU6050.Ay, MPU6050.Az);
+    printf("Gyroscope x   :%12.8f \t y:%12.8f \t z:%12.8f\n", MPU6050.Gx, MPU6050.Gy, MPU6050.Gz);
+    printf("Temperature   :%12.8f\n", MPU6050.Temperature);
+
+
+    // OLED UPDATING
+    sprintf(acc_x_str, "%12.8f", MPU6050.Ax);
+    sprintf(acc_y_str, "%12.8f", MPU6050.Ay);
+    sprintf(acc_z_str, "%12.8f", MPU6050.Az);
+    sprintf(IMU_Temp, "%4.2f Deg C", MPU6050.Temperature);
+
+    // DISPLAY ACCELERATION
+    OLED_NewFrame();
+
+    OLED_PrintASCIIString(0, 0, "Accel X:", &afont8x6, OLED_COLOR_NORMAL);
+    OLED_PrintASCIIString(50, 0, acc_x_str, &afont8x6, OLED_COLOR_NORMAL);
+    OLED_PrintASCIIString(0, 12, "Accel Y:", &afont8x6, OLED_COLOR_NORMAL);
+    OLED_PrintASCIIString(50, 12, acc_y_str, &afont8x6, OLED_COLOR_NORMAL);
+    OLED_PrintASCIIString(0, 24, "Accel Z:", &afont8x6, OLED_COLOR_NORMAL);
+    OLED_PrintASCIIString(50, 24, acc_z_str, &afont8x6, OLED_COLOR_NORMAL);
+    OLED_PrintASCIIString(0, 36, "Temp:", &afont8x6, OLED_COLOR_NORMAL);
+    OLED_PrintASCIIString(50, 36, IMU_Temp, &afont8x6, OLED_COLOR_NORMAL);
+
+    OLED_ShowFrame();
+
+    // // Read acceleration
+    // MPU6050_Read_Accel(&hi2c2, &MPU6050);
+    // printf("Updated acceleration only x:%12.8f \t y:%12.8f \t z:%12.8f\n", MPU6050.Ax, MPU6050.Ay, MPU6050.Az);
+
+    // // Read gyroscope
+    // MPU6050_Read_Gyro(&hi2c2, &MPU6050);
+    // printf("Updated gyroscope only x:%12.8f \t y:%12.8f \t z:%12.8f\n", MPU6050.Gx, MPU6050.Gy, MPU6050.Gz);
+
+    // // Read temperature
+    // MPU6050_Read_Temp(&hi2c2, &MPU6050);
+    // printf("Updated temperature only %12.8f\n", MPU6050.Temperature);
+
+    HAL_Delay(10);
   }
   /* USER CODE END 3 */
 }

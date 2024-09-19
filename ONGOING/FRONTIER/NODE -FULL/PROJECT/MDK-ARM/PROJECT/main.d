@@ -60,4 +60,4 @@ project/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\BSP\bsp_memory.h ..\BSP\bsp_usart.h ..\BSP\bsp_sdram.h \
   ..\BSP\bsp_file.h ..\Middlewares\Third_Party\FatFs\src\diskio.h \
   ..\Peripherals\Interfacing\font.h ..\Peripherals\Interfacing\oled.h \
-  ..\Peripherals\Interfacing\font.h
+  ..\Peripherals\Interfacing\font.h ..\Peripherals\Perception\mpu6050.h

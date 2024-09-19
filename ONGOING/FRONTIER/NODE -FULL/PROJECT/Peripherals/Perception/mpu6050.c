@@ -2,7 +2,7 @@
  * mpu6050.c
  *
  *  Created on: Nov 13, 2019
- *      Author: Bulanov Konstantin
+ *  Author: Bulanov Konstantin
  *
  *  Contact information
  *  -------------------
@@ -44,6 +44,15 @@
 #define TEMP_OUT_H_REG 0x41
 #define GYRO_CONFIG_REG 0x1B
 #define GYRO_XOUT_H_REG 0x43
+
+// char array for acc_x, acc_y, acc_z
+char acc_x_str[13];
+char acc_y_str[13];
+char acc_z_str[13];
+char IMU_Temp[13];
+
+// MPU6050
+MPU6050_t MPU6050;
 
 // Setup MPU6050
 #define MPU6050_ADDR 0xD0

@@ -35,6 +35,7 @@
 "project\bsp_memory.o"
 "project\bsp_sdcard.o"
 "project\bsp_file.o"
+"project\mpu6050.o"
 "project\font.o"
 "project\oled.o"
 "project\diskio.o"

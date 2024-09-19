@@ -40,15 +40,11 @@
  * @brief This section is to determine the peripheral components to be incorporated in the project
  * ! This is where you configure the peripheral components to be included in the project
  * @param MODULE_ENABLE_OLED //! Enable OLED module
+ * @param MODULE_ENABL_MPU6050 //! Enable IMU MPU6050 module
  * 
  */
 #define MODULE_ENABLE_OLED // Enable OLED module
-
-
-
-
-
-
+#define MODULE_ENABLE_MPU6050 // Enable IMU MPU6050 module
 
 // Necessary Libraries
 #include <stdio.h>
@@ -88,6 +84,13 @@
 #include "font.h"
 #include "oled.h"
 #endif
+
+// MPU6050 for IMU
+#ifdef MODULE_ENABLE_MPU6050
+#include "mpu6050.h"
+#endif
+
+
 
 /**
  * @name NODE INFORMATION

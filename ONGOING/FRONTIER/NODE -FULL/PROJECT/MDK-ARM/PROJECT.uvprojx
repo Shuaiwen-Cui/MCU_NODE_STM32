@@ -820,6 +820,18 @@
         </Group>
         <Group>
           <GroupName>Peripherals/Perception</GroupName>
+          <Files>
+            <File>
+              <FileName>mpu6050.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Peripherals\Perception\mpu6050.c</FilePath>
+            </File>
+            <File>
+              <FileName>mpu6050.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Peripherals\Perception\mpu6050.h</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Peripherals/Communication</GroupName>

@@ -180,6 +180,16 @@ int Node_Init(void)
     printf("\n\r");
 #endif
 
+    HAL_Delay(10*Init_Gap);
+
+#ifdef MODULE_ENABLE_MPU6050
+    // BSP Initialization - MPU6050
+    printf("[NODE INITIALIZATION] MPU6050 Initialization - START.\n\r");
+    while (MPU6050_Init(&hi2c2) == 1)
+        ;
+    printf("[NODE INITIALIZATION] MPU6050 Initialization - DONE.\n\r\n\r");
+#endif
+
     return NODE_SUCCESS;
 }
 

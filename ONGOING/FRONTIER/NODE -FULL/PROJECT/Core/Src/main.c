@@ -166,7 +166,7 @@ int main(void)
     // MPU6050_Read_Temp(&hi2c2, &MPU6050);
     // printf("Updated temperature only %12.8f\n", MPU6050.Temperature);
 
-    HAL_Delay(10);
+    HAL_Delay(50);
   }
   /* USER CODE END 3 */
 }

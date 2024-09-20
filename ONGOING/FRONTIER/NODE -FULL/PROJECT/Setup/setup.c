@@ -190,6 +190,16 @@ int Node_Init(void)
     printf("[NODE INITIALIZATION] MPU6050 Initialization - DONE.\n\r\n\r");
 #endif
 
+    HAL_Delay(Init_Gap);
+
+#ifdef MODULE_ENABLE_ADXL355
+    // BSP Initialization - ADXL355
+    printf("[NODE INITIALIZATION] ADXL355 Initialization - START.\n\r");
+    ADXL355_Init();
+    printf("[NODE INITIALIZATION] ADXL355 Initialization - DONE.\n\r\n\r");
+#endif
+
+
     return NODE_SUCCESS;
 }
 

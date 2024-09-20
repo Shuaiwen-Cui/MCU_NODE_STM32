@@ -40,11 +40,13 @@
  * @brief This section is to determine the peripheral components to be incorporated in the project
  * ! This is where you configure the peripheral components to be included in the project
  * @param MODULE_ENABLE_OLED //! Enable OLED module
- * @param MODULE_ENABL_MPU6050 //! Enable IMU MPU6050 module
+ * @param MODULE_ENABLE_MPU6050 //! Enable IMU MPU6050 module
+ * @param MODULE_ENABLE_ADXL355 //! Enable IMU ADXL355 module
  * 
  */
 #define MODULE_ENABLE_OLED // Enable OLED module
 #define MODULE_ENABLE_MPU6050 // Enable IMU MPU6050 module
+#define MODULE_ENABLE_ADXL355 // Enable IMU ADXL355 module
 
 // Necessary Libraries
 #include <stdio.h>
@@ -90,6 +92,10 @@
 #include "mpu6050.h"
 #endif
 
+// ADXL355 for ACC 
+#ifdef MODULE_ENABLE_ADXL355
+#include "adxl355.h"
+#endif
 
 
 /**

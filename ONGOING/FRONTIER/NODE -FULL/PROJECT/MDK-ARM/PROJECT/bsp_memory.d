@@ -40,6 +40,8 @@ project/bsp_memory.o: ..\BSP\bsp_memory.c ..\BSP\bsp_memory.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_sd_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_sdram.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_fmc.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_spi.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_spi_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h \
   ..\BSP\bsp_usart.h D:\Keil5\ARM\ARMCLANG\Bin\..\include\string.h \

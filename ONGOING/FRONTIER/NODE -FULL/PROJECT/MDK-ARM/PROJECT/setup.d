@@ -41,6 +41,8 @@ project/setup.o: ..\Setup\setup.c ..\Setup\setup.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_sd_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_sdram.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_fmc.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_spi.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_spi_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h \
   ..\Core\Inc\main.h ..\BSP\bsp_usart.h \
@@ -58,4 +60,5 @@ project/setup.o: ..\Setup\setup.c ..\Setup\setup.h \
   ..\Middlewares\Third_Party\FatFs\src\ff.h ..\FATFS\Target\sd_diskio.h \
   ..\Peripherals\Interfacing\font.h ..\Peripherals\Interfacing\oled.h \
   ..\Peripherals\Interfacing\font.h ..\Peripherals\Perception\mpu6050.h \
-  ..\Core\Inc\i2c.h ..\Core\Inc\main.h
+  ..\Core\Inc\i2c.h ..\Core\Inc\main.h \
+  ..\Peripherals\Perception\adxl355.h ..\Core\Inc\spi.h

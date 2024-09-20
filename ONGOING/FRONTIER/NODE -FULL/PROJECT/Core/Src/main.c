@@ -24,6 +24,7 @@
 #include "mdma.h"
 #include "rtc.h"
 #include "sdmmc.h"
+#include "spi.h"
 #include "usart.h"
 #include "gpio.h"
 #include "fmc.h"
@@ -51,7 +52,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+uint8_t buff[10];
+uint32_t data_num=0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -113,9 +115,11 @@ int main(void)
   MX_RTC_Init();
   MX_I2C1_Init();
   MX_I2C2_Init();
+  MX_SPI1_Init();
+  MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
   Node_Init();
-  
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -127,32 +131,32 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    // Read all parameters
-    MPU6050_Read_All(&hi2c2, &MPU6050);
-    printf("Acceleration x:%12.8f \t y:%12.8f \t z:%12.8f\n", MPU6050.Ax, MPU6050.Ay, MPU6050.Az);
-    printf("Gyroscope x   :%12.8f \t y:%12.8f \t z:%12.8f\n", MPU6050.Gx, MPU6050.Gy, MPU6050.Gz);
-    printf("Temperature   :%12.8f\n", MPU6050.Temperature);
+    // // Read all parameters
+    // MPU6050_Read_All(&hi2c2, &MPU6050);
+    // printf("Acceleration x:%12.8f \t y:%12.8f \t z:%12.8f\n", MPU6050.Ax, MPU6050.Ay, MPU6050.Az);
+    // printf("Gyroscope x   :%12.8f \t y:%12.8f \t z:%12.8f\n", MPU6050.Gx, MPU6050.Gy, MPU6050.Gz);
+    // printf("Temperature   :%12.8f\n", MPU6050.Temperature);
 
 
-    // OLED UPDATING
-    sprintf(acc_x_str, "%12.8f", MPU6050.Ax);
-    sprintf(acc_y_str, "%12.8f", MPU6050.Ay);
-    sprintf(acc_z_str, "%12.8f", MPU6050.Az);
-    sprintf(IMU_Temp, "%4.2f Deg C", MPU6050.Temperature);
+    // // OLED UPDATING
+    // sprintf(acc_x_str, "%12.8f", MPU6050.Ax);
+    // sprintf(acc_y_str, "%12.8f", MPU6050.Ay);
+    // sprintf(acc_z_str, "%12.8f", MPU6050.Az);
+    // sprintf(IMU_Temp, "%4.2f Deg C", MPU6050.Temperature);
 
-    // DISPLAY ACCELERATION
-    OLED_NewFrame();
+    // // DISPLAY ACCELERATION
+    // OLED_NewFrame();
 
-    OLED_PrintASCIIString(0, 0, "Accel X:", &afont8x6, OLED_COLOR_NORMAL);
-    OLED_PrintASCIIString(50, 0, acc_x_str, &afont8x6, OLED_COLOR_NORMAL);
-    OLED_PrintASCIIString(0, 12, "Accel Y:", &afont8x6, OLED_COLOR_NORMAL);
-    OLED_PrintASCIIString(50, 12, acc_y_str, &afont8x6, OLED_COLOR_NORMAL);
-    OLED_PrintASCIIString(0, 24, "Accel Z:", &afont8x6, OLED_COLOR_NORMAL);
-    OLED_PrintASCIIString(50, 24, acc_z_str, &afont8x6, OLED_COLOR_NORMAL);
-    OLED_PrintASCIIString(0, 36, "Temp:", &afont8x6, OLED_COLOR_NORMAL);
-    OLED_PrintASCIIString(50, 36, IMU_Temp, &afont8x6, OLED_COLOR_NORMAL);
+    // OLED_PrintASCIIString(0, 0, "Accel X:", &afont8x6, OLED_COLOR_NORMAL);
+    // OLED_PrintASCIIString(50, 0, acc_x_str, &afont8x6, OLED_COLOR_NORMAL);
+    // OLED_PrintASCIIString(0, 12, "Accel Y:", &afont8x6, OLED_COLOR_NORMAL);
+    // OLED_PrintASCIIString(50, 12, acc_y_str, &afont8x6, OLED_COLOR_NORMAL);
+    // OLED_PrintASCIIString(0, 24, "Accel Z:", &afont8x6, OLED_COLOR_NORMAL);
+    // OLED_PrintASCIIString(50, 24, acc_z_str, &afont8x6, OLED_COLOR_NORMAL);
+    // OLED_PrintASCIIString(0, 36, "Temp:", &afont8x6, OLED_COLOR_NORMAL);
+    // OLED_PrintASCIIString(50, 36, IMU_Temp, &afont8x6, OLED_COLOR_NORMAL);
 
-    OLED_ShowFrame();
+    // OLED_ShowFrame();
 
     // // Read acceleration
     // MPU6050_Read_Accel(&hi2c2, &MPU6050);
@@ -166,7 +170,7 @@ int main(void)
     // MPU6050_Read_Temp(&hi2c2, &MPU6050);
     // printf("Updated temperature only %12.8f\n", MPU6050.Temperature);
 
-    HAL_Delay(50);
+    HAL_Delay(500);
   }
   /* USER CODE END 3 */
 }
@@ -206,7 +210,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLM = 5;
   RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 4;
+  RCC_OscInitStruct.PLL.PLLQ = 5;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;

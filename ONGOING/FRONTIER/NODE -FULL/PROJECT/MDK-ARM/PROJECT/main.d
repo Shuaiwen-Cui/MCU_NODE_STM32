@@ -40,6 +40,8 @@ project/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_sd_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_sdram.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_fmc.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_spi.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_spi_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h \
   ..\Core\Inc\dma.h ..\Core\Inc\main.h ..\FATFS\App\fatfs.h \
@@ -51,8 +53,8 @@ project/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Middlewares\Third_Party\FatFs\src\diskio.h \
   ..\Middlewares\Third_Party\FatFs\src\ff.h ..\FATFS\Target\sd_diskio.h \
   ..\Core\Inc\i2c.h ..\Core\Inc\mdma.h ..\Core\Inc\rtc.h \
-  ..\Core\Inc\sdmmc.h ..\Core\Inc\usart.h ..\Core\Inc\gpio.h \
-  ..\Core\Inc\fmc.h ..\Setup\setup.h \
+  ..\Core\Inc\sdmmc.h ..\Core\Inc\spi.h ..\Core\Inc\usart.h \
+  ..\Core\Inc\gpio.h ..\Core\Inc\fmc.h ..\Setup\setup.h \
   D:\Keil5\ARM\ARMCLANG\Bin\..\include\stdio.h ..\BSP\bsp_led.h \
   ..\BSP\bsp_usart.h D:\Keil5\ARM\ARMCLANG\Bin\..\include\string.h \
   D:\Keil5\ARM\ARMCLANG\Bin\..\include\stdarg.h \
@@ -60,4 +62,5 @@ project/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\BSP\bsp_memory.h ..\BSP\bsp_usart.h ..\BSP\bsp_sdram.h \
   ..\BSP\bsp_file.h ..\Middlewares\Third_Party\FatFs\src\diskio.h \
   ..\Peripherals\Interfacing\font.h ..\Peripherals\Interfacing\oled.h \
-  ..\Peripherals\Interfacing\font.h ..\Peripherals\Perception\mpu6050.h
+  ..\Peripherals\Interfacing\font.h ..\Peripherals\Perception\mpu6050.h \
+  ..\Peripherals\Perception\adxl355.h

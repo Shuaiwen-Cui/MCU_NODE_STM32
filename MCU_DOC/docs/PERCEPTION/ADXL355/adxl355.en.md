@@ -8,6 +8,7 @@ This accelerometer has a selectable measurement range of ±2g, ±4g, or ±8g and
 
 ![FRONT](355front.jpg){: width="70%"}
 ![BACK](355back.jpg){: width="70%"}
+![ADXL355](ADXL355.png){: width="100%"}
 
 <div class="grid cards" markdown>
 

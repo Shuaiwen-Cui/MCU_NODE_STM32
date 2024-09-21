@@ -23,7 +23,7 @@ int sensing(void)
     for(i = 0; i < num_points; i++)
     {
         MPU6050_Read_All(&hi2c2, &MPU6050);
-        acc_data[i] = MPU6050.Az;
+        acc_data[i] = MPU6050.Ax;
         HAL_Delay(100);
     }
 

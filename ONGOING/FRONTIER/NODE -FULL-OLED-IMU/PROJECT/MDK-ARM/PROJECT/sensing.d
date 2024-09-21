@@ -59,4 +59,17 @@ project/sensing.o: ..\TinySHM\Sensing\sensing.c \
   ..\Middlewares\Third_Party\FatFs\src\ff.h ..\FATFS\Target\sd_diskio.h \
   ..\Peripherals\Interfacing\font.h ..\Peripherals\Interfacing\oled.h \
   ..\Peripherals\Interfacing\font.h ..\Peripherals\Perception\mpu6050.h \
-  ..\Core\Inc\i2c.h ..\Core\Inc\main.h
+  ..\Core\Inc\i2c.h ..\Core\Inc\main.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_math.h \
+  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  D:\Keil5\ARM\ARMCLANG\Bin\..\include\float.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_const_structs.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_math.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_common_tables.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_common_tables.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nnfunctions.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nnsupportfunctions.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nn_tables.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nn_tables.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nnsupportfunctions.h \
+  ..\TinySHM\Sensing\Sensing.h

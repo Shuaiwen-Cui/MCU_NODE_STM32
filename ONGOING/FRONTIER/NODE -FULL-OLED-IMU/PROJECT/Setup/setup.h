@@ -11,6 +11,42 @@
 #ifndef _SETUP_H_
 #define _SETUP_H_
 
+/*
+ ========================================================================== INFORMATION
+ */
+/* NODE INFO */
+extern char NodeName[];
+extern int NodeID;
+
+/* WIFI */
+extern char WIFI_SSID[];
+extern char WIFI_PASSWORD[];
+
+/*
+ ========================================================================== CONFIGURATIONS
+ */
+
+/*
+ ========================================================================== VARIABLES
+ */
+/* IMU */
+typedef struct {
+    int Calibration_Rate;
+    int Calibration_Duration;
+    float Mean_AccX_G_Proj;
+    float Mean_AccY_G_Proj;
+    float Mean_AccZ_G_Proj;
+    float Std_AccX_G_Proj;
+    float Std_AccY_G_Proj;
+    float Std_AccZ_G_Proj;
+} IMU_Calibration;
+
+extern IMU_Calibration IMU_Calibration_Instance;
+
+/*
+ ========================================================================== MACROS & MODULES
+ */
+
 /**
  * @name MACROS
  */
@@ -38,7 +74,7 @@
 /**
  * @name PERIPHERAL COMPONENT CONFIGURATION
  * @brief This section is to determine the peripheral components to be incorporated in the project
- * ! This is where you configure the peripheral components to be included in the project
+ * ! This is where you configure the peripheral components to be included in the projec
  * @param MODULE_ENABLE_OLED //! Enable OLED module
  * @param MODULE_ENABL_MPU6050 //! Enable IMU MPU6050 module
  * 
@@ -46,9 +82,30 @@
 #define MODULE_ENABLE_OLED // Enable OLED module
 #define MODULE_ENABLE_MPU6050 // Enable IMU MPU6050 module
 
-// Necessary Libraries
-#include <stdio.h>
+/**
+ * @name CMSIS COMPUTATION
+ * @brief This section is to determine the configuration about CMSIS computation
+ * ! This is where you configure the CMSIS computation libraries to be included in the project
+ * @param MODULE_ENABLE_CMSIS_DSP //! Enable CMSIS DSP library
+ * @param MODULE_ENABLE_CMSIS_NN //! Enable CMSIS NN library
+ */
+#define MODULE_ENABLE_CMSIS_DSP
+#define MODULE_ENABLE_CMSIS_NN
 
+
+/**
+ * @name TinySHM COMPONENT CONFIGURATION
+ * @brief This section is to determine the TinySHM components to be incorporated in the project
+ * ! This is where you configure the TinySHM components to be included in the project
+ * @param MODULE_ENABLE_TINYSHM_SENSING //! Enable TinySHM Sensing module
+ */
+#define MODULE_ENABLE_TINYSHM_SENSING // Enable TinySHM Sensing module
+
+/* Necessary Libraries */ 
+#include <stdio.h>
+#include <math.h>
+
+/* Main Control BSP */ 
 // LED for Status Indication
 #ifdef MODULE_ENABLE_LED
 #include "bsp_led.h"
@@ -79,6 +136,7 @@
 #include "bsp_file.h"
 #endif
 
+/* Peripheral Components */ 
 // OLED for Interfacing
 #ifdef MODULE_ENABLE_OLED
 #include "font.h"
@@ -90,12 +148,31 @@
 #include "mpu6050.h"
 #endif
 
+/* CMSIS Libs */
+// CMSIS DSP
+#ifdef MODULE_ENABLE_CMSIS_DSP
+#include "arm_math.h"
+#include "arm_const_structs.h"
+#include "arm_common_tables.h"
+#endif
 
+// CMSIS NN
+#ifdef MODULE_ENABLE_CMSIS_NN
+#include "arm_nnfunctions.h"
+#include "arm_nn_tables.h"
+#include "arm_nnsupportfunctions.h"
+#endif
 
-/**
- * @name NODE INFORMATION
+/* TinySHM Components */
+
+// TinySHM Sensing
+#ifdef MODULE_ENABLE_TINYSHM_SENSING
+#include "Sensing.h"
+#endif 
+
+/*
+ ========================================================================== FUNCTION PROTOTYPING
  */
-
 
 /**
  * @name FUNCTION PROTOTYPING

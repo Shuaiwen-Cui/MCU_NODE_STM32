@@ -61,4 +61,16 @@ project/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\BSP\bsp_file.h ..\Middlewares\Third_Party\FatFs\src\diskio.h \
   ..\Peripherals\Interfacing\font.h ..\Peripherals\Interfacing\oled.h \
   ..\Peripherals\Interfacing\font.h ..\Peripherals\Perception\mpu6050.h \
-  ..\TinySHM\Sensing\sensing.h
+  ..\Drivers\CMSIS\DSP\Include\arm_math.h \
+  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  D:\Keil5\ARM\ARMCLANG\Bin\..\include\float.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_const_structs.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_math.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_common_tables.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_common_tables.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nnfunctions.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nnsupportfunctions.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nn_tables.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nn_tables.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nnsupportfunctions.h \
+  ..\TinySHM\Sensing\Sensing.h

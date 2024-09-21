@@ -15,6 +15,7 @@
 #include "main.h"
 #include "setup.h"
 
+int MPU6050_gravity_projection(IMU_Calibration *pIMU_Calibration);
 int sensing(void);
 
 #endif /* _SENSING_H_ */

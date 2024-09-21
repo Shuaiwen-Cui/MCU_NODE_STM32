@@ -10,18 +10,52 @@
  */
 #include "setup.h"
 
-/**
- * @name INITIALIZATION TEST
- * @brief This determines whether to conduct test when initializing the node. To disenable, comment it out.
+/*
+ ========================================================================== INFORMATION
  */
-int init_test_mode = 0; // 0 for not, 1 for yes.
+/* NODE INFO */
+char NodeName[] = "LiftNode";
+int NodeID = 1;
 
-/**
- * @name VARIABLES
- *
+/* WIFI */
+char WIFI_SSID[] = "CSW@CEE";
+char WIFI_PASSWORD[] = "88888888";
+
+
+/*
+ ========================================================================== CONFIGURATIONS
  */
-// The gap between the initialization of each module, in ms.
-int Init_Gap = 300;
+/* INITIALIZATION FUNCTION*/
+int init_test_mode = 0; // 0 for not, 1 for yes.
+int Init_Gap = 300; // The gap between the initialization of each module, in ms.
+
+IMU_Calibration IMU_Calibration_Instance = {
+    .Calibration_Rate = 20, // Hz
+    .Calibration_Duration = 5, // seconds
+    .Mean_AccX_G_Proj = 0.0f,
+    .Mean_AccY_G_Proj = 0.0f,
+    .Mean_AccZ_G_Proj = 0.0f,
+    .Std_AccX_G_Proj = 0.0f,
+    .Std_AccY_G_Proj = 0.0f,
+    .Std_AccZ_G_Proj = 0.0f
+};
+
+/*
+ ========================================================================== VARIABLES
+ */
+/* IMU */
+// float Mean_IMU_AccX_G_Proj = 0.0;
+// float Mean_IMU_AccY_G_Proj = 0.0;
+// float Mean_IMU_AccZ_G_Proj = 0.0;
+// float Std_IMU_AccX_G_Proj = 0.0;
+// float Std_IMU_AccY_G_Proj = 0.0;
+// float Std_IMU_AccZ_G_Proj = 0.0;
+
+
+
+/*
+ ========================================================================== FUNCTIONS
+ */
 
 /**
  * @name Node_Init

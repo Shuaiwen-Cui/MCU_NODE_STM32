@@ -31,7 +31,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "setup.h"
-#include "sensing.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -116,7 +116,8 @@ int main(void)
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
   Node_Init();
-  sensing();
+  // sensing();
+  MPU6050_gravity_projection(&IMU_Calibration_Instance);
   
   /* USER CODE END 2 */
 

@@ -46,7 +46,7 @@
 #define MODULE_ENABLE_OLED // Enable OLED module
 #define MODULE_ENABLE_MPU6050 // Enable IMU MPU6050 module
 
-// Necessary Libraries
+/* Necessary Libraries */ 
 #include <stdio.h>
 
 // LED for Status Indication
@@ -88,8 +88,7 @@
 // MPU6050 for IMU
 #ifdef MODULE_ENABLE_MPU6050
 #include "mpu6050.h"
-#endif
-
+#endif 
 
 
 /**

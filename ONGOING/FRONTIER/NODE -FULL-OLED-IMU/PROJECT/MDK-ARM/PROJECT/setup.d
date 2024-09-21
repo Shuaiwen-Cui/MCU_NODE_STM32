@@ -1,5 +1,6 @@
 project/setup.o: ..\Setup\setup.c ..\Setup\setup.h \
-  D:\Keil5\ARM\ARMCLANG\Bin\..\include\stdio.h ..\BSP\bsp_led.h \
+  D:\Keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  D:\Keil5\ARM\ARMCLANG\Bin\..\include\math.h ..\BSP\bsp_led.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
   ..\Core\Inc\stm32h7xx_hal_conf.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h \
@@ -17,7 +18,6 @@ project/setup.o: ..\Setup\setup.c ..\Setup\setup.h \
   ..\Drivers\CMSIS\Device\ST\STM32H7xx\Include\system_stm32h7xx.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h \
   D:\Keil5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  D:\Keil5\ARM\ARMCLANG\Bin\..\include\math.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_gpio.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_gpio_ex.h \
@@ -58,4 +58,17 @@ project/setup.o: ..\Setup\setup.c ..\Setup\setup.h \
   ..\Middlewares\Third_Party\FatFs\src\ff.h ..\FATFS\Target\sd_diskio.h \
   ..\Peripherals\Interfacing\font.h ..\Peripherals\Interfacing\oled.h \
   ..\Peripherals\Interfacing\font.h ..\Peripherals\Perception\mpu6050.h \
-  ..\Core\Inc\i2c.h ..\Core\Inc\main.h
+  ..\Core\Inc\i2c.h ..\Core\Inc\main.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_math.h \
+  ..\Drivers\CMSIS\Include\cmsis_compiler.h \
+  D:\Keil5\ARM\ARMCLANG\Bin\..\include\float.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_const_structs.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_math.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_common_tables.h \
+  ..\Drivers\CMSIS\DSP\Include\arm_common_tables.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nnfunctions.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nnsupportfunctions.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nn_tables.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nn_tables.h \
+  ..\Drivers\CMSIS\NN\Include\arm_nnsupportfunctions.h \
+  ..\TinySHM\Sensing\Sensing.h ..\Setup\setup.h

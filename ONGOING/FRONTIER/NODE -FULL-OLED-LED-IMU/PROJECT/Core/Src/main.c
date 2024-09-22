@@ -53,7 +53,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+// int rgb_cnt = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -131,6 +131,21 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+    // rgb_cnt++;
+    // switch(rgb_cnt){
+    //   case 1:
+    //     LED_RGB(1, 0, 0);
+    //     break;
+    //   case 2:
+    //     LED_RGB(0, 1, 0);
+    //     break;
+    //   case 3:
+    //     LED_RGB(0, 0, 1);
+    //     rgb_cnt = 0;
+    //     break;
+    // }
+    MPU6050_Read_Show(&IMU_Calibration_Instance);
+    HAL_Delay(100);
 
     /* USER CODE BEGIN 3 */
   }

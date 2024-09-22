@@ -167,7 +167,7 @@ int MPU6050_Read_Show(IMU_Calibration *pIMU_Calibration)
     sprintf(IMU_Temp, "%4.2f Deg C", MPU6050.Temperature);
 
     // print acc_x_str, acc_y_str, acc_z_str, IMU_Temp
-    printf("acc_x_str: %s, acc_y_str: %s, acc_z_str: %s, IMU_Temp: %s\n", acc_x_str, acc_y_str, acc_z_str, IMU_Temp);
+    // printf("acc_x_str: %s, acc_y_str: %s, acc_z_str: %s, IMU_Temp: %s\n", acc_x_str, acc_y_str, acc_z_str, IMU_Temp);
 
     // DISPLAY ACCELERATION
     OLED_NewFrame();

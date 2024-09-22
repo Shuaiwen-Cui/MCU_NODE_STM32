@@ -15,7 +15,21 @@
 #include "main.h"
 #include "setup.h"
 
-int MPU6050_gravity_projection(IMU_Calibration *pIMU_Calibration);
-int sensing(void);
+/**
+ * @name MPU6050_Gravity_Projection
+ * @brief This function is for calculating the gravity projection of the MPU6050 for orientation calculation and compensation.
+ * @param pIMU_Calibration: the pointer to the IMU_Calibration instance.
+ *
+ */
+
+int MPU6050_Gravity_Projection(IMU_Calibration *pIMU_Calibration);
+
+/**
+ * @name MPU6050_Read_Show
+ * @brief This function is for reading and showing the MPU6050 data on OLED screen.
+ * @param pIMU_Calibration: the pointer to the IMU_Calibration instance.
+ * 
+ */
+int MPU6050_Read_Show(IMU_Calibration *pIMU_Calibration);
 
 #endif /* _SENSING_H_ */

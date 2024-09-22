@@ -29,29 +29,23 @@ char WIFI_PASSWORD[] = "88888888";
 int init_test_mode = 0; // 0 for not, 1 for yes.
 int Init_Gap = 300; // The gap between the initialization of each module, in ms.
 
+
+
+/*
+ ========================================================================== VARIABLES
+ */
+/* IMU */
 IMU_Calibration IMU_Calibration_Instance = {
-    .Calibration_Rate = 20, // Hz
+    .Calibration_Rate = 100, // Hz
     .Calibration_Duration = 5, // seconds
     .Mean_AccX_G_Proj = 0.0f,
     .Mean_AccY_G_Proj = 0.0f,
     .Mean_AccZ_G_Proj = 0.0f,
     .Std_AccX_G_Proj = 0.0f,
     .Std_AccY_G_Proj = 0.0f,
-    .Std_AccZ_G_Proj = 0.0f
+    .Std_AccZ_G_Proj = 0.0f,
+    .Acc_Scale = 1.0f // can be modified as the sensing procedure goes on
 };
-
-/*
- ========================================================================== VARIABLES
- */
-/* IMU */
-// float Mean_IMU_AccX_G_Proj = 0.0;
-// float Mean_IMU_AccY_G_Proj = 0.0;
-// float Mean_IMU_AccZ_G_Proj = 0.0;
-// float Std_IMU_AccX_G_Proj = 0.0;
-// float Std_IMU_AccY_G_Proj = 0.0;
-// float Std_IMU_AccZ_G_Proj = 0.0;
-
-
 
 /*
  ========================================================================== FUNCTIONS
@@ -214,7 +208,7 @@ int Node_Init(void)
     printf("\n\r");
 #endif
 
-    HAL_Delay(10*Init_Gap);
+    HAL_Delay(Init_Gap);
 
 #ifdef MODULE_ENABLE_MPU6050
     // BSP Initialization - MPU6050

@@ -55,6 +55,7 @@ extern char IMU_Temp[13];
 // MPU6050
 extern MPU6050_t MPU6050;
 
+// Function Prototyping
 uint8_t MPU6050_Init(I2C_HandleTypeDef *I2Cx);
 
 void MPU6050_Read_Accel(I2C_HandleTypeDef *I2Cx, MPU6050_t *DataStruct);

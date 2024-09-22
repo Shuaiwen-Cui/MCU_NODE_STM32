@@ -39,9 +39,11 @@ typedef struct {
     float Std_AccX_G_Proj;
     float Std_AccY_G_Proj;
     float Std_AccZ_G_Proj;
+    float Acc_Scale;
 } IMU_Calibration;
 
 extern IMU_Calibration IMU_Calibration_Instance;
+
 
 /*
  ========================================================================== MACROS & MODULES

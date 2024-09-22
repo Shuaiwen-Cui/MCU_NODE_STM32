@@ -94,7 +94,7 @@ uint8_t MPU6050_Init(I2C_HandleTypeDef *I2Cx)
         HAL_I2C_Mem_Write(I2Cx, MPU6050_ADDR, SMPLRT_DIV_REG, 1, &Data, 1, i2c_timeout);
 
         // Set accelerometer configuration in ACCEL_CONFIG Register
-        // XA_ST=0,YA_ST=0,ZA_ST=0, FS_SEL=0 -> � 2g
+        // XA_ST=0,YA_ST=0,ZA_ST=0, FS_SEL=0 (0X00) -> +/- 2g; FS_SEL=1 (0X08) -> +/- 4g; FS_SEL=2 (0X10) -> +/- 8g; FS_SEL=3 (0X18) -> +/- 16g
         Data = 0x00;
         HAL_I2C_Mem_Write(I2Cx, MPU6050_ADDR, ACCEL_CONFIG_REG, 1, &Data, 1, i2c_timeout);
 

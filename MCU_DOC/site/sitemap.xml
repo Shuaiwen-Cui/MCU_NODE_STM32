@@ -2,476 +2,476 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://localhost:8000/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/"/>
     </url>
     <url>
         <loc>https://localhost:8000/ABOUT/about/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/ABOUT/about/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/ABOUT/about/"/>
     </url>
     <url>
         <loc>https://localhost:8000/ARCHITECTURE/architecture/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/ARCHITECTURE/architecture/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/ARCHITECTURE/architecture/"/>
     </url>
     <url>
         <loc>https://localhost:8000/COMMUNICATION/communication/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/communication/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/communication/"/>
     </url>
     <url>
         <loc>https://localhost:8000/COMMUNICATION/WIFI/esp8266/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/WIFI/esp8266/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/WIFI/esp8266/"/>
     </url>
     <url>
         <loc>https://localhost:8000/COMMUNICATION/WIFI/stm32-esp8266/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/WIFI/stm32-esp8266/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/WIFI/stm32-esp8266/"/>
     </url>
     <url>
         <loc>https://localhost:8000/COMMUNICATION/WIFI/wifi/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/WIFI/wifi/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/WIFI/wifi/"/>
     </url>
     <url>
         <loc>https://localhost:8000/COMPUTATION/computation/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/computation/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/computation/"/>
     </url>
     <url>
         <loc>https://localhost:8000/COMPUTATION/CMSIS-DSP/cmsis-dsp/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/CMSIS-DSP/cmsis-dsp/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/CMSIS-DSP/cmsis-dsp/"/>
     </url>
     <url>
         <loc>https://localhost:8000/COMPUTATION/CMSIS-NN/cmsis-nn/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/CMSIS-NN/cmsis-nn/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/CMSIS-NN/cmsis-nn/"/>
     </url>
     <url>
         <loc>https://localhost:8000/INTERFACING/interfacing/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/INTERFACING/interfacing/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/INTERFACING/interfacing/"/>
     </url>
     <url>
         <loc>https://localhost:8000/INTERFACING/OLED/oled/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/INTERFACING/OLED/oled/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/INTERFACING/OLED/oled/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/main-control/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/main-control/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/main-control/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/BSP/bsp/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/BSP/bsp/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/BSP/bsp/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/FILE-SYS/file-sys/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/FILE-SYS/file-sys/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/FILE-SYS/file-sys/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/FMC/fmc/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/FMC/fmc/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/FMC/fmc/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/LED/led/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/LED/led/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/LED/led/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/MEMORY/memory/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/MEMORY/memory/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/MEMORY/memory/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/PERIPHERAL/peripheral/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/PERIPHERAL/peripheral/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/PERIPHERAL/peripheral/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/PREPARATION/preparation/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/PREPARATION/preparation/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/PREPARATION/preparation/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/RTOS/rtos/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/RTOS/rtos/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/RTOS/rtos/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/SDCARD/sdcard/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDCARD/sdcard/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDCARD/sdcard/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/SDMMC/sdmmc/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDMMC/sdmmc/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDMMC/sdmmc/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/SDRAM/sdram/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDRAM/sdram/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDRAM/sdram/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/SETUP/setup/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SETUP/setup/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SETUP/setup/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/USART/usart-interactive/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/USART/usart-interactive/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/USART/usart-interactive/"/>
     </url>
     <url>
         <loc>https://localhost:8000/MAIN-CONTROL/USART/usart/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/USART/usart/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/USART/usart/"/>
     </url>
     <url>
         <loc>https://localhost:8000/PERCEPTION/perception/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/perception/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/perception/"/>
     </url>
     <url>
         <loc>https://localhost:8000/PERCEPTION/ADXL355/adxl355/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/ADXL355/adxl355/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/ADXL355/adxl355/"/>
     </url>
     <url>
         <loc>https://localhost:8000/PERCEPTION/ADXL362/adxl362/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/ADXL362/adxl362/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/ADXL362/adxl362/"/>
     </url>
     <url>
         <loc>https://localhost:8000/PERCEPTION/MPU6050/mpu6050/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/MPU6050/mpu6050/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/MPU6050/mpu6050/"/>
     </url>
     <url>
         <loc>https://localhost:8000/POWER/power/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/POWER/power/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/POWER/power/"/>
     </url>
     <url>
         <loc>https://localhost:8000/RELEASES/releases/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/RELEASES/releases/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/RELEASES/releases/"/>
     </url>
     <url>
         <loc>https://localhost:8000/blog/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/blog/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/blog/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/ABOUT/about/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/ABOUT/about/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/ABOUT/about/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/ARCHITECTURE/architecture/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/ARCHITECTURE/architecture/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/ARCHITECTURE/architecture/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/COMMUNICATION/communication/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/communication/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/communication/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/COMMUNICATION/WIFI/esp8266/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/WIFI/esp8266/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/WIFI/esp8266/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/COMMUNICATION/WIFI/stm32-esp8266/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/WIFI/stm32-esp8266/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/WIFI/stm32-esp8266/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/COMMUNICATION/WIFI/wifi/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMMUNICATION/WIFI/wifi/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMMUNICATION/WIFI/wifi/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/COMPUTATION/computation/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/computation/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/computation/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/COMPUTATION/CMSIS-DSP/cmsis-dsp/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/CMSIS-DSP/cmsis-dsp/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/CMSIS-DSP/cmsis-dsp/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/COMPUTATION/CMSIS-NN/cmsis-nn/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/COMPUTATION/CMSIS-NN/cmsis-nn/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/COMPUTATION/CMSIS-NN/cmsis-nn/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/INTERFACING/interfacing/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/INTERFACING/interfacing/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/INTERFACING/interfacing/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/INTERFACING/OLED/oled/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/INTERFACING/OLED/oled/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/INTERFACING/OLED/oled/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/main-control/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/main-control/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/main-control/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/BSP/bsp/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/BSP/bsp/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/BSP/bsp/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/FILE-SYS/file-sys/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/FILE-SYS/file-sys/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/FILE-SYS/file-sys/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/FMC/fmc/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/FMC/fmc/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/FMC/fmc/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/LED/led/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/LED/led/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/LED/led/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/MEMORY/memory/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/MEMORY/memory/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/MEMORY/memory/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/PERIPHERAL/peripheral/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/PERIPHERAL/peripheral/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/PERIPHERAL/peripheral/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/PREPARATION/preparation/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/PREPARATION/preparation/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/PREPARATION/preparation/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/RTOS/rtos/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/RTOS/rtos/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/RTOS/rtos/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/SDCARD/sdcard/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDCARD/sdcard/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDCARD/sdcard/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/SDMMC/sdmmc/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDMMC/sdmmc/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDMMC/sdmmc/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/SDRAM/sdram/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SDRAM/sdram/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SDRAM/sdram/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/SETUP/setup/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/SETUP/setup/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/SETUP/setup/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/USART/usart-interactive/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/USART/usart-interactive/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/USART/usart-interactive/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/MAIN-CONTROL/USART/usart/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/MAIN-CONTROL/USART/usart/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/MAIN-CONTROL/USART/usart/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/PERCEPTION/perception/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/perception/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/perception/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/PERCEPTION/ADXL355/adxl355/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/ADXL355/adxl355/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/ADXL355/adxl355/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/PERCEPTION/ADXL362/adxl362/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/ADXL362/adxl362/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/ADXL362/adxl362/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/PERCEPTION/MPU6050/mpu6050/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/PERCEPTION/MPU6050/mpu6050/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/PERCEPTION/MPU6050/mpu6050/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/POWER/power/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/POWER/power/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/POWER/power/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/RELEASES/releases/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/RELEASES/releases/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/RELEASES/releases/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/blog/</loc>
-        <lastmod>2024-09-21</lastmod>
+        <lastmod>2024-09-22</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/blog/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/blog/"/>

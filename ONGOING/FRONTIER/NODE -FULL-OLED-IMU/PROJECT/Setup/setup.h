@@ -78,10 +78,12 @@ extern IMU_Calibration IMU_Calibration_Instance;
  * @brief This section is to determine the peripheral components to be incorporated in the project
  * ! This is where you configure the peripheral components to be included in the projec
  * @param MODULE_ENABLE_OLED //! Enable OLED module
+ * @param MODULE_ENABLE_RGB //! Enable RGB LED module
  * @param MODULE_ENABL_MPU6050 //! Enable IMU MPU6050 module
  * 
  */
 #define MODULE_ENABLE_OLED // Enable OLED module
+#define MODULE_ENABLE_RGB // Enable RGB LED module
 #define MODULE_ENABLE_MPU6050 // Enable IMU MPU6050 module
 
 /**
@@ -143,6 +145,11 @@ extern IMU_Calibration IMU_Calibration_Instance;
 #ifdef MODULE_ENABLE_OLED
 #include "font.h"
 #include "oled.h"
+#endif
+
+// RGB LED for Status Indication
+#ifdef MODULE_ENABLE_RGB
+#include "led_rgb.h"
 #endif
 
 // MPU6050 for IMU

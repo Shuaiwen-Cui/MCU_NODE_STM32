@@ -41,6 +41,8 @@ project/sensing.o: ..\TinySHM\Sensing\sensing.c \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_sd_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_sdram.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_ll_fmc.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_spi.h \
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_spi_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h \
   ..\Setup\setup.h D:\Keil5\ARM\ARMCLANG\Bin\..\include\stdio.h \
@@ -58,9 +60,9 @@ project/sensing.o: ..\TinySHM\Sensing\sensing.c \
   ..\Middlewares\Third_Party\FatFs\src\diskio.h \
   ..\Middlewares\Third_Party\FatFs\src\ff.h ..\FATFS\Target\sd_diskio.h \
   ..\Peripherals\Interfacing\font.h ..\Peripherals\Interfacing\oled.h \
-  ..\Peripherals\Interfacing\font.h ..\Peripherals\Perception\mpu6050.h \
-  ..\Core\Inc\i2c.h ..\Core\Inc\main.h \
-  ..\Drivers\CMSIS\DSP\Include\arm_math.h \
+  ..\Peripherals\Interfacing\font.h ..\Peripherals\Interfacing\led_rgb.h \
+  ..\Peripherals\Perception\mpu6050.h ..\Core\Inc\i2c.h \
+  ..\Core\Inc\main.h ..\Drivers\CMSIS\DSP\Include\arm_math.h \
   ..\Drivers\CMSIS\Include\cmsis_compiler.h \
   D:\Keil5\ARM\ARMCLANG\Bin\..\include\float.h \
   ..\Drivers\CMSIS\DSP\Include\arm_const_structs.h \

@@ -24,6 +24,7 @@
 #include "mdma.h"
 #include "rtc.h"
 #include "sdmmc.h"
+#include "spi.h"
 #include "usart.h"
 #include "gpio.h"
 #include "fmc.h"
@@ -114,6 +115,11 @@ int main(void)
   MX_RTC_Init();
   MX_I2C1_Init();
   MX_I2C2_Init();
+  MX_SPI1_Init();
+  MX_SPI2_Init();
+  MX_SPI3_Init();
+  MX_USART2_UART_Init();
+  MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
   Node_Init();
   MPU6050_Gravity_Projection(&IMU_Calibration_Instance);
@@ -124,11 +130,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    LED_Toggle();
+    /* USER CODE END WHILE */
 
-    MPU6050_Read_Show(&IMU_Calibration_Instance);
-
-    HAL_Delay(100);
+    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
@@ -168,7 +172,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLM = 5;
   RCC_OscInitStruct.PLL.PLLN = 192;
   RCC_OscInitStruct.PLL.PLLP = 2;
-  RCC_OscInitStruct.PLL.PLLQ = 4;
+  RCC_OscInitStruct.PLL.PLLQ = 5;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_2;
   RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;

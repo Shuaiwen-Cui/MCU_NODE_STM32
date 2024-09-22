@@ -21,22 +21,19 @@ int NodeID = 1;
 char WIFI_SSID[] = "CSW@CEE";
 char WIFI_PASSWORD[] = "88888888";
 
-
 /*
  ========================================================================== CONFIGURATIONS
  */
 /* INITIALIZATION FUNCTION*/
 int init_test_mode = 0; // 0 for not, 1 for yes.
-int Init_Gap = 300; // The gap between the initialization of each module, in ms.
-
-
+int Init_Gap = 100;     // The gap between the initialization of each module, in ms.
 
 /*
  ========================================================================== VARIABLES
  */
 /* IMU */
 IMU_Calibration IMU_Calibration_Instance = {
-    .Calibration_Rate = 100, // Hz
+    .Calibration_Rate = 100,   // Hz
     .Calibration_Duration = 5, // seconds
     .Mean_AccX_G_Proj = 0.0f,
     .Mean_AccY_G_Proj = 0.0f,
@@ -206,6 +203,33 @@ int Node_Init(void)
 
     printf("[NODE INITIALIZATION] OLED Initialization - FINISHED\n\r");
     printf("\n\r");
+#endif
+
+    HAL_Delay(Init_Gap);
+
+#ifdef MODULE_ENABLE_RGB
+    // BSP Initialization - RGB LED
+    printf("[NODE INITIALIZATION] RGB LED Initialization - START.\n\r");
+    if (init_test_mode == 1)
+    {
+        LED_RGB(1, 0, 0);
+        HAL_Delay(3 * Init_Gap);
+        LED_RGB(0, 1, 0);
+        HAL_Delay(3 * Init_Gap);
+        LED_RGB(0, 0, 1);
+        HAL_Delay(3 * Init_Gap);
+        LED_RGB(1, 1, 1);
+        HAL_Delay(3 * Init_Gap);
+        LED_RGB(0, 0, 0);
+        HAL_Delay(3 * Init_Gap);
+    }
+    else
+    {
+        LED_RGB(0, 1, 0);
+        HAL_Delay(5 * Init_Gap);
+        LED_RGB(0, 0, 0);
+    }
+    printf("[NODE INITIALIZATION] RGB LED Initialization - DONE.\n\r\n\r");
 #endif
 
     HAL_Delay(Init_Gap);

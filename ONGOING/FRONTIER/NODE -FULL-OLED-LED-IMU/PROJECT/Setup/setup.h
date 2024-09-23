@@ -26,6 +26,23 @@ extern char WIFI_PASSWORD[];
  ========================================================================== CONFIGURATIONS
  */
 
+/* TRIGGERING MECHANISM*/
+typedef struct{
+    // triggering parameters
+    float activate_threshold_z;
+    int activate_duration;
+    float inactivate_threshold_z;
+    int inactivate_duration;
+    // triggering counters
+    int cnt_activate;
+    int cnt_inactivate;
+    // triggering flags
+    int activate_flag;
+    int activate_led_flag;
+}Triggering_Mechanism;
+
+extern Triggering_Mechanism LiftNode_TM;
+
 /*
  ========================================================================== VARIABLES
  */

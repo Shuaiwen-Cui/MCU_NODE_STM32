@@ -22,6 +22,11 @@
 /* SPI */
 
 /*
+ ======================================== VARIABLES
+ */
+
+
+/*
  ======================================== FUNCTION DEFINITIONS - MPU6050
  */
 
@@ -123,11 +128,11 @@ int MPU6050_Gravity_Projection(IMU_Calibration *pIMU_Calibration)
     pIMU_Calibration->Std_AccX_G_Proj = std_x_g_proj;
     pIMU_Calibration->Std_AccY_G_Proj = std_y_g_proj;
     pIMU_Calibration->Std_AccZ_G_Proj = std_z_g_proj;
-    pIMU_Calibration->Acc_Scale = 1/mean_square_sum;
+    pIMU_Calibration->Acc_Scale = sqrt(0.9999/mean_square_sum);
 
     if (1)
     {
-        // check the vaues in pIMU_Calibration
+        // check the values in pIMU_Calibration
         printf("Mean_AccX_G_Proj: %12.8f\n\r", pIMU_Calibration->Mean_AccX_G_Proj);
         printf("Mean_AccY_G_Proj: %12.8f\n\r", pIMU_Calibration->Mean_AccY_G_Proj);
         printf("Mean_AccZ_G_Proj: %12.8f\n\r", pIMU_Calibration->Mean_AccZ_G_Proj);
@@ -186,3 +191,4 @@ int MPU6050_Read_Show(IMU_Calibration *pIMU_Calibration)
 
     return NODE_SUCCESS;
 }
+

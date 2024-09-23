@@ -28,6 +28,20 @@ char WIFI_PASSWORD[] = "88888888";
 int init_test_mode = 0; // 0 for not, 1 for yes.
 int Init_Gap = 100;     // The gap between the initialization of each module, in ms.
 
+/* TRIGGERING MECHANISM*/
+Triggering_Mechanism LiftNode_TM = {
+    // triggering parameters
+    .activate_threshold_z = 0,
+    .activate_duration = 1,
+    .inactivate_threshold_z = 0,
+    .inactivate_duration = 1,
+    // triggering counters
+    .cnt_activate = 0,
+    .cnt_inactivate = 0,
+    // triggering flags
+    .activate_flag = 0,
+    .activate_led_flag = 0};
+
 /*
  ========================================================================== VARIABLES
  */

@@ -145,7 +145,7 @@ int main(void)
     //     break;
     // }
     MPU6050_Read_Show(&IMU_Calibration_Instance);
-    HAL_Delay(100);
+    HAL_Delay(500);
 
     /* USER CODE BEGIN 3 */
   }

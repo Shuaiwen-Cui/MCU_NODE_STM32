@@ -3,7 +3,7 @@
 <title>Static Call Graph - [PROJECT\PROJECT.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image PROJECT\PROJECT.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6110004: Last Updated: Sun Sep 22 22:51:29 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6110004: Last Updated: Mon Sep 23 11:38:58 2024
 <BR><P>
 <H3>Maximum Stack Usage =       1576 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1868,6 +1868,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Node_Init
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> setup.o(.text.Node_Init)
 </UL>
@@ -1926,13 +1927,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU6050_Read_Show
 </UL>
 
-<P><STRONG><a name="[16e]"></a>MPU6050_Read_Show</STRONG> (Thumb, 424 bytes, Stack size 40 bytes, sensing.o(.text.MPU6050_Read_Show))
+<P><STRONG><a name="[16e]"></a>MPU6050_Read_Show</STRONG> (Thumb, 348 bytes, Stack size 40 bytes, sensing.o(.text.MPU6050_Read_Show))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = MPU6050_Read_Show &rArr; MPU6050_Read_All &rArr; __hardfp_atan2 &rArr; atan &rArr; __hardfp_atan &rArr; fabs
 </UL>
 <BR>[Calls]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_ShowFrame
 <LI><a href="#[16f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OLED_NewFrame
 <LI><a href="#[168]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU6050_Read_All
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2970,12 +2970,13 @@ Global Symbols
 <LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_sync
 </UL>
 
-<P><STRONG><a name="[95]"></a>main</STRONG> (Thumb, 244 bytes, Stack size 0 bytes, main.o(.text.main))
+<P><STRONG><a name="[95]"></a>main</STRONG> (Thumb, 300 bytes, Stack size 0 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1576<LI>Call Chain = main &rArr; Node_Init &rArr; FatFs_ReadTXTFile &rArr; f_open &rArr; dir_register &rArr; dir_find &rArr; dir_next &rArr; create_chain &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MPU_Enable
 <LI><a href="#[1d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MPU_Disable
 <LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Node_Init
+<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_RGB
 <LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Init
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FATFS_Init
@@ -3041,7 +3042,6 @@ Global Symbols
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FatFs_GetFileInfo
 <LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FatFs_DeleteFile
 <LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FatFs_PrintfFileDate
-<LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU6050_Read_Show
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MPU6050_Gravity_Projection
 </UL>
 <BR>[Address Reference Count : 4]<UL><LI> setup.o(.text.Node_Init)

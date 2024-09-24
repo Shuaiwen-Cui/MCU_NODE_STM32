@@ -10,7 +10,7 @@
 
 ![BUZZER](buzzer_wiring.png)
 
-| OLED PIN | MCU PIN |
+| 蜂鸣器 PIN | MCU PIN |
 |----------|---------|
 | VCC      | 3.3V (or external VCC)   |
 | GND      | GND (or external GND)    |

@@ -10,7 +10,7 @@ A buzzer is an audio signaling device, which may be mechanical, electromechanica
 
 ![BUZZER](buzzer_wiring.png)
 
-| OLED PIN | MCU PIN |
+| BUZZER PIN | MCU PIN |
 |----------|---------|
 | VCC      | 3.3V (or external VCC)   |
 | GND      | GND (or external GND)    |

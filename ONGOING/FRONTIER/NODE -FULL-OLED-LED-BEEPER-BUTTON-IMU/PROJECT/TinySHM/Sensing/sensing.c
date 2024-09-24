@@ -257,7 +257,7 @@ int Triggering_Check(Triggering_Mechanism *pTriggering_Mechanism)
     // LED
     if (activate_flag == 1)
     {
-        printf("Node activated!\n\r");
+        // printf("Node activated!\n\r");
         activate_led_flag = 1;
 #ifdef MODULE_ENABLE_RGB
         LED_RGB(1, 0, 0);
@@ -268,7 +268,7 @@ int Triggering_Check(Triggering_Mechanism *pTriggering_Mechanism)
     }
     else
     {
-        printf("Node inactivated!\n\r");
+        // printf("Node inactivated!\n\r");
         activate_led_flag = 0;
 
 #ifdef MODULE_ENABLE_RGB
@@ -288,13 +288,43 @@ int Triggering_Check(Triggering_Mechanism *pTriggering_Mechanism)
     return NODE_SUCCESS;
 }
 
-int Record_Sensing(Data_Structure LiftNode_Data)
+int Record_Sensing(void)
 {
     // pass the configuration values to the meta data of the data structure
+    int sampling_rate = sensing_rate;
+    int sampling_duration = sensing_duration;
+
+    // variables
+    int i;
+    float dt;
+    int sampling_points;
+
+    // calculate the sampling points
+    sampling_points = sampling_rate * sampling_duration + 1;
+    dt = 1000.0 / sampling_rate; // ms
+
+    // pass the values to the meta data of the data structure
+    LiftNode_Data.sampling_rate = sampling_rate;
+    LiftNode_Data.sampling_duration = sampling_duration;
+    LiftNode_Data.sampling_points = sampling_points;
+    LiftNode_Data.dt = dt;
+
+    // allocate memory for LiftNode_Data.ch01_data, LiftNode_Data.ch02_data, LiftNode_Data.ch03_data
+    LiftNode_Data.ch01_data = (float *)malloc(sampling_points * sizeof(float));
+    LiftNode_Data.ch02_data = (float *)malloc(sampling_points * sizeof(float));
+    LiftNode_Data.ch03_data = (float *)malloc(sampling_points * sizeof(float));
 
     // sensing with iterations
+    printf("Sensing...\n\r");
 
     // save the data to the SD card
+
+    // free the memory
+    free(LiftNode_Data.ch01_data);
+    free(LiftNode_Data.ch02_data);
+    free(LiftNode_Data.ch03_data);
+
+    button_trigger = 0;
 
     return NODE_SUCCESS;
 }

@@ -29,4 +29,5 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
             LED_RGB(0, 0, 0);
         }
     }
+    button_trigger = 1;
 }

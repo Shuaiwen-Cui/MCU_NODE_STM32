@@ -72,4 +72,6 @@ int MPU6050_Read_Show(IMU_Calibration *pIMU_Calibration);
  */
 int Triggering_Check(Triggering_Mechanism *pTriggering_Mechanism);
 
+int Record_Sensing(void);
+
 #endif /* _SENSING_H_ */

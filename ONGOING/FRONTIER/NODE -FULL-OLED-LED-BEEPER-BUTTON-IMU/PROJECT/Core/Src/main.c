@@ -133,6 +133,10 @@ int main(void)
     MPU6050_Read_Show(&IMU_Calibration_Instance);
     Triggering_Check(&LiftNode_TM);
     HAL_Delay(10);
+    if(button_trigger == 1)
+    {
+      Record_Sensing();
+    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -147,6 +147,7 @@ plugins:
             INTERFACING: 交互
             OLED: OLED 显示屏
             RGB_LED: RGB LED灯
+            BUZZER: 蜂鸣器
             RELEASES: 发布
 
 # # Hooks
@@ -318,6 +319,7 @@ nav:
       - "INTERFACING/interfacing.md"
       - OLED: "INTERFACING/OLED/oled.md"
       - RGB_LED: "INTERFACING/RGB_LED/rgb_led.md"
+      - BUZZER: "INTERFACING/BUZZER/buzzer.md"
   - RELEASES:
       - "RELEASES/releases.md"
 

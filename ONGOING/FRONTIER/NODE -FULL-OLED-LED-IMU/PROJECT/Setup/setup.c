@@ -31,16 +31,26 @@ int Init_Gap = 100;     // The gap between the initialization of each module, in
 /* TRIGGERING MECHANISM*/
 Triggering_Mechanism LiftNode_TM = {
     // triggering parameters
-    .activate_threshold_z = 0,
+    .activate_threshold_x = 0,
+    .activate_threshold_y = 0,
+    .activate_threshold_z = 0.02,
     .activate_duration = 1,
-    .inactivate_threshold_z = 0,
+    .inactivate_threshold_x = 0,
+    .inactivate_threshold_y = 0,
+    .inactivate_threshold_z = 0.01,
     .inactivate_duration = 1,
     // triggering counters
     .cnt_activate = 0,
     .cnt_inactivate = 0,
     // triggering flags
     .activate_flag = 0,
-    .activate_led_flag = 0};
+    .activate_led_flag = 0
+    };
+
+/* SENSING SETUP*/
+int sensing_rate = 100;
+int sensing_duration = 60;
+
 
 /*
  ========================================================================== VARIABLES
@@ -57,6 +67,9 @@ IMU_Calibration IMU_Calibration_Instance = {
     .Std_AccZ_G_Proj = 0.0f,
     .Acc_Scale = 1.0f // can be modified as the sensing procedure goes on
 };
+
+
+
 
 /*
  ========================================================================== FUNCTIONS

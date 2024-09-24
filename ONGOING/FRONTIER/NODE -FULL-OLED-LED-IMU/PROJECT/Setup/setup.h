@@ -29,8 +29,12 @@ extern char WIFI_PASSWORD[];
 /* TRIGGERING MECHANISM*/
 typedef struct{
     // triggering parameters
+    float activate_threshold_x;
+    float activate_threshold_y;
     float activate_threshold_z;
     int activate_duration;
+    float inactivate_threshold_x;
+    float inactivate_threshold_y;
     float inactivate_threshold_z;
     int inactivate_duration;
     // triggering counters
@@ -42,6 +46,10 @@ typedef struct{
 }Triggering_Mechanism;
 
 extern Triggering_Mechanism LiftNode_TM;
+
+/* SENSING SETUP*/
+extern int sensing_rate;
+extern int sensing_duration;
 
 /*
  ========================================================================== VARIABLES

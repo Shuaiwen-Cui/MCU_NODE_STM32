@@ -12,9 +12,40 @@
 #ifndef _SENSING_H_
 #define _SENSING_H_
 
+/*
+ ======================================== INCLUDES
+ */
+
 #include "main.h"
 #include "setup.h"
 
+/*
+ ======================================== VARIABLES
+ */
+typedef struct{
+    int sampling_rate;
+    int sampling_duration;
+    int sampling_points;
+    float dt;
+    float *ch01_data;
+    float *ch02_data;
+    float *ch03_data;
+}Data_Structure;
+
+extern Data_Structure LiftNode_Data;
+
+
+
+
+
+
+
+
+
+
+/*
+ ======================================== FUNCTION DEFINITIONS
+ */
 /**
  * @name MPU6050_Gravity_Projection
  * @brief This function is for calculating the gravity projection of the MPU6050 for orientation calculation and compensation.
@@ -31,5 +62,14 @@ int MPU6050_Gravity_Projection(IMU_Calibration *pIMU_Calibration);
  * 
  */
 int MPU6050_Read_Show(IMU_Calibration *pIMU_Calibration);
+
+/**
+ * @name Triggering_Check
+ * @brief This function is for checking the triggering status of the node.
+ * @param pTriggering_Mechanism: the pointer to the Triggering_Mechanism instance.
+ * @return int NODE_SUCCESS/NODE_FAIL
+ * 
+ */
+int Triggering_Check(Triggering_Mechanism *pTriggering_Mechanism);
 
 #endif /* _SENSING_H_ */

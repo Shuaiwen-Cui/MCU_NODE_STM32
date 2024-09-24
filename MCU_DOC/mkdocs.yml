@@ -146,6 +146,7 @@ plugins:
             STM32-ESP8266: STM32与ESP8266
             INTERFACING: 交互
             OLED: OLED 显示屏
+            RGB_LED: RGB LED灯
             RELEASES: 发布
 
 # # Hooks
@@ -316,6 +317,7 @@ nav:
   - INTERFACING:
       - "INTERFACING/interfacing.md"
       - OLED: "INTERFACING/OLED/oled.md"
+      - RGB_LED: "INTERFACING/RGB_LED/rgb_led.md"
   - RELEASES:
       - "RELEASES/releases.md"
 

@@ -24,10 +24,17 @@
 /*
  ======================================== VARIABLES
  */
-
+Data_Structure LiftNode_Data = {
+    .sampling_rate = 0,
+    .sampling_duration = 0,
+    .sampling_points = 0,
+    .dt = 0,
+    .ch01_data = NULL,
+    .ch02_data = NULL,
+    .ch03_data = NULL};
 
 /*
- ======================================== FUNCTION DEFINITIONS - MPU6050
+ ======================================== FUNCTION DEFINITIONS
  */
 
 /**
@@ -128,7 +135,7 @@ int MPU6050_Gravity_Projection(IMU_Calibration *pIMU_Calibration)
     pIMU_Calibration->Std_AccX_G_Proj = std_x_g_proj;
     pIMU_Calibration->Std_AccY_G_Proj = std_y_g_proj;
     pIMU_Calibration->Std_AccZ_G_Proj = std_z_g_proj;
-    pIMU_Calibration->Acc_Scale = sqrt(0.9999/mean_square_sum);
+    pIMU_Calibration->Acc_Scale = sqrt(0.9999 / mean_square_sum);
 
     if (1)
     {
@@ -150,12 +157,11 @@ int MPU6050_Gravity_Projection(IMU_Calibration *pIMU_Calibration)
     return NODE_SUCCESS;
 }
 
-
 /**
  * @name MPU6050_Read_Show
  * @brief This function is for reading and showing the MPU6050 data on OLED screen.
  * @param pIMU_Calibration: the pointer to the IMU_Calibration instance.
- * 
+ *
  */
 int MPU6050_Read_Show(IMU_Calibration *pIMU_Calibration)
 {
@@ -166,9 +172,9 @@ int MPU6050_Read_Show(IMU_Calibration *pIMU_Calibration)
     // printf("Acceleration x:%12.8f \t y:%12.8f \t z:%12.8f\n", MPU6050.Ax, MPU6050.Ay, MPU6050.Az);
 
     // OLED UPDATING
-    sprintf(acc_x_str, "%12.8f", MPU6050.Ax*pIMU_Calibration->Acc_Scale);
-    sprintf(acc_y_str, "%12.8f", MPU6050.Ay*pIMU_Calibration->Acc_Scale);
-    sprintf(acc_z_str, "%12.8f", MPU6050.Az*pIMU_Calibration->Acc_Scale);
+    sprintf(acc_x_str, "%12.8f", MPU6050.Ax * pIMU_Calibration->Acc_Scale);
+    sprintf(acc_y_str, "%12.8f", MPU6050.Ay * pIMU_Calibration->Acc_Scale);
+    sprintf(acc_z_str, "%12.8f", MPU6050.Az * pIMU_Calibration->Acc_Scale);
     sprintf(IMU_Temp, "%4.2f Deg C", MPU6050.Temperature);
 
     // print acc_x_str, acc_y_str, acc_z_str, IMU_Temp
@@ -188,7 +194,101 @@ int MPU6050_Read_Show(IMU_Calibration *pIMU_Calibration)
 
     OLED_ShowFrame();
 
+    return NODE_SUCCESS;
+}
+
+/**
+ * @name Triggering_Check
+ * @brief This function is for checking the triggering status of the node.
+ * @param pTriggering_Mechanism: the pointer to the Triggering_Mechanism instance.
+ * @return int NODE_SUCCESS/NODE_FAIL
+ *
+ */
+int Triggering_Check(Triggering_Mechanism *pTriggering_Mechanism)
+{
+    float activate_threshold_z = pTriggering_Mechanism->activate_threshold_z;
+    int activate_duration = pTriggering_Mechanism->activate_duration;
+    float inactivate_threshold_z = pTriggering_Mechanism->inactivate_threshold_z;
+    int inactivate_duration = pTriggering_Mechanism->inactivate_duration;
+    int cnt_activate = pTriggering_Mechanism->cnt_activate;
+    int cnt_inactivate = pTriggering_Mechanism->cnt_inactivate;
+    int activate_flag = pTriggering_Mechanism->activate_flag;
+    int activate_led_flag = pTriggering_Mechanism->activate_led_flag;
+    float acc;
+    float avg_acc;
+    float gap_acc;
+    acc = MPU6050.Az * IMU_Calibration_Instance.Acc_Scale;
+    avg_acc = IMU_Calibration_Instance.Mean_AccZ_G_Proj;
+    gap_acc = fabs(acc - avg_acc);
+
+    if (activate_flag == 0) // inactive
+    {
+        if (gap_acc > activate_threshold_z)
+        {
+            cnt_activate++;
+            if (cnt_activate >= activate_duration)
+            {
+                activate_flag = 1;
+                cnt_activate = 0;
+            }
+        }
+        else
+        {
+            cnt_activate = 0;
+        }
+    }
+    else // active
+    {
+        if (gap_acc < inactivate_threshold_z)
+        {
+            cnt_inactivate++;
+            if (cnt_inactivate >= inactivate_duration)
+            {
+                activate_flag = 0;
+                cnt_inactivate = 0;
+            }
+        }
+        else
+        {
+            cnt_inactivate = 0;
+        }
+    }
+
+    // LED
+    if (activate_flag == 1)
+    {
+        printf("Node activated!\n\r");
+        activate_led_flag = 1;
+#ifdef MODULE_ENABLE_RGB
+        LED_RGB(1, 0, 0);
+#endif
+    }
+    else
+    {
+        printf("Node inactivated!\n\r");
+        activate_led_flag = 0;
+
+#ifdef MODULE_ENABLE_RGB
+        LED_RGB(0, 0, 0);
+#endif
+    }
+
+    // output the numbers to pTriggering_Mechanism
+    pTriggering_Mechanism->cnt_activate = cnt_activate;
+    pTriggering_Mechanism->cnt_inactivate = cnt_inactivate;
+    pTriggering_Mechanism->activate_flag = activate_flag;
+    pTriggering_Mechanism->activate_led_flag = activate_led_flag;
 
     return NODE_SUCCESS;
 }
 
+int Record_Sensing(Data_Structure LiftNode_Data)
+{
+    // pass the configuration values to the meta data of the data structure
+
+    // sensing with iterations
+
+    // save the data to the SD card
+
+    return NODE_SUCCESS;
+}

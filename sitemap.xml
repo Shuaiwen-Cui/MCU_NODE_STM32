@@ -78,6 +78,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/INTERFACING/interfacing/"/>
     </url>
     <url>
+        <loc>https://localhost:8000/INTERFACING/BUZZER/buzzer/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/INTERFACING/BUZZER/buzzer/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/INTERFACING/BUZZER/buzzer/"/>
+    </url>
+    <url>
         <loc>https://localhost:8000/INTERFACING/OLED/oled/</loc>
         <lastmod>2024-09-24</lastmod>
         <changefreq>daily</changefreq>
@@ -321,6 +328,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/INTERFACING/interfacing/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/INTERFACING/interfacing/"/>
+    </url>
+    <url>
+        <loc>https://localhost:8000/zh/INTERFACING/BUZZER/buzzer/</loc>
+        <lastmod>2024-09-24</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://localhost:8000/zh/INTERFACING/BUZZER/buzzer/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://localhost:8000/INTERFACING/BUZZER/buzzer/"/>
     </url>
     <url>
         <loc>https://localhost:8000/zh/INTERFACING/OLED/oled/</loc>

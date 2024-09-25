@@ -33,9 +33,9 @@ extern char WIFI_PASSWORD[];
  ========================================================================== CONFIGURATIONS
  */
 
-extern const char *liftnode_folders[];
+extern char *liftnode_folders[];
 
-extern const char *config_files[];
+extern char *config_files[];
 
 /* TRIGGERING MECHANISM*/
 typedef struct
@@ -62,6 +62,13 @@ extern Triggering_Mechanism LiftNode_TM;
 /* SENSING SETUP*/
 extern int sensing_rate;
 extern int sensing_duration;
+
+/* FILE SYSTEM */
+#define NUM_FOLDERS 2
+#define NUM_CFG_FILES 3
+
+/* CONFIGURATIONS IN SD CARD*/
+extern int record_num; // the number of records in the SD card
 
 /*
  ========================================================================== VARIABLES
@@ -239,6 +246,10 @@ extern int button_trigger;
 #ifdef MODULE_ENABLE_TINYSHM_FILESYSTEM
 #include "FileSystem.h"
 #endif
+
+/*
+ ========================================================================== FILE SYSTEM RELATED VARIABLES
+ */
 
 /* FILE SYSTEM */
 // FATFS SDFatFS;    // already defined in fatfs.c

@@ -12,22 +12,21 @@
 #include "filesystem.h"
 
 /**
- * @name Node_FS_Init
- * @brief This function is to initialize the file system for the node.
- *
+ * @name FS_Check
+ * @brief This function is to check the file system for the node. If not exist, create one.
+ * 
  */
-int Node_FS_Init(void)
+int FS_Check(void)
 {
     int i;
     char filename[50];
     char buffer[50];
-    int offset;
     FRESULT fr;
     FILINFO finfo;
     UINT bw; // File write count
     UINT br; // File read count
 
-    /* STEP 1: check whether the folders and files are ready*/
+    /* check whether the folders and files are ready*/
 
     // go through the folder list and check if they exist
     for (i = 0; i < NUM_FOLDERS; i++)
@@ -40,7 +39,7 @@ int Node_FS_Init(void)
             if (fr != FR_OK)
             {
                 printf("Error: Cannot create folder %s.\n", liftnode_folders[i]);
-                return 1;
+                return NODE_FAIL;
             }
             else
             {
@@ -50,7 +49,7 @@ int Node_FS_Init(void)
         else if (fr != FR_OK)
         {
             printf("Error: Cannot access folder %s, code %d.\n", liftnode_folders[i], fr);
-            return 1;
+            return NODE_FAIL;
         }
         else
         {
@@ -70,7 +69,7 @@ int Node_FS_Init(void)
             if (fr != FR_OK)
             {
                 printf("Error: Cannot create file %s.\n", filename);
-                return 1;
+                return NODE_FAIL;
             }
             else
             {
@@ -86,7 +85,7 @@ int Node_FS_Init(void)
                     {
                         printf("Error: Cannot write to file %s.\n", filename);
                         f_close(&SDFile);
-                        return 1;
+                        return NODE_FAIL;
                     }
                     else
                     {
@@ -101,7 +100,7 @@ int Node_FS_Init(void)
         else if (fr != FR_OK)
         {
             printf("Error: Cannot access file %s, code %d.\n", filename, fr);
-            return 1;
+            return NODE_FAIL;
         }
         else
         {
@@ -109,7 +108,25 @@ int Node_FS_Init(void)
         }
     }
 
-    /* STEP 2: load the configurations into memory*/
+    return NODE_SUCCESS;
+}
+
+/**
+ * @name Load_Config
+ * @brief This function is to load the configurations into memory.
+ */
+int Load_Config(void)
+{
+    int i;
+    char filename[50];
+    char buffer[50];
+    int offset;
+    FRESULT fr;
+    FILINFO finfo;
+    UINT bw; // File write count
+    UINT br; // File read count
+
+    /* load the configurations into memory*/
 
     // RECORD_NUM loading
     sprintf(filename, "/%s/%s", liftnode_folders[0], config_files[2]);
@@ -148,7 +165,30 @@ int Node_FS_Init(void)
     else
     {
         printf("Error: Cannot open file %s for reading.\n", filename);
+        return NODE_FAIL;
     }
 
-    return 0;
+    return NODE_SUCCESS;
+}
+
+/**
+ * @name Node_FS_Init
+ * @brief This function is to initialize the file system for the node.
+ *
+ */
+int Node_FS_Init(void)
+{
+    // Step 1: FS Check
+    if(FS_Check() != NODE_SUCCESS)
+    {
+        return NODE_FAIL;
+    }
+
+    // Step 2：Load Configurations
+    if(Load_Config() != NODE_SUCCESS)
+    {
+        return NODE_FAIL;
+    }
+
+    return NODE_SUCCESS;
 }

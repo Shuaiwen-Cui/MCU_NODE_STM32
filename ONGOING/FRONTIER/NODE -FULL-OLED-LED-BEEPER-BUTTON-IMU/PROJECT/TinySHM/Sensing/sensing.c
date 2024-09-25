@@ -24,14 +24,7 @@
 /*
  ======================================== VARIABLES
  */
-Data_Structure LiftNode_Data = {
-    .sampling_rate = 0,
-    .sampling_duration = 0,
-    .sampling_points = 0,
-    .dt = 0,
-    .ch01_data = NULL,
-    .ch02_data = NULL,
-    .ch03_data = NULL};
+
 
 /*
  ======================================== FUNCTION DEFINITIONS
@@ -70,6 +63,13 @@ int MPU6050_Gravity_Projection(IMU_Calibration *pIMU_Calibration)
     G_x_proj_data = (float *)malloc(sampling_points * sizeof(float));
     G_y_proj_data = (float *)malloc(sampling_points * sizeof(float));
     G_z_proj_data = (float *)malloc(sampling_points * sizeof(float));
+
+    // check if malloc fails 
+    if (G_x_proj_data == NULL || G_y_proj_data == NULL || G_z_proj_data == NULL)
+    {
+        printf("Error: Memory allocation failed.\n\r");
+        return NODE_FAIL;
+    }
 
     printf("Calculating MPU6050 Gravity Projection...\n\r");
 
@@ -322,7 +322,27 @@ int Record_Sensing(void)
     // sensing with iterations
     printf("Sensing...\n\r");
 
+    for (i = 0; i < sampling_points; i++)
+    {
+        // read the data
+        MPU6050_Read_All(&hi2c2, &MPU6050);
+
+        // save the data to the memory
+        LiftNode_Data.ch01_data[i] = MPU6050.Ax * IMU_Calibration_Instance.Acc_Scale;
+        LiftNode_Data.ch02_data[i] = MPU6050.Ay * IMU_Calibration_Instance.Acc_Scale;
+        LiftNode_Data.ch03_data[i] = MPU6050.Az * IMU_Calibration_Instance.Acc_Scale;
+
+        // show the data on the OLED
+        MPU6050_Read_Show(&IMU_Calibration_Instance);
+
+        // delay
+        HAL_Delay(dt);
+    }
+
     // save the data to the SD card
+    Save_Data();
+
+    // update the RECORD_NUM stored in the SD card in path: /CONFIG/RECORD_NUM.cfg. Overwrite it with "LAST = %d", record_num + 1
 
     // free the memory
     free(LiftNode_Data.ch01_data);

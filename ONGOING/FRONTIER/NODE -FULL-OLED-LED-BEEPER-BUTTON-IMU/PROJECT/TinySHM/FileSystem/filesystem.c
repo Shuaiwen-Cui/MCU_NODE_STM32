@@ -11,6 +11,11 @@
 
 #include "filesystem.h"
 
+
+/*
+ ========================================================================== INITIALIZATION
+ */
+
 /**
  * @name FS_Check
  * @brief This function is to check the file system for the node. If not exist, create one.
@@ -188,6 +193,138 @@ int Node_FS_Init(void)
     if(Load_Config() != NODE_SUCCESS)
     {
         return NODE_FAIL;
+    }
+
+    return NODE_SUCCESS;
+}
+
+/*
+ ========================================================================== COMMON OPERATION
+ */
+
+/**
+ * @name Save_Data
+ * @brief This function is to save the Data into the SD card.
+ *
+ */
+
+int Save_Data(void)
+{
+    /* VARIABLES */
+    int i, j;
+    char data_folder[20];
+    char data_filename[50]; // to be constructed
+    char meta_data_filename[50]; // to be constructed
+    char data_path[100]; // to be constructed
+    char meta_data_path[100]; // to be constructed
+
+    char content[100];
+
+    FRESULT fr;
+    FILINFO finfo;
+    UINT bw; // File write count
+    UINT br; // File read count
+
+    /* FILENAME & PATH */
+    sprintf(data_folder, "%s", liftnode_folders[1]); // DATA folder
+    printf("Data folder: %s\n", data_folder);
+
+    sprintf(data_filename, "%s_%d.csv", "Node_Data", record_num + 1); // DATA file
+    printf("Data filename: %s\n", data_filename);
+
+    sprintf(meta_data_filename, "%s_%d.csv", "Node_Meta_Data", record_num + 1); // META DATA file
+    printf("Meta Data filename: %s\n", meta_data_filename);
+
+    sprintf(data_path, "/%s/%s", data_folder, data_filename); // DATA path
+    printf("Data path: %s\n", data_path);
+
+    sprintf(meta_data_path, "/%s/%s", data_folder, meta_data_filename); // META DATA path
+    printf("Meta Data path: %s\n", meta_data_path);
+
+    /* WRITE META DATA */
+
+    // Meta Data Saving, save LiftNode_Data.sampling_rate, LiftNode_Data.sampling_duration, LiftNode_Data.sampling_points, LiftNode_Data.dt to the file, each in a row
+    fr = f_open(&SDFile, meta_data_path, FA_CREATE_ALWAYS | FA_WRITE); // always create a new file
+    if (fr != FR_OK)
+    {
+        printf("Error: Cannot create file %s.\n", meta_data_path);
+        return NODE_FAIL;
+    }
+    else
+    {
+        printf("File %s created.\n", meta_data_path);
+
+        // Write the meta data
+        for (i = 0; i < 4; i++)
+        {
+            switch (i)
+            {
+            case 0:
+                sprintf(content, "SAMPLING RATE = %d\n", LiftNode_Data.sampling_rate);
+                break;
+            case 1:
+                sprintf(content, "SAMPLING DURATION = %d\n", LiftNode_Data.sampling_duration);
+                break;
+            case 2:
+                sprintf(content, "SAMPLING POINTS = %d\n", LiftNode_Data.sampling_points);
+                break;
+            case 3:
+                sprintf(content, "SAMPLING INTERVAL (ms) = %f\n", LiftNode_Data.dt);
+                break;
+            default:
+                break;
+            }
+
+            fr = f_write(&SDFile, content, strlen(content), &bw);
+            if (fr != FR_OK || bw != strlen(content))
+            {
+                printf("Error: Cannot write to file %s.\n", meta_data_path);
+                f_close(&SDFile);
+                return NODE_FAIL;
+            }
+            else
+            {
+                // printf("Written '%s' to %s.\n", content, meta_data_path);
+            }
+        }
+
+        // close the file
+        f_close(&SDFile);
+    }
+
+    /* WRITE DATA */ 
+
+    // write LiftNode_Data.ch01_data, LiftNode_Data.ch02_data, LiftNode_Data.ch03_data to the file, in 3 columns, each row stands for a time point, columns are separated by ',': %f,%f,%f\n
+    fr = f_open(&SDFile, data_path, FA_CREATE_ALWAYS | FA_WRITE); // always create a new file
+    if (fr != FR_OK)
+    {
+        printf("Error: Cannot create file %s.\n", data_path);
+        return NODE_FAIL;
+    }
+    else
+    {
+        printf("File %s created.\n", data_path);
+
+        // Write the data
+        for (i = 0; i < LiftNode_Data.sampling_points; i++)
+        {
+            sprintf(content, "%12.8f,%12.8f,%12.8f\n", LiftNode_Data.ch01_data[i], LiftNode_Data.ch02_data[i], LiftNode_Data.ch03_data[i]);
+
+            fr = f_write(&SDFile, content, strlen(content), &bw);
+            if (fr != FR_OK || bw != strlen(content))
+            {
+                printf("Error: Cannot write to file %s.\n", data_path);
+                f_close(&SDFile);
+                return NODE_FAIL;
+            }
+            else
+            {
+                // printf("Written '%s' to %s.\n", content, data_path);
+            }
+        }
+
+        // close the file
+        f_close(&SDFile);
     }
 
     return NODE_SUCCESS;

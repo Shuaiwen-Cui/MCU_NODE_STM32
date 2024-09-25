@@ -15,6 +15,10 @@
 #include "main.h"
 #include "setup.h"
 
+/*
+ ========================================================================== INITIALIZATION
+ */
+
 /**
  * @name FS_Check
  * @brief This function is to check the file system for the node. If not exist, create one.
@@ -35,6 +39,16 @@ int Load_Config(void);
  */
 int Node_FS_Init(void);
 
+/*
+ ========================================================================== COMMON OPERATION
+ */
 
+/**
+ * @name Save_Data
+ * @brief This function is to save the Data into the SD card.
+ *
+ */
+
+int Save_Data(void);
 
 #endif /* _FILESYSTEM_H_ */

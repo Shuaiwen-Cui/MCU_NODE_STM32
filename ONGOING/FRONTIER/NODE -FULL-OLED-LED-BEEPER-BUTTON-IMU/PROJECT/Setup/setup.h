@@ -89,7 +89,21 @@ typedef struct
 
 extern IMU_Calibration IMU_Calibration_Instance;
 
+/* BUTTON */
 extern int button_trigger;
+
+/* DATA */
+typedef struct{
+    int sampling_rate;
+    int sampling_duration;
+    int sampling_points;
+    float dt;
+    float *ch01_data;
+    float *ch02_data;
+    float *ch03_data;
+}Data_Structure;
+
+extern Data_Structure LiftNode_Data;
 
 /*
  ========================================================================== MACROS & MODULES - Corresponding to the 'INCLUDE' below

@@ -64,8 +64,8 @@ Triggering_Mechanism LiftNode_TM = {
     .activate_led_flag = 0};
 
 /* SENSING SETUP*/
-int sensing_rate = 100;
-int sensing_duration = 60;
+int sensing_rate = 10;
+int sensing_duration = 5;
 
 /* CONFIGURATIONS IN SD CARD*/
 int record_num; // the number of records in the SD card
@@ -86,6 +86,16 @@ IMU_Calibration IMU_Calibration_Instance = {
     .Std_AccZ_G_Proj = 0.0f,
     .Acc_Scale = 1.0f // can be modified as the sensing procedure goes on
 };
+
+/* DATA*/
+Data_Structure LiftNode_Data = {
+    .sampling_rate = 0,
+    .sampling_duration = 0,
+    .sampling_points = 0,
+    .dt = 0,
+    .ch01_data = NULL,
+    .ch02_data = NULL,
+    .ch03_data = NULL};
 
 /* USER_INPUT*/
 int button_trigger = 0; // mostly used in button interrupt handling

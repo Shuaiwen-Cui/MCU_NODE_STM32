@@ -15,7 +15,18 @@
 #include "main.h"
 #include "setup.h"
 
+/**
+ * @name FS_Check
+ * @brief This function is to check the file system for the node. If not exist, create one.
+ * 
+ */
+int FS_Check(void);
 
+/**
+ * @name Load_Config
+ * @brief This function is to load the configurations into memory.
+ */
+int Load_Config(void);
 
 /**
  * @name Node_FS_Init

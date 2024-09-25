@@ -67,6 +67,9 @@ extern int sensing_duration;
 #define NUM_FOLDERS 2
 #define NUM_CFG_FILES 3
 
+/* CONFIGURATIONS IN SD CARD*/
+extern int record_num; // the number of records in the SD card
+
 /*
  ========================================================================== VARIABLES
  */

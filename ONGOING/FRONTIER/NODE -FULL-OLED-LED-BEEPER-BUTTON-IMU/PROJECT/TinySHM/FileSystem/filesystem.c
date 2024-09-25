@@ -19,10 +19,13 @@
 int Node_FS_Init(void)
 {
     int i;
-    char filename[100];
+    char filename[50];
+    char buffer[50];
+    int offset;
     FRESULT fr;
     FILINFO finfo;
     UINT bw; // File write count
+    UINT br; // File read count
 
     /* STEP 1: check whether the folders and files are ready*/
 
@@ -104,6 +107,47 @@ int Node_FS_Init(void)
         {
             printf("File %s exists.\n", filename);
         }
+    }
+
+    /* STEP 2: load the configurations into memory*/
+
+    // RECORD_NUM loading
+    sprintf(filename, "/%s/%s", liftnode_folders[0], config_files[2]);
+
+    // Open the file first to ensure it can be read
+    fr = f_open(&SDFile, filename, FA_READ);
+    if (fr == FR_OK)
+    {
+        // Load content into buffer
+        fr = f_read(&SDFile, buffer, sizeof(buffer) - 1, &br);
+        if (fr == FR_OK && br > 0)
+        {
+            buffer[br] = '\0'; // Ensure the string is terminated with '\0'
+
+            // Find "LAST = " and then extract the number behind it
+            char *last_str = strstr(buffer, "LAST = ");
+            if (last_str != NULL)
+            {
+                offset = strlen("LAST = ");
+                record_num = atoi(last_str + offset); // Skip the "LAST = " and convert the number to integer
+                printf("Loaded record number: %d\n", record_num);
+            }
+            else
+            {
+                printf("Error: 'LAST = ' not found in the file.\n");
+            }
+        }
+        else
+        {
+            printf("Error: Failed to read the file %s.\n", filename);
+        }
+
+        // Close the file
+        f_close(&SDFile);
+    }
+    else
+    {
+        printf("Error: Cannot open file %s for reading.\n", filename);
     }
 
     return 0;

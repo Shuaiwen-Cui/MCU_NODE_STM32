@@ -8,4 +8,4 @@
 
 请参阅相应的子章节以获取更多信息。
 
-![LIFTNODE-OLED](OLED/LIFTNODE-OLED.jpg)
+![LIFTNODE](LIFTNODE.jpg)

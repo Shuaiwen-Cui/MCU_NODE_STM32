@@ -67,6 +67,10 @@ Triggering_Mechanism LiftNode_TM = {
 int sensing_rate = 100;
 int sensing_duration = 60;
 
+/* CONFIGURATIONS IN SD CARD*/
+int record_num; // the number of records in the SD card
+
+
 /*
  ========================================================================== VARIABLES
  */

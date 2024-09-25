@@ -76,4 +76,4 @@ project/sensing.o: ..\TinySHM\Sensing\sensing.c \
   ..\Drivers\CMSIS\NN\Include\arm_nn_tables.h \
   ..\Drivers\CMSIS\NN\Include\arm_nn_tables.h \
   ..\Drivers\CMSIS\NN\Include\arm_nnsupportfunctions.h \
-  ..\TinySHM\Sensing\Sensing.h
+  ..\TinySHM\Sensing\Sensing.h ..\TinySHM\FileSystem\FileSystem.h

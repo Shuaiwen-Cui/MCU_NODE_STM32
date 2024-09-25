@@ -122,7 +122,6 @@ int main(void)
   MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
   Node_Init();
-  MPU6050_Gravity_Projection(&IMU_Calibration_Instance);
   
   /* USER CODE END 2 */
 

@@ -98,6 +98,7 @@
 "project\stm32h7xx_it.o"
 "project\stm32h7xx_hal_msp.o"
 "project\sensing.o"
+"project\filesystem.o"
 --library_type=microlib --strict --scatter "PROJECT\PROJECT.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

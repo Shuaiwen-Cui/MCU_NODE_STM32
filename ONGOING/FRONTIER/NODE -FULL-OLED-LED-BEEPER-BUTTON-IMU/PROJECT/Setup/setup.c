@@ -26,7 +26,24 @@ char WIFI_PASSWORD[] = "88888888";
  */
 /* INITIALIZATION FUNCTION*/
 int init_test_mode = 0; // 0 for not, 1 for yes.
-int Init_Gap = 100;     // The gap between the initialization of each module, in ms.
+int Init_Gap = 50;     // The gap between the initialization of each module, in ms.
+
+/* FILE SYSTEM */
+// FATFS SDFatFS;    // already defined in fatfs.c
+// FIL SDFile;       // already defined in fatfs.c
+FRESULT fr;      // FatFs function common result code
+FILINFO finfo;     // File information
+UINT bw;         // File write count
+
+const char *liftnode_folders[] = {
+    "CONFIG",
+    "DATA"};
+
+const char *config_files[] = {
+    "NODE_INFO",
+    "INTERNET",
+    "RECORD_NUM"
+    };
 
 /* TRIGGERING MECHANISM*/
 Triggering_Mechanism LiftNode_TM = {
@@ -44,8 +61,7 @@ Triggering_Mechanism LiftNode_TM = {
     .cnt_inactivate = 0,
     // triggering flags
     .activate_flag = 0,
-    .activate_led_flag = 0
-    };
+    .activate_led_flag = 0};
 
 /* SENSING SETUP*/
 int sensing_rate = 100;
@@ -285,6 +301,24 @@ int Node_Init(void)
         ;
     printf("[NODE INITIALIZATION] MPU6050 Initialization - DONE.\n\r\n\r");
 #endif
+
+    HAL_Delay(Init_Gap);
+
+#ifdef MODULE_ENABLE_TINYSHM_SENSING
+    // Initialization - TinySHM Sensing
+    printf("[NODE INITIALIZATION] Sensing Initialization - START.\n\r");
+    MPU6050_Gravity_Projection(&IMU_Calibration_Instance);
+    printf("[NODE INITIALIZATION] Sensing Initialization - DONE.\n\r\n\r");
+#endif
+
+    HAL_Delay(Init_Gap);
+
+#ifdef MODULE_ENABLE_TINYSHM_FILESYSTEM
+    // Initialization - TinySHM File System
+    printf("[NODE INITIALIZATION] File System Initialization - START.\n\r");
+    Node_FS_Init();
+    printf("[NODE INITIALIZATION] File System Initialization - DONE.\n\r\n\r");
+#endif    
 
     return NODE_SUCCESS;
 }

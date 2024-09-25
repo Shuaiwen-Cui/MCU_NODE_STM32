@@ -12,6 +12,13 @@
 #define _SETUP_H_
 
 /*
+ ========================================================================== INCLUDE - Necessary Libraries
+ */
+/* Necessary Libraries */
+#include <stdio.h>
+#include <math.h>
+
+/*
  ========================================================================== INFORMATION
  */
 /* NODE INFO */
@@ -26,8 +33,13 @@ extern char WIFI_PASSWORD[];
  ========================================================================== CONFIGURATIONS
  */
 
+extern const char *liftnode_folders[];
+
+extern const char *config_files[];
+
 /* TRIGGERING MECHANISM*/
-typedef struct{
+typedef struct
+{
     // triggering parameters
     float activate_threshold_x;
     float activate_threshold_y;
@@ -43,7 +55,7 @@ typedef struct{
     // triggering flags
     int activate_flag;
     int activate_led_flag;
-}Triggering_Mechanism;
+} Triggering_Mechanism;
 
 extern Triggering_Mechanism LiftNode_TM;
 
@@ -55,7 +67,8 @@ extern int sensing_duration;
  ========================================================================== VARIABLES
  */
 /* IMU */
-typedef struct {
+typedef struct
+{
     int Calibration_Rate;
     int Calibration_Duration;
     float Mean_AccX_G_Proj;
@@ -71,9 +84,8 @@ extern IMU_Calibration IMU_Calibration_Instance;
 
 extern int button_trigger;
 
-
 /*
- ========================================================================== MACROS & MODULES
+ ========================================================================== MACROS & MODULES - Corresponding to the 'INCLUDE' below
  */
 
 /**
@@ -93,12 +105,12 @@ extern int button_trigger;
  * @param MODULE_ENABLE_SDCARD //! Enable SD Card module- for SD Card basic io. !!! This module can not be used together with MODULE_ENABLE_FILE. Better to disable this and use the MODULE_ENABLE_FILE. Enabling FATFS in CubeMX may lead to fail of this option, and you may need to reformat the SD card before using next time.
  * @param MODULE_ENABLE_FILE //! Enable File module - for file operations on SD Card !!! This module can not be used together with MODULE_ENABLE_SDCARD. Better to enable this.
  */
-#define MODULE_ENABLE_LED // Enable LED module
-#define MODULE_ENABLE_USART // Enable USART module
+#define MODULE_ENABLE_LED    // Enable LED module
+#define MODULE_ENABLE_USART  // Enable USART module
 #define MODULE_ENABLE_SDRAM  // Enable SDRAM module
 #define MODULE_ENABLE_MEMORY // Enable Memory module - for memory management on SDRAM
 // #define MODULE_ENABLE_SDCARD // Enable SD Card module
-#define MODULE_ENABLE_FILE   // Enable File module - for file operations on SD Card
+#define MODULE_ENABLE_FILE // Enable File module - for file operations on SD Card
 
 /**
  * @name PERIPHERAL COMPONENT CONFIGURATION
@@ -109,12 +121,12 @@ extern int button_trigger;
  * @param MODULE_ENABLE_BUZZER //! Enable Buzzer module
  * @param MODULE_ENABLE_BUTTON //! Enable Button module
  * @param MODULE_ENABL_MPU6050 //! Enable IMU MPU6050 module
- * 
+ *
  */
-#define MODULE_ENABLE_OLED // Enable OLED module
-#define MODULE_ENABLE_RGB // Enable RGB LED module
-#define MODULE_ENABLE_BUZZER // Enable Buzzer module
-#define MODULE_ENABLE_BUTTON // Enable Button module
+#define MODULE_ENABLE_OLED    // Enable OLED module
+#define MODULE_ENABLE_RGB     // Enable RGB LED module
+#define MODULE_ENABLE_BUZZER  // Enable Buzzer module
+#define MODULE_ENABLE_BUTTON  // Enable Button module
 #define MODULE_ENABLE_MPU6050 // Enable IMU MPU6050 module
 
 /**
@@ -127,20 +139,23 @@ extern int button_trigger;
 #define MODULE_ENABLE_CMSIS_DSP
 #define MODULE_ENABLE_CMSIS_NN
 
-
 /**
  * @name TinySHM COMPONENT CONFIGURATION
  * @brief This section is to determine the TinySHM components to be incorporated in the project
  * ! This is where you configure the TinySHM components to be included in the project
  * @param MODULE_ENABLE_TINYSHM_SENSING //! Enable TinySHM Sensing module
+ * @param MODULE_ENABLE_TINYSHM_FILESYSTEM //! Enable TinySHM File System module
  */
-#define MODULE_ENABLE_TINYSHM_SENSING // Enable TinySHM Sensing module
+#define MODULE_ENABLE_TINYSHM_SENSING    // Enable TinySHM Sensing module
+#define MODULE_ENABLE_TINYSHM_FILESYSTEM // Enable TinySHM File System module
 
-/* Necessary Libraries */ 
-#include <stdio.h>
-#include <math.h>
+/*
+ ========================================================================== INCLUDE - According to the MODULE configuration above
+ */
 
-/* Main Control BSP */ 
+
+
+/* Main Control BSP */
 // LED for Status Indication
 #ifdef MODULE_ENABLE_LED
 #include "bsp_led.h"
@@ -171,7 +186,7 @@ extern int button_trigger;
 #include "bsp_file.h"
 #endif
 
-/* Peripheral Components */ 
+/* Peripheral Components */
 // OLED for Interfacing
 #ifdef MODULE_ENABLE_OLED
 #include "font.h"
@@ -218,7 +233,19 @@ extern int button_trigger;
 // TinySHM Sensing
 #ifdef MODULE_ENABLE_TINYSHM_SENSING
 #include "Sensing.h"
-#endif 
+#endif
+
+// TinySHM File System
+#ifdef MODULE_ENABLE_TINYSHM_FILESYSTEM
+#include "FileSystem.h"
+#endif
+
+/* FILE SYSTEM */
+// FATFS SDFatFS;    // already defined in fatfs.c
+// FIL SDFile;       // already defined in fatfs.c
+extern FRESULT fr;      // FatFs function common result code
+extern FILINFO finfo;     // File information
+extern UINT bw;         // File write count
 
 /*
  ========================================================================== FUNCTION PROTOTYPING

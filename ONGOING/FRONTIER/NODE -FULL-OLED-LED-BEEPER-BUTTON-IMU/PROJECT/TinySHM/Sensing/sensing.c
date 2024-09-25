@@ -288,6 +288,11 @@ int Triggering_Check(Triggering_Mechanism *pTriggering_Mechanism)
     return NODE_SUCCESS;
 }
 
+/**
+ * @name Record_Sensing
+ * @brief This function is for recording the sensing data.
+ * 
+ */
 int Record_Sensing(void)
 {
     // pass the configuration values to the meta data of the data structure

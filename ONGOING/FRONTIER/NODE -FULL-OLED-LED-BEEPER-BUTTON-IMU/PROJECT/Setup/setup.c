@@ -35,14 +35,14 @@ FRESULT fr;      // FatFs function common result code
 FILINFO finfo;     // File information
 UINT bw;         // File write count
 
-const char *liftnode_folders[] = {
+char *liftnode_folders[NUM_FOLDERS] = {
     "CONFIG",
     "DATA"};
 
-const char *config_files[] = {
-    "NODE_INFO",
-    "INTERNET",
-    "RECORD_NUM"
+char *config_files[NUM_CFG_FILES] = {
+    "NODE_INFO.cfg",
+    "INTERNET.cfg",
+    "RECORD_NUM.cfg"
     };
 
 /* TRIGGERING MECHANISM*/
@@ -174,13 +174,13 @@ int Node_Init(void)
 #ifdef MODULE_ENABLE_SDCARD
     printf("[NODE INITIALIZATION] SD Card Initialization - START.\n\r");
     SD_Init();
-    printf("[NODE INITIALIZATION] SD CARD Initialization - DONE.\n\r");
+    printf("[NODE INITIALIZATION] SD CARD Initialization - DONE.\n\r\n\r");
     if (init_test_mode == 1)
     {
         // SD Card Test
         printf("[NODE INITIALIZATION] SD Card Test - START.\n\r");
         SD_Test();
-        printf("[NODE INITIALIZATION] SD Card Test - DONE.\n\r");
+        printf("[NODE INITIALIZATION] SD Card Test - DONE.\n\r\n\r");
     }
 #endif
 
@@ -243,8 +243,7 @@ int Node_Init(void)
     OLED_PrintString(32, 64 - 16, "LIFTNODE", &font16x16, OLED_COLOR_NORMAL);
     OLED_ShowFrame();
 
-    printf("[NODE INITIALIZATION] OLED Initialization - FINISHED\n\r");
-    printf("\n\r");
+    printf("[NODE INITIALIZATION] OLED Initialization - FINISHED\n\r\n\r");
 #endif
 
     HAL_Delay(Init_Gap);
@@ -280,7 +279,7 @@ int Node_Init(void)
     // BSP Initialization - Buzzer
     printf("[NODE INITIALIZATION] Buzzer Initialization - START.\n\r");
     Buzzer_Beep(100);
-    printf("[NODE INITIALIZATION] Buzzer Initialization - DONE.\n\r");
+    printf("[NODE INITIALIZATION] Buzzer Initialization - DONE.\n\r\n\r");
 #endif
 
     HAL_Delay(Init_Gap);
@@ -289,7 +288,7 @@ int Node_Init(void)
     // BSP Initialization - Button
     printf("[NODE INITIALIZATION] Button Initialization - START.\n\r");
     // nothing requried
-    printf("[NODE INITIALIZATION] Button Initialization - DONE.\n\r");
+    printf("[NODE INITIALIZATION] Button Initialization - DONE.\n\r\n\r");
 #endif
 
     HAL_Delay(Init_Gap);

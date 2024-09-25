@@ -18,55 +18,92 @@
  */
 int Node_FS_Init(void)
 {
+    int i;
+    char filename[100];
+    FRESULT fr;
+    FILINFO finfo;
+    UINT bw; // File write count
+
     /* STEP 1: check whether the folders and files are ready*/
-    fr = f_stat("/CONFIG", &finfo);
-    if (fr == FR_NO_FILE)
+
+    // go through the folder list and check if they exist
+    for (i = 0; i < NUM_FOLDERS; i++)
     {
-        printf("Warning: Cannot find folder /CONFIG, creating one ...\n");
-        fr = f_mkdir("/CONFIG");
-        if (fr != FR_OK)
+        fr = f_stat(liftnode_folders[i], &finfo);
+        if (fr == FR_NO_FILE)
         {
-            printf("Error: Cannot create folder /CONFIG.\n");
+            printf("Warning: Cannot find folder %s, creating one ...\n", liftnode_folders[i]);
+            fr = f_mkdir(liftnode_folders[i]);
+            if (fr != FR_OK)
+            {
+                printf("Error: Cannot create folder %s.\n", liftnode_folders[i]);
+                return 1;
+            }
+            else
+            {
+                printf("Folder %s created.\n", liftnode_folders[i]);
+            }
+        }
+        else if (fr != FR_OK)
+        {
+            printf("Error: Cannot access folder %s, code %d.\n", liftnode_folders[i], fr);
             return 1;
         }
         else
         {
-            printf("Folder /CONFIG created.\n");
+            printf("Folder %s exists.\n", liftnode_folders[i]);
         }
-    }
-    else if (fr != FR_OK)
-    {
-        printf("Error: Cannot access folder /CONFIG, code %d.\n", fr);
-        return 1;
-    }
-    else
-    {
-        printf("Folder /CONFIG exists.\n");
     }
 
-    fr = f_stat("/DATA", &finfo);
-    if (fr == FR_NO_FILE)
+    // inside the folder CONFIG, go through the config_files list and check if they exist
+    for (i = 0; i < NUM_CFG_FILES; i++)
     {
-        printf("Warning: Cannot find folder /DATA, creating one ...\n");
-        fr = f_mkdir("/DATA");
-        if (fr != FR_OK)
+        sprintf(filename, "/%s/%s", liftnode_folders[0], config_files[i]); // only check the CONFIG folder, where the configuration files reside in.
+        fr = f_stat(filename, &finfo);
+        if (fr == FR_NO_FILE)
         {
-            printf("Error: Cannot create folder /DATA.\n");
+            printf("Warning: Cannot find file %s, creating one ...\n", filename);
+            fr = f_open(&SDFile, filename, FA_CREATE_ALWAYS | FA_WRITE); // always create a new file
+            if (fr != FR_OK)
+            {
+                printf("Error: Cannot create file %s.\n", filename);
+                return 1;
+            }
+            else
+            {
+                printf("File %s created.\n", filename);
+
+                // if it is the RECORD_NUM file, write the initial value
+                if (i == 2)
+                {
+                    const char *data = "LAST = 0\n";
+                    UINT bytesWritten;
+                    fr = f_write(&SDFile, data, strlen(data), &bytesWritten);
+                    if (fr != FR_OK || bytesWritten != strlen(data))
+                    {
+                        printf("Error: Cannot write to file %s.\n", filename);
+                        f_close(&SDFile);
+                        return 1;
+                    }
+                    else
+                    {
+                        printf("Written 'LAST = 0' to %s.\n", filename);
+                    }
+                }
+
+                // close the file
+                f_close(&SDFile);
+            }
+        }
+        else if (fr != FR_OK)
+        {
+            printf("Error: Cannot access file %s, code %d.\n", filename, fr);
             return 1;
         }
         else
         {
-            printf("Folder /DATA created.\n");
+            printf("File %s exists.\n", filename);
         }
-    }
-    else if (fr != FR_OK)
-    {
-        printf("Error: Cannot access folder /DATA, code %d.\n", fr);
-        return 1;
-    }
-    else
-    {
-        printf("Folder /DATA exists.\n");
     }
 
     return 0;

@@ -62,6 +62,17 @@ int MPU6050_Read_Show(IMU_Calibration *pIMU_Calibration);
  */
 int Triggering_Check(Triggering_Mechanism *pTriggering_Mechanism);
 
+/**
+ * @name Update_Record_Num
+ * @brief This function is used in record_sensing to update the record number. Path: /CONFIG/RECORD_NUM.cfg
+ */
+int Update_Record_Num(void);
+
+/**
+ * @name Record_Sensing
+ * @brief This function is for recording the sensing data.
+ *
+ */
 int Record_Sensing(void);
 
 #endif /* _SENSING_H_ */

@@ -25,7 +25,6 @@
  ======================================== VARIABLES
  */
 
-
 /*
  ======================================== FUNCTION DEFINITIONS
  */
@@ -64,7 +63,7 @@ int MPU6050_Gravity_Projection(IMU_Calibration *pIMU_Calibration)
     G_y_proj_data = (float *)malloc(sampling_points * sizeof(float));
     G_z_proj_data = (float *)malloc(sampling_points * sizeof(float));
 
-    // check if malloc fails 
+    // check if malloc fails
     if (G_x_proj_data == NULL || G_y_proj_data == NULL || G_z_proj_data == NULL)
     {
         printf("Error: Memory allocation failed.\n\r");
@@ -289,9 +288,56 @@ int Triggering_Check(Triggering_Mechanism *pTriggering_Mechanism)
 }
 
 /**
+ * @name Update_Record_Num
+ * @brief This function is used in record_sensing to update the record number. Path: /CONFIG/RECORD_NUM.cfg
+ */
+int Update_Record_Num(void)
+{
+    FRESULT fr;
+    FILINFO finfo;
+    UINT bw; // File write count
+
+    // update the RECORD_NUM stored in the SD card in path: /CONFIG/RECORD_NUM.cfg. Overwrite it with "LAST = %d", record_num + 1
+    char path[50] = "/CONFIG/RECORD_NUM.cfg";
+    char buffer[30];
+
+    record_num += 1;
+    sprintf(buffer, "LAST = %d\n", record_num);
+
+    // Open file for writing, create if doesn't exist
+    fr = f_open(&SDFile, path, FA_WRITE | FA_CREATE_ALWAYS);
+    if (fr != FR_OK) {
+        printf("Error: Cannot open file %s for writing.\n", path);
+        return NODE_FAIL;
+    }
+
+    // Write buffer to file
+    fr = f_write(&SDFile, buffer, strlen(buffer), &bw);
+    if (fr != FR_OK || bw != strlen(buffer)) {
+        printf("Error: Cannot write to file %s.\n", path);
+        f_close(&SDFile);
+        return NODE_FAIL;
+    }
+
+    // Sync file to ensure data is written to SD card
+    fr = f_sync(&SDFile);
+    if (fr != FR_OK) {
+        printf("Error: Cannot sync file %s.\n", path);
+        f_close(&SDFile);
+        return NODE_FAIL;
+    }
+
+    // Close the file
+    f_close(&SDFile);
+    printf("Record number updated.\n\r");
+
+    return NODE_SUCCESS;
+}
+
+/**
  * @name Record_Sensing
  * @brief This function is for recording the sensing data.
- * 
+ *
  */
 int Record_Sensing(void)
 {
@@ -322,6 +368,8 @@ int Record_Sensing(void)
     // sensing with iterations
     printf("Sensing...\n\r");
 
+    LED_RGB(0, 0, 1);
+
     for (i = 0; i < sampling_points; i++)
     {
         // read the data
@@ -332,17 +380,20 @@ int Record_Sensing(void)
         LiftNode_Data.ch02_data[i] = MPU6050.Ay * IMU_Calibration_Instance.Acc_Scale;
         LiftNode_Data.ch03_data[i] = MPU6050.Az * IMU_Calibration_Instance.Acc_Scale;
 
-        // show the data on the OLED
-        MPU6050_Read_Show(&IMU_Calibration_Instance);
+        // // show the data on the OLED
+        // MPU6050_Read_Show(&IMU_Calibration_Instance);
 
         // delay
         HAL_Delay(dt);
     }
 
+    LED_RGB(1, 0, 0);
+
     // save the data to the SD card
     Save_Data();
 
-    // update the RECORD_NUM stored in the SD card in path: /CONFIG/RECORD_NUM.cfg. Overwrite it with "LAST = %d", record_num + 1
+    // update the RECORD_NUM stored in the SD card in path: /CONFIG/RECORD_NUM.cfg.
+    Update_Record_Num();
 
     // free the memory
     free(LiftNode_Data.ch01_data);
@@ -350,6 +401,8 @@ int Record_Sensing(void)
     free(LiftNode_Data.ch03_data);
 
     button_trigger = 0;
+
+    LED_RGB(0, 1, 0);
 
     return NODE_SUCCESS;
 }

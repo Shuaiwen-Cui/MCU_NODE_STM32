@@ -122,9 +122,8 @@ int main(void)
   MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
   Node_Init();
-  // Save_Data();
-  Record_Sensing();
-  LED_RGB(1,1,1);
+  // Record_Sensing();
+  // LED_RGB(0,1,0);
   
   /* USER CODE END 2 */
 
@@ -135,10 +134,14 @@ int main(void)
     // MPU6050_Read_Show(&IMU_Calibration_Instance);
     // Triggering_Check(&LiftNode_TM);
     // HAL_Delay(10);
-    // if(button_trigger == 1)
-    // {
-    //   Record_Sensing();
-    // }
+    if(button_trigger == 1)
+    {
+      printf("Button Triggered!\n");
+      // LED_RGB(0,0,1);
+      Record_Sensing();
+      // LED_RGB(0,0,0);
+      printf("Triggering Processed!\n");
+    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

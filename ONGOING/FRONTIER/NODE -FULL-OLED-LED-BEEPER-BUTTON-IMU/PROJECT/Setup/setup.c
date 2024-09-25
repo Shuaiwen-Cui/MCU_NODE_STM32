@@ -64,8 +64,8 @@ Triggering_Mechanism LiftNode_TM = {
     .activate_led_flag = 0};
 
 /* SENSING SETUP*/
-int sensing_rate = 10;
-int sensing_duration = 5;
+int sensing_rate = 100;
+int sensing_duration = 60;
 
 /* CONFIGURATIONS IN SD CARD*/
 int record_num; // the number of records in the SD card
@@ -332,6 +332,12 @@ int Node_Init(void)
     Node_FS_Init();
     printf("[NODE INITIALIZATION] File System Initialization - DONE.\n\r\n\r");
 #endif    
+
+    // show ready
+    printf("[NODE INITIALIZATION] Node Ready!\n\r\n\r");
+#ifdef MODULE_ENABLE_RGB
+    LED_RGB(0, 1, 0);
+#endif
 
     return NODE_SUCCESS;
 }

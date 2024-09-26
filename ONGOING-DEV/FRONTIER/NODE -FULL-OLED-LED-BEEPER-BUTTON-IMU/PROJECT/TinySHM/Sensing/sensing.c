@@ -306,14 +306,16 @@ int Update_Record_Num(void)
 
     // Open file for writing, create if doesn't exist
     fr = f_open(&SDFile, path, FA_WRITE | FA_CREATE_ALWAYS);
-    if (fr != FR_OK) {
+    if (fr != FR_OK)
+    {
         printf("Error: Cannot open file %s for writing.\n", path);
         return NODE_FAIL;
     }
 
     // Write buffer to file
     fr = f_write(&SDFile, buffer, strlen(buffer), &bw);
-    if (fr != FR_OK || bw != strlen(buffer)) {
+    if (fr != FR_OK || bw != strlen(buffer))
+    {
         printf("Error: Cannot write to file %s.\n", path);
         f_close(&SDFile);
         return NODE_FAIL;
@@ -321,7 +323,8 @@ int Update_Record_Num(void)
 
     // Sync file to ensure data is written to SD card
     fr = f_sync(&SDFile);
-    if (fr != FR_OK) {
+    if (fr != FR_OK)
+    {
         printf("Error: Cannot sync file %s.\n", path);
         f_close(&SDFile);
         return NODE_FAIL;
@@ -349,6 +352,7 @@ int Record_Sensing(void)
     int i;
     float dt;
     int sampling_points;
+    char progress[25];
 
     // calculate the sampling points
     sampling_points = sampling_rate * sampling_duration + 1;
@@ -361,9 +365,13 @@ int Record_Sensing(void)
     LiftNode_Data.dt = dt;
 
     // allocate memory for LiftNode_Data.ch01_data, LiftNode_Data.ch02_data, LiftNode_Data.ch03_data
-    LiftNode_Data.ch01_data = (float *)malloc(sampling_points * sizeof(float));
-    LiftNode_Data.ch02_data = (float *)malloc(sampling_points * sizeof(float));
-    LiftNode_Data.ch03_data = (float *)malloc(sampling_points * sizeof(float));
+    // LiftNode_Data.ch01_data = (float *)malloc(sampling_points * sizeof(float));
+    // LiftNode_Data.ch02_data = (float *)malloc(sampling_points * sizeof(float));
+    // LiftNode_Data.ch03_data = (float *)malloc(sampling_points * sizeof(float));
+
+    LiftNode_Data.ch01_data = (float *)memory_alloc(sampling_points * sizeof(float));
+    LiftNode_Data.ch02_data = (float *)memory_alloc(sampling_points * sizeof(float));
+    LiftNode_Data.ch03_data = (float *)memory_alloc(sampling_points * sizeof(float));
 
     // sensing with iterations
     printf("Sensing...\n\r");
@@ -373,19 +381,37 @@ int Record_Sensing(void)
     for (i = 0; i < sampling_points; i++)
     {
         // read the data
-        MPU6050_Read_All(&hi2c2, &MPU6050);
+        // MPU6050_Read_All(&hi2c2, &MPU6050);
+        MPU6050_Read_Accel(&hi2c2, &MPU6050);
 
         // save the data to the memory
         LiftNode_Data.ch01_data[i] = MPU6050.Ax * IMU_Calibration_Instance.Acc_Scale;
         LiftNode_Data.ch02_data[i] = MPU6050.Ay * IMU_Calibration_Instance.Acc_Scale;
         LiftNode_Data.ch03_data[i] = MPU6050.Az * IMU_Calibration_Instance.Acc_Scale;
 
-        // // show the data on the OLED
-        // MPU6050_Read_Show(&IMU_Calibration_Instance);
+        // print the data
+        printf("Ax: %12.8f, Ay: %12.8f, Az: %12.8f\n", LiftNode_Data.ch01_data[i], LiftNode_Data.ch02_data[i], LiftNode_Data.ch03_data[i]);
+
+        if (i % sampling_rate == 0)
+        {
+            sprintf(progress, "%d/%d", i, sampling_points-1);
+            // DISPLAY ACCELERATION
+            OLED_NewFrame();
+
+            OLED_PrintASCIIString(0, 0, "Progress:", &afont8x6, OLED_COLOR_NORMAL);
+            OLED_PrintASCIIString(0, 24, progress, &afont8x6, OLED_COLOR_NORMAL);
+
+            OLED_ShowFrame();
+        }
 
         // delay
         HAL_Delay(dt);
     }
+
+    OLED_NewFrame();
+    OLED_PrintASCIIString(0, 0, "Done", &afont8x6, OLED_COLOR_NORMAL);
+    OLED_PrintASCIIString(0, 24, "Waiting for next ...", &afont8x6, OLED_COLOR_NORMAL);
+    OLED_ShowFrame();
 
     LED_RGB(1, 0, 0);
 
@@ -396,9 +422,9 @@ int Record_Sensing(void)
     Update_Record_Num();
 
     // free the memory
-    free(LiftNode_Data.ch01_data);
-    free(LiftNode_Data.ch02_data);
-    free(LiftNode_Data.ch03_data);
+    memory_free(LiftNode_Data.ch01_data);
+    memory_free(LiftNode_Data.ch02_data);
+    memory_free(LiftNode_Data.ch03_data);
 
     button_trigger = 0;
 

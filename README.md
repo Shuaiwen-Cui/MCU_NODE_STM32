@@ -1,5 +1,5 @@
 # MCU_NODE_STM32
-Make an edge intelligence node based on STM32.
+Make an edge intelligence node based on STM32, this project is tightly coupled with [TinySHM](https://github.com/Shuaiwen-Cui/TinySHM.git), which serves as a middleware framework for edge intelligence enabled SHM. 
 
 Please check the link on the right-hand side for more information.
 
@@ -7,10 +7,15 @@ Please check the link on the right-hand side for more information.
 ```bash
 .
 README.md: README FILE
-MCU DOC: DOCUMENTATION
+MCU_DOC: ONLINE DOCUMENTATION, PLEASE CHECK THE LINK ON THE RIGHT-HAND SIDE: https://shuaiwen-cui.github.io/MCU_NODE_STM32/
 DEPRECATED: DEPRECATED CODE
-NODE-CORE-BUILT: BUILT VERSION (CUBEMX + KEIL)
-ONGOING: ONGOING CODE, STABLE FEATURE WILL BE RELEASED
-- BASELINE: BASELINE CODE
-- FRONTIER: FRONTIER CODE
+STABLE-RELEASE: STABLE RELEASE
+    -NODE-CORE-BUILT (Sep 20, 2024): BUILT VERSION (CUBEMX + KEIL) FOR THE MAIN CONTROL
+ONGOING-DEV: ONGOING CODE, STABLE FEATURE WILL BE RELEASED
+    -BASELINE: BASELINE CODE
+    -DISCARDED: DISCARDED CODE
+        - CUBEIDE VERSION: NOT WORKING
+    -FRONTIER: FRONTIER CODE
+        -NODE-FULL: FULL FEATURE VERSION (CUBEMX + KEIL), MAIN CONTROL BOARD + PERIPHERALS
+        -NODE-FULL-X: FULL FEATURE VERSION (CUBEMX + KEIL), MAIN CONTROL BOARD + PERIPHERALS (LATEST), X STANDS FOR THE ADDED PERIPHERALS
 ```

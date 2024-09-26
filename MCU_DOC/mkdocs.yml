@@ -150,6 +150,8 @@ plugins:
             BUZZER: 蜂鸣器
             BUTTON: 按键
             RELEASES: 发布
+            LOG: 日志
+            Year 2024: 2024年
 
 # # Hooks
 # hooks:
@@ -324,6 +326,8 @@ nav:
       - BUTTON: "INTERFACING/BUTTON/button.md"
   - RELEASES:
       - "RELEASES/releases.md"
+  - LOG: 
+      - Year 2024: "LOG/log-2024.md"
 
 
     

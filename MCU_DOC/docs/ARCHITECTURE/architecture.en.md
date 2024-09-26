@@ -1,5 +1,9 @@
 # ARCHITECTURE
 
+## LIFTNODE
+
+![LIFTNODE](LIFTNODE.jpg)
+
 ## HARDWARE ARCHITECTURE
 
 ![Hardware Architecture](hw.png)

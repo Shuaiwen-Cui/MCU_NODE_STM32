@@ -3,3 +3,4 @@
 
 ![封面](cover.jpg)
 
+![LIFTNODE](LIFTNODE.jpg)

@@ -1,5 +1,9 @@
 # 架构
 
+## LIFTNODE
+
+![LIFTNODE](LIFTNODE.jpg)
+
 ## 硬件架构
 
 ![Hardware Architecture](hw.png)

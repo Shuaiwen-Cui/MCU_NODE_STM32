@@ -1,2 +1,0 @@
-../BSP/bsp_led.c:10:6:LED	16	static
-../BSP/bsp_led.c:23:6:LED_Toggle	16	static

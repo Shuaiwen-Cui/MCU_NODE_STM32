@@ -1,4 +1,0 @@
-../BSP/bsp_memory.c:44:6:memory_init	1
-../BSP/bsp_memory.c:56:7:memory_alloc	6
-../BSP/bsp_memory.c:115:6:memory_free	8
-../BSP/bsp_memory.c:157:5:memory_management_test	4

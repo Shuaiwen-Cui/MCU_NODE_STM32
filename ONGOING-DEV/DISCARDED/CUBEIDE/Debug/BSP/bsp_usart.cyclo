@@ -1,4 +1,0 @@
-../BSP/bsp_usart.c:27:6:MCU_serial_init	1
-../BSP/bsp_usart.c:63:6:MCU_send	1
-../BSP/bsp_usart.c:87:6:MCU_printf	1
-../BSP/bsp_usart.c:129:6:HAL_UARTEx_RxEventCallback	2

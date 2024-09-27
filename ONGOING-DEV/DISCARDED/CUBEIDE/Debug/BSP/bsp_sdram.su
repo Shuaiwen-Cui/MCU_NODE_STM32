@@ -1,4 +1,0 @@
-../BSP/bsp_sdram.c:35:6:SDRAM_InitSequence	16	static
-../BSP/bsp_sdram.c:105:6:SDRAM_WriteBuffer	32	static
-../BSP/bsp_sdram.c:135:6:SDRAM_ReadBuffer	32	static
-../BSP/bsp_sdram.c:161:9:SDRAM_Test	32	static

@@ -1,3 +1,0 @@
-../EdgeIntelligence/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c:73:6:arm_rfft_q31	48	static
-../EdgeIntelligence/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c:124:6:arm_split_rfft_q31	424	static
-../EdgeIntelligence/CMSIS-DSP/Source/TransformFunctions/arm_rfft_q31.c:222:6:arm_split_rifft_q31	416	static

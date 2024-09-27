@@ -1,2 +1,0 @@
-../BSP/bsp_sdcard.c:41:5:SD_Init	8	static
-../BSP/bsp_sdcard.c:62:5:SD_Test	72	static

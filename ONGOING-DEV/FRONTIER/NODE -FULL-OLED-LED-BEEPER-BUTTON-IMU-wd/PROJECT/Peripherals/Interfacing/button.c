@@ -18,16 +18,16 @@
  */
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
-    HAL_Delay(10); // Debounce time
-    if (HAL_GPIO_ReadPin(BUTTON_GPIO_Port, BUTTON_Pin) == GPIO_PIN_RESET)
-    {
-        if (GPIO_Pin == BUTTON_Pin)
-        {
-            /* app code */
-            LED_RGB(1, 0, 1);
-            Buzzer_Beep(200);
-            LED_RGB(0, 0, 0);
-        }
-    }
-    button_trigger = 1;
+    // HAL_Delay(10); // Debounce time
+    // if (HAL_GPIO_ReadPin(BUTTON_GPIO_Port, BUTTON_Pin) == GPIO_PIN_RESET)
+    // {
+    //     if (GPIO_Pin == BUTTON_Pin)
+    //     {
+    //         /* app code */
+    //         LED_RGB(1, 0, 1);
+    //         Buzzer_Beep(200);
+    //         LED_RGB(0, 0, 0);
+    //     }
+    // }
+    // button_trigger = 1;
 }

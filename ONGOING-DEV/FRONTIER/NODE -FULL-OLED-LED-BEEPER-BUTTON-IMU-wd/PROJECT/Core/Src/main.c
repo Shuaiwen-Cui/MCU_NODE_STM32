@@ -124,6 +124,14 @@ int main(void)
   Node_Init();
   // Record_Sensing();
   // LED_RGB(0,1,0);
+
+  // record sensing conduct 100 times
+  for(int i = 0; i < 100; i++)
+  {
+    Record_Sensing();
+
+    HAL_Delay(5000);
+  }
   
   /* USER CODE END 2 */
 
@@ -134,14 +142,14 @@ int main(void)
     // MPU6050_Read_Show(&IMU_Calibration_Instance);
     // Triggering_Check(&LiftNode_TM);
     // HAL_Delay(10);
-    if(button_trigger == 1)
-    {
-      printf("Button Triggered!\n");
-      // LED_RGB(0,0,1);
-      Record_Sensing();
-      // LED_RGB(0,0,0);
-      printf("Triggering Processed!\n");
-    }
+    // if(button_trigger == 1)
+    // {
+    //   printf("Button Triggered!\n");
+    //   // LED_RGB(0,0,1);
+    //   Record_Sensing();
+    //   // LED_RGB(0,0,0);
+    //   printf("Triggering Processed!\n");
+    // }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
